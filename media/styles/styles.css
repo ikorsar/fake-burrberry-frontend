@@ -121,9 +121,8 @@ p {
   text-align: center;
   text-transform: uppercase;
   color: #171717;
-  width: 100%;
   border-radius: 2px;
-  display: inline-block;
+  display: block;
   margin: 0 0 1rem;
 }
 
@@ -135,6 +134,8 @@ p {
 
 .dropdown {
   border-top: 1px solid #c6c6c6;
+  display: flex;
+  flex-flow: column;
 }
 
 .dropdown + .dropdown {
@@ -152,7 +153,6 @@ p {
   border: none;
   position: relative;
   text-align: left;
-  width: 100%;
   text-transform: uppercase;
   font-size: .875rem;
 }
@@ -288,15 +288,21 @@ p {
 
 .product-controls {
   padding: 0 1rem 3rem;
+  display: flex;
+  flex-flow: column;
 }
 
-.product-size-help-link {
+.product-size-help-button {
   color: #171717;
   font-size: .75rem;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
   margin-top: .5rem;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  padding: 0;
 }
 
 
@@ -399,4 +405,3 @@ p {
 .page-footer .help-links-item {
   text-align: center;
 }
-
