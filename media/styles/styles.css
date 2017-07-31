@@ -1,0 +1,19 @@
+body {
+  max-width: 320px;
+  margin: 0 auto;
+  font-size: 16px;
+  min-height: 100vh;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+.page_header {
+  border-bottom: 2px solid #c6c6c6;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_title {
+  
+}
