@@ -1,13 +1,13 @@
 /* default styles */
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -25,39 +25,39 @@ audio,
 canvas,
 img,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .strike,
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 ol {
-    list-style-position: outside;
-    padding: 0 0 0 1.25rem;
-    margin: 0 0 1.25rem;
+  list-style-position: outside;
+  padding: 0 0 0 1.25rem;
+  margin: 0 0 1.25rem;
 }
 
 button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+  padding: 0;
+  border: 0;
 }
 
 img {
@@ -303,8 +303,8 @@ p {
   border: none;
   text-align: left;
   padding: 0;
+  align-self: flex-start;
 }
-
 
 .product-section {
   padding-top: 2.875rem;
@@ -317,18 +317,18 @@ p {
 }
 
 .product-recomendation-list-item {
-  width: calc(50% - 1.875rem);
+  flex-basis: 50%;
   margin-bottom: 1rem;
 }
 
 .product-recomendation-list-item:nth-child(odd) {
-  margin-left: 1rem;
-  margin-right: .875rem;
+  padding-left: 1rem;
+  padding-right: .875rem;
 }
 
 .product-recomendation-list-item:nth-child(even) {
-  margin-left: .875rem;
-  margin-right: 1rem;
+  padding-left: .875rem;
+  padding-right: 1rem;
 }
 
 .product-recomendation-list-link {
