@@ -86,6 +86,10 @@ h2,
   margin-bottom: 2.6rem;
 }
 
+.section-title-seo {
+  font-family: 'Lora', Helvetica, Arial, serif;
+}
+
 .section-title:after {
   content: '';
   display: block;
