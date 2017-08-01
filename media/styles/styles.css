@@ -66,14 +66,14 @@ img {
 
 h1,
 .product-title {
-  font: .875rem/1.4 'Lora', Helvetica, Arial, serif;
+  font: 1.25rem/normal 'Lora', Helvetica, Arial, serif;
   padding: 0 1rem;
-  margin: 0 0 1.5rem;
+  margin: 0 0 .975rem;
 }
 
 h2,
 .section-title {
-  font: .875rem/1rem 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 1rem/1rem 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 0 1rem;
   color: #111;
   text-transform: uppercase;
@@ -83,11 +83,7 @@ h2,
 
 .section-title {
   display: inline-block;
-  margin-bottom: 2.6rem;
-}
-
-.section-title-seo {
-  font-family: 'Lora', Helvetica, Arial, serif;
+  margin-bottom: 2.05rem;
 }
 
 .section-title:after {
@@ -103,7 +99,7 @@ h2,
 }
 
 h3 {
-  font: 1rem/1.5 'Lora', Helvetica, Arial, serif;
+  font: 1rem/normal 'Lora', Helvetica, Arial, serif;
   padding: 0 1rem;
 }
 
@@ -118,7 +114,7 @@ p {
 }
 
 .btn {
-  padding: .875rem 0;
+  padding: .9rem 0;
   background-color: #fff;
   font: .75em/normal 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   border: 1px solid #999;
@@ -127,7 +123,7 @@ p {
   color: #171717;
   border-radius: 2px;
   display: block;
-  margin: 0 0 1rem;
+  margin: 0 0 1.1rem;
 }
 
 .btn-black {
@@ -153,12 +149,12 @@ p {
 .dropdown-button {
   display: block;
   background-color: transparent;
-  padding: 1.875rem 1rem;
+  padding: 2rem 1rem;
   border: none;
   position: relative;
   text-align: left;
   text-transform: uppercase;
-  font-size: .875rem;
+  font: 1rem/normal 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .dropdown-button:after {
@@ -176,12 +172,16 @@ p {
 
 .dropdown-content {
   display: none;
-  padding: .16rem 1rem 2rem;
+  padding: .1rem 1rem 1.8rem;
 }
 
 .dropdown-text {
   font: .875rem/1.5rem 'Lora', Helvetica, Arial, serif;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
+}
+
+.dropdown-text:last-of-type {
+  margin-bottom: 1.5rem;
 }
 
 .dropdown-list {
@@ -214,7 +214,7 @@ p {
 /* page styles */
 
 .page-content {
-  padding-top: 1.5rem;
+  padding-top: .95rem;
   padding-bottom: 4rem;
 }
 
@@ -240,13 +240,13 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1rem 0;
+  padding: 1.2rem 1rem 0;
 }
 
 .product-details-price {
   color: #111;
-  font-size: 1.125rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1rem;
   padding: 0;
   text-transform: none;
 }
@@ -317,11 +317,11 @@ p {
 
 .product-size-help-button {
   color: #171717;
-  font-size: .75rem;
+  font: .75rem/normal 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
-  margin-top: .575rem;
+  margin-top: .425rem;
   background-color: transparent;
   border: none;
   text-align: left;
@@ -330,11 +330,11 @@ p {
 }
 
 .product-section {
-  padding-top: 2.8rem;
+  padding-top: 3.1rem;
 }
 
 .product-section-seo {
-  padding-top: 1.9rem;
+  padding-top: 2.1rem;
 }
 
 .product-recomendation-list {
@@ -345,7 +345,7 @@ p {
 
 .product-recomendation-list-item {
   flex-basis: 50%;
-  margin-bottom: 2.15rem;
+  margin-bottom: 2.1rem;
 }
 
 .product-recomendation-list-item:nth-child(odd) {
@@ -359,7 +359,7 @@ p {
 }
 
 .product-recomendation-list-link {
-  color: #111;
+  color: #171717;
   text-decoration: none;
   display: block;
 }
@@ -370,7 +370,7 @@ p {
 
 .product-recomendation-list-name {
   padding: 0;
-  margin: .75rem 0 .55rem;
+  margin: .55rem 0;
 }
 
 .product-recomendation-list-price {
@@ -380,7 +380,6 @@ p {
 
 .help-links {
   padding: 0 1rem;
-  margin-top: -.5rem;
 }
 
 .help-links-item {
@@ -404,24 +403,25 @@ p {
 
 .page-footer {
   background-color: #f3f3f3;
-  padding: 1.7rem 1rem 2rem;
+  padding: 1.85rem 1rem 2.1rem;
 }
 
-.service-text {
-  margin-bottom: .45rem;
-}
-
-.service-text-link {
-  font-size: .75rem;
+.service-text-button {
   color: #999;
   text-decoration: none;
+  margin-bottom: .75rem;
+  padding: 0;
+  background-color: transparent;
+  font: .75rem/normal 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  border: none;
 }
 
 .page-footer-help {
   text-align: center;
   font-weight: bold;
   line-height: 1rem;
-  margin: 1.2rem 0 1.525rem;
+  margin: .9rem 0 1rem;
+  font-size: 1rem;
 }
 
 .page-footer-help-link {
