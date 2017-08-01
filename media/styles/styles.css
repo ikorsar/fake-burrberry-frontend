@@ -118,7 +118,7 @@ p {
 }
 
 .btn {
-  padding: .9375rem 0;
+  padding: .875rem 0;
   background-color: #fff;
   font: .75em/normal 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   border: 1px solid #999;
@@ -196,7 +196,7 @@ p {
 
 .page-content {
   padding-top: 1.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
 /* page styles stop */
@@ -302,7 +302,7 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
-  margin-top: .5rem;
+  margin-top: .575rem;
   background-color: transparent;
   border: none;
   text-align: left;
@@ -311,7 +311,11 @@ p {
 }
 
 .product-section {
-  padding-top: 2.875rem;
+  padding-top: 2.8rem;
+}
+
+.product-section-seo {
+  padding-top: 1.9rem;
 }
 
 .product-recomendation-list {
@@ -322,7 +326,7 @@ p {
 
 .product-recomendation-list-item {
   flex-basis: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 2.15rem;
 }
 
 .product-recomendation-list-item:nth-child(odd) {
@@ -347,7 +351,7 @@ p {
 
 .product-recomendation-list-name {
   padding: 0;
-  margin: .75rem 0 .5rem;
+  margin: .75rem 0 .55rem;
 }
 
 .product-recomendation-list-price {
@@ -361,7 +365,7 @@ p {
 }
 
 .help-links-item {
-  font: .875rem/1rem 'Lora', Helvetica, Arial, serif;
+  font: .875rem/1.063rem 'Lora', Helvetica, Arial, serif;
   font-style: italic;
   margin-bottom: 1rem;
 }
@@ -381,7 +385,7 @@ p {
 
 .page-footer {
   background-color: #f3f3f3;
-  padding: 2.8rem 1rem 2rem;
+  padding: 1.7rem 1rem 2rem;
 }
 
 .service-text {
@@ -398,7 +402,7 @@ p {
   text-align: center;
   font-weight: bold;
   line-height: 1rem;
-  margin: 1.25rem 0 1.625rem;
+  margin: 1.2rem 0 1.525rem;
 }
 
 .page-footer-help-link {
