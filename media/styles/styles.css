@@ -140,7 +140,7 @@ p {
   position: relative;
   text-align: left;
   text-transform: uppercase;
-  font: 500 1rem/1.19 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 500 1rem/1.25rem 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .dropdown-button:after {
@@ -256,7 +256,7 @@ p {
 
 .product-colors-choosen {
   font-size: .75rem;
-  line-height: 1.17;
+  line-height: 1rem;
 }
 
 .product-colors {
@@ -316,7 +316,7 @@ p {
 
 .product-size-help-button {
   color: #171717;
-  font: .75rem/normal 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;;
+  font: .75rem/1rem 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
@@ -329,7 +329,7 @@ p {
 }
 
 .product-section {
-  padding-top: 2.938rem;
+  padding-top: 3rem;
 }
 
 .product-section-recommend .section-title {
@@ -419,14 +419,14 @@ p {
   margin-bottom: 1rem;
   padding: 0;
   background-color: transparent;
-  font: 400 .75rem/1.17 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 400 .75rem/1rem 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   border: none;
 }
 
 .page-footer-help {
   text-align: center;
   font-weight: bold;
-  line-height: 1.1875rem;
+  line-height: 1.188rem;
   margin: 1.5rem 0 1rem;
   font-size: 1rem;
 }
