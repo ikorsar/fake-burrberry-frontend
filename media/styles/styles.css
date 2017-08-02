@@ -64,47 +64,33 @@ img {
   max-width: 100%;
 }
 
-h1,
-.product-title {
-  font: 1.25rem/normal 'Lora', Helvetica, Arial, serif;
-  padding: 0 1rem;
-  margin: 0 0 .975rem;
+h1 {
+  font: 400 1.25rem/1.5rem 'Lora', Helvetica, Arial, serif;
+  margin: 0 0 1rem;
 }
 
 h2,
 .section-title {
-  font: 1rem/1rem 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  padding: 0 1rem;
-  color: #111;
+  font: 500 1rem/1.1875rem 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #171717;
   text-transform: uppercase;
   position: relative;
-  margin: 0 0 1rem;
+  margin: 0 1rem 1.5rem;
 }
 
 .section-title {
   display: inline-block;
-  margin-bottom: 2.05rem;
-}
-
-.section-title:after {
-  content: '';
-  display: block;
-  height: 1px;
-  background-color: #171717;
-  position: absolute;
-  top: 100%;
-  left: 1rem;
-  right: 1rem;
-  margin-top: .5rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #171717;
 }
 
 h3 {
-  font: 1rem/normal 'Lora', Helvetica, Arial, serif;
+  font: 400 1rem/1.19 'Lora', Helvetica, Arial, serif;
   padding: 0 1rem;
 }
 
 h5 {
-  font: .75rem/1 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 400 .75rem/1.17 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -114,16 +100,16 @@ p {
 }
 
 .btn {
-  padding: .9rem 0;
+  padding: 1rem 0;
   background-color: #fff;
-  font: .75em/normal 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: .75em/1 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   border: 1px solid #999;
   text-align: center;
   text-transform: uppercase;
   color: #171717;
   border-radius: 2px;
   display: block;
-  margin: 0 0 1.1rem;
+  margin: 0 0 1rem;
 }
 
 .btn-black {
@@ -154,7 +140,7 @@ p {
   position: relative;
   text-align: left;
   text-transform: uppercase;
-  font: 1rem/normal 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 500 1rem/1.19 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .dropdown-button:after {
@@ -172,7 +158,7 @@ p {
 
 .dropdown-content {
   display: none;
-  padding: .1rem 1rem 1.8rem;
+  padding: 0 1rem 2rem;
 }
 
 .dropdown-text {
@@ -206,7 +192,12 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .75rem 0;
+  padding: 1rem 0;
+}
+
+.logo-img {
+  width: 138px;
+  height: 10px;
 }
 
 /* header styles stop */
@@ -214,7 +205,6 @@ p {
 /* page styles */
 
 .page-content {
-  padding-top: .95rem;
   padding-bottom: 4rem;
 }
 
@@ -223,7 +213,12 @@ p {
 /* product styles */
 
 .product-title {
-  padding: 0 1rem;
+  padding: 1rem;
+}
+
+.product-title-content {
+  font: 400 1.25rem/1.5rem 'Lora', serif;
+  margin: 0;
 }
 
 .product-gallery-slider {
@@ -240,34 +235,38 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 1rem 0;
+  padding: 1rem;
 }
 
 .product-details-price {
-  color: #111;
+  font-weight: normal;
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 1.19;
   padding: 0;
   text-transform: none;
+  margin: 0;
 }
 
 .product-details-partnumber {
   color: #171717;
   font-size: .75rem;
-  line-height: .875rem;
+  line-height: 1.19;
+  margin: 0;
 }
 
 .product-colors-choosen {
   font-size: .75rem;
-  line-height: .875rem;
-  padding: 0 1rem;
+  line-height: 1.17;
 }
 
 .product-colors {
   border-bottom: 1px solid #c6c6c6;
-  margin: 0 1rem 2rem;
-  display: flex;
   padding-bottom: 2rem;
+  margin: 0 1rem 2rem;
+}
+
+.product-colors-buttons {
+  display: flex;
 }
 
 .product-color {
@@ -321,7 +320,7 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
-  margin-top: .425rem;
+  margin-top: .5rem;
   background-color: transparent;
   border: none;
   text-align: left;
@@ -330,22 +329,25 @@ p {
 }
 
 .product-section {
-  padding-top: 3.1rem;
+  padding-top: 3rem;
 }
 
 .product-section-seo {
-  padding-top: 2.1rem;
+  padding-top: 1rem;
+}
+
+.product-section-seo .section-title:after {
+  margin-top: .65rem;
 }
 
 .product-recomendation-list {
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: -1rem;
 }
 
 .product-recomendation-list-item {
   flex-basis: 50%;
-  margin-bottom: 2.1rem;
+  margin-bottom: 2rem;
 }
 
 .product-recomendation-list-item:nth-child(odd) {
@@ -365,17 +367,21 @@ p {
 }
 
 .product-recomendation-list-img {
-  width: 100%;
+  width: 130px;
+  height: 174px;
+  display: block;
 }
 
 .product-recomendation-list-name {
   padding: 0;
-  margin: .55rem 0;
+  margin: .5rem 0;
 }
 
 .product-recomendation-list-price {
   color: #999;
   margin: 0;
+  font-size: .75rem;
+  line-height: 1.17;
 }
 
 .help-links {
@@ -403,24 +409,25 @@ p {
 
 .page-footer {
   background-color: #f3f3f3;
-  padding: 1.85rem 1rem 2.1rem;
+  padding: 2rem 1rem;
 }
 
 .service-text-button {
+  display: block;
   color: #999;
   text-decoration: none;
-  margin-bottom: .75rem;
+  margin-bottom: 1rem;
   padding: 0;
   background-color: transparent;
-  font: .75rem/normal 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 400 .75rem/1.17 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   border: none;
 }
 
 .page-footer-help {
   text-align: center;
   font-weight: bold;
-  line-height: 1rem;
-  margin: .9rem 0 1rem;
+  line-height: 1.1875rem;
+  margin: 1.5rem 0 1rem;
   font-size: 1rem;
 }
 
@@ -431,4 +438,5 @@ p {
 
 .page-footer .help-links-item {
   text-align: center;
+  margin-bottom: 0;
 }
