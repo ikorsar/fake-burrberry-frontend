@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <meta name='viewport' content='width=device-width'>
+  <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -13,82 +13,70 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,700">
 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
-  <link rel="stylesheet" type="text/css" href="media/styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+  <link rel="stylesheet" href="media/styles/styles.css">
 </head>
 <body>
   <header class="page-header">
-    <img class="logo-img" src="media/images/logo.svg" alt="Burberry Logo">
+    <img class="page-header-logo" src="media/images/logo.svg" alt="Burberry Logo">
   </header>
   <section class="page-content" role="main">
-    <div class="product-title">
-      <h1 class="product-title-content">Long Cotton Gabardine Car Coat</h1>
-    </div>
-
-    <section class="product-gallery-slider">
-      <div class="product-photo">
-        <img class="product-photo-img" src="files/product-img1.jpg" alt="Product photo 1">
+    <h1 class="product-title">Long Cotton Gabardine Car Coat</h1>
+    
+    <section class="product-gallery">
+      <div class="product-gallery-item">
+        <img class="product-gallery-photo" src="files/product-img1.jpg" alt="Product photo 1">
       </div>
-      <div class="product-photo">
-        <img class="product-photo-img" src="files/product-img3.jpg" alt="Product photo 3">
+      <div class="product-gallery-item">
+        <img class="product-gallery-photo" src="files/product-img3.jpg" alt="Product photo 3">
       </div>
-      <div class="product-photo">
-        <img class="product-photo-img" src="files/product-img2.jpg" alt="Product photo 2">
+      <div class="product-gallery-item">
+        <img class="product-gallery-photo" src="files/product-img2.jpg" alt="Product photo 2">
       </div>
-      <div class="product-photo">
-        <img class="product-photo-img" src="files/product-img4.jpg" alt="Product photo 4">
+      <div class="product-gallery-item">
+        <img class="product-gallery-photo" src="files/product-img4.jpg" alt="Product photo 4">
       </div>
     </section>
 
-    <section class="product-details">
+    <article class="product-details">
       <h2 class="product-details-price">110 000 руб.</h2>
       <p class="product-details-partnumber">Item 39428531</p>
-    </section>
+    </article>
 
-    <section class="product-colors">
+    <section class="product-colors-container">
       <p class="product-colors-choosen">Colour: <span class="product-colors-choosen-name">Honey</span></p>
-      <div class="product-colors-buttons">
-        <label class="product-color">
-        <span class="radio-button">
-          <input class="radio-button-input" name="product-color" type="radio">
-          <span class="radio-button-inner" style="background-color: #232122"></span>
-      </span>
-        </label>
-        <label class="product-color">
-      <span class="radio-button">
-        <input class="radio-button-input" name="product-color" type="radio" checked>
-        <span class="radio-button-inner" style="background-color: #cfa880"></span>
-      </span>
-        </label>
+      <div class="product-colors">
+        <button class="product-colors-button" type="button" style="background-color: #232122">Black color</button>
+        <button class="product-colors-button is-active" type="button" style="background-color: #cfa880">Honey color</button>
       </div>
     </section>
 
     <section class="product-controls">
       <button class="btn btn-black" type="button">Select a size</button>
       <button class="btn btn-white" type="button">Find in store</button>
-      <button class="product-size-help-button" type="button">Need size help?</button>
+      <button class="btn btn-text" type="button">Need size help?</button>
     </section>
 
     <div class="dropdown is-active">
       <button class="dropdown-button" type="button">Description</button>
       <div class="dropdown-content" style="display: block;">
-        <p class="dropdown-text">A refined car coat crafted in protective cotton gabardine.</p>
-        <p class="dropdown-text">Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable
+        <p>A refined car coat crafted in protective cotton gabardine.</p>
+        <p>Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable
           fabric that protects
           against wind and rain.</p>
-        <p class="dropdown-text">Raglan sleeves and a concealed button closure complement the clean tailored lines.</p>
-        <p class="dropdown-text">The piece is finished with a distinctive check undercollar.</p>
-        <ul class="dropdown-list">
-          <li class="dropdown-list-item">Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change
+        <p>Raglan sleeves and a concealed button closure complement the clean tailored lines.</p>
+        <p>The piece is finished with a distinctive check undercollar.</p>
+        <ul>
+          <li>Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change
             slightly according to size.
           </li>
-          <li class="dropdown-list-item">Outer: 100% cotton</li>
-          <li class="dropdown-list-item">Check lining: 100% cotton</li>
-          <li class="dropdown-list-item">Sleeve lining: 100% viscose</li>
-          <li class="dropdown-list-item">Buttons: buffalo horn</li>
-          <li class="dropdown-list-item">Specialist dry clean</li>
-          <li class="dropdown-list-item">Made in Europe</li>
-          <li class="dropdown-list-item">Item 39428531</li>
+          <li>Outer: 100% cotton</li>
+          <li>Check lining: 100% cotton</li>
+          <li>Sleeve lining: 100% viscose</li>
+          <li>Buttons: buffalo horn</li>
+          <li>Specialist dry clean</li>
+          <li>Made in Europe</li>
+          <li>Item 39428531</li>
         </ul>
       </div>
     </div>
@@ -119,7 +107,7 @@
     </div>
 
     <section class="product-section product-section-recommend">
-      <h2 class="section-title">We recommend</h2>
+      <h2 class="product-section-title">We recommend</h2>
       <ul class="product-recomendation-list">
         <li class="product-recomendation-list-item">
           <a class="product-recomendation-list-link" href="#">
@@ -153,7 +141,7 @@
     </section>
 
     <section class="product-section product-section-seo">
-      <h2 class="section-title">More for you</h2>
+      <h2 class="product-section-title">More for you</h2>
       <ul class="help-links">
         <li class="help-links-item">
           <a class="help-links-link" href="#">Men’s Black Trench Coats</a>
@@ -169,14 +157,10 @@
   </section>
 
   <footer class="page-footer">
-    <button class="service-text-button" type="button">Shipping country: Russian Federation</button>
-    <button class="service-text-button" type="button">Language: English</button>
+    <button class="page-footer-button" type="button">Shipping country: Russian Federation</button>
+    <button class="page-footer-button" type="button">Language: English</button>
     <h5 class="page-footer-help">Need help?</h5>
-    <ul class="help-links">
-      <li class="help-links-item">
-        <a class="help-links-link" href="#">Find out more and contact us</a>
-      </li>
-    </ul>
+    <a class="page-footer-help-link" href="#">Find out more and contact us</a>
   </footer>
 </body>
 </html>
