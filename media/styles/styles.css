@@ -134,8 +134,24 @@ p {
   flex-flow: column;
 }
 
+@media (min-width: 48rem) {
+  .dropdown {
+    border-top: none;
+  }
+}
+
 .dropdown + .dropdown {
   border-bottom: 1px solid #c6c6c6;
+}
+
+@media (min-width: 48rem) {
+  .dropdown + .dropdown {
+    border-bottom: none;
+  }
+}
+
+.dropdown.is-active .dropdown-content {
+  display: block;
 }
 
 .dropdown.is-active .dropdown-button:after {
@@ -156,6 +172,12 @@ p {
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+@media (min-width: 48rem) {
+  .dropdown-button {
+    padding: 1.5rem .5rem 1rem;
+  }
+}
+
 .dropdown-button:after {
   content: '';
   width: 0;
@@ -169,9 +191,22 @@ p {
   transform: translateY(-50%);
 }
 
+@media (min-width: 48rem) {
+  .dropdown-button:after {
+    display: none;
+  }
+}
+
 .dropdown-content {
   display: none;
   padding: 0 1rem 2rem;
+}
+
+@media (min-width: 48rem) {
+  .dropdown-content {
+    display: block;
+    padding: 0 .5rem 1.5rem;
+  }
 }
 
 .dropdown-content p {
@@ -206,10 +241,19 @@ p {
 
 .page-header {
   border-bottom: 1px solid #c6c6c6;
+  padding: 1rem 0;
+}
+
+@media (min-width: 48rem) {
+  .page-header {
+    padding: 1.5rem;
+  }
+}
+
+.page-header-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
 }
 
 .page-header-logo {
@@ -225,6 +269,12 @@ p {
   padding-bottom: 4rem;
 }
 
+@media (min-width: 48rem) {
+  .page-content {
+    padding-bottom: 3.5rem;
+  }
+}
+
 /* page styles end */
 
 /* footer styles */
@@ -232,6 +282,19 @@ p {
 .page-footer {
   background-color: #f3f3f3;
   padding: 2rem 1rem;
+}
+
+@media (min-width: 48rem) {
+  .page-footer {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .page-footer-buttons {
+    display: flex;
+  }
 }
 
 .page-footer-button {
@@ -248,12 +311,24 @@ p {
   border: none;
 }
 
+@media (min-width: 48rem) {
+  .page-footer-button {
+    margin: 0 1.5rem 0 0;
+  }
+}
+
 .page-footer-help {
   text-align: center;
   font-weight: bold;
   line-height: 1.188rem;
   margin: 1.5rem 0 1rem;
   font-size: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .page-footer-help {
+    display: none;
+  }
 }
 
 .page-footer-help-link {
@@ -266,6 +341,40 @@ p {
   font-style: italic;
   display: block;
   padding: 0 1rem;
+}
+
+@media (min-width: 48rem) {
+  .page-footer-help-link {
+    display: none;
+  }
+}
+
+.page-footer-nav {
+  margin-bottom: 2rem;
+}
+
+.page-footer-nav-title {
+  font-weight: bold;
+  font-size: .75rem;
+  line-height: .875rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.page-footer-nav-item {
+  font-weight: 600;
+  font-size: .75rem;
+  line-height: 1rem;
+  margin-bottom: .75rem;
+}
+
+.page-footer-nav-item:last-child {
+  margin-bottom: 0;
+}
+
+.page-footer-nav-link {
+  color: #999;
+  text-decoration: none;
 }
 
 /* footer styles end */
