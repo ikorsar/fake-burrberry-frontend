@@ -378,20 +378,18 @@ p {
   text-transform: uppercase;
 }
 
-.page-footer-nav-item {
+.page-footer-nav-link {
+  color: #999;
+  text-decoration: none;
   font-weight: 600;
   font-size: .75rem;
   line-height: 1rem;
   margin-bottom: .75rem;
+  display: block;
 }
 
-.page-footer-nav-item:last-child {
+.page-footer-nav-link:last-child {
   margin-bottom: 0;
-}
-
-.page-footer-nav-link {
-  color: #999;
-  text-decoration: none;
 }
 
 /* footer styles end */

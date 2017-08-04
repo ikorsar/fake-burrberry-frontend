@@ -167,7 +167,7 @@
     padding: 0;
   }
 
-  .dropdown-delivery-options h5 {
+  .delivery-description .delivery-description-title {
     font-weight: bold;
     font-size: .75rem;
     line-height: .875rem;
@@ -175,7 +175,7 @@
     margin: 0 0 .25rem;
   }
 
-  .dropdown-delivery-options p {
+  .delivery-description .delivery-description-text {
     font-size: .75rem;
     line-height: 1rem;
     font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
