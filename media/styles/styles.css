@@ -130,8 +130,6 @@ p {
 
 .dropdown {
   border-top: 1px solid #c6c6c6;
-  display: flex;
-  flex-flow: column;
 }
 
 @media (min-width: 48rem) {
@@ -158,10 +156,15 @@ p {
   transform: translateY(-50%) rotate(180deg);
 }
 
+.dropdown-button-container {
+  display: flex;
+  flex-flow: column;
+}
+
 .dropdown-button {
   display: block;
   background-color: transparent;
-  padding: 2rem 1rem;
+  padding: 2rem .5rem;
   border: none;
   position: relative;
   text-align: left;
@@ -174,7 +177,7 @@ p {
 
 @media (min-width: 48rem) {
   .dropdown-button {
-    padding: 1.5rem .5rem 1rem;
+    padding: 1.563rem 0 1rem;
   }
 }
 
@@ -199,13 +202,13 @@ p {
 
 .dropdown-content {
   display: none;
-  padding: 0 1rem 2rem;
+  padding: 0 .5rem 2rem;
 }
 
 @media (min-width: 48rem) {
   .dropdown-content {
     display: block;
-    padding: 0 .5rem 1.5rem;
+    padding: 0 0 1.438rem;
   }
 }
 
@@ -281,19 +284,26 @@ p {
 
 .page-footer {
   background-color: #f3f3f3;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
 }
 
 @media (min-width: 48rem) {
   .page-footer {
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: 0;
+    padding-right: 0;
   }
+}
+
+.page-footer-buttons {
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 @media (min-width: 48rem) {
   .page-footer-buttons {
     display: flex;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -351,6 +361,13 @@ p {
 
 .page-footer-nav {
   margin-bottom: 2rem;
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .page-footer-nav {
+    display: block;
+  }
 }
 
 .page-footer-nav-title {

@@ -15,8 +15,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2">
-  <!--<link rel="stylesheet" href="https://unpkg.com/flexboxgrid-helpers">-->
-  <link rel="stylesheet" href="media/styles/flexboxgrid-helpers.min.css">
   <link rel="stylesheet" href="media/styles/styles.css">
   <link rel="stylesheet" href="media/styles/product-card.css">
 </head>
@@ -27,220 +25,243 @@
     </a>
   </header>
   <section class="page-content" role="main">
-    <h1 class="product-title">Long Cotton Gabardine Car Coat</h1>
-
+    <div class="container">
+      <h1 class="product-title">Long Cotton Gabardine Car Coat</h1>
+    </div>
     <div class="container">
       <div class="row">
-        <section class="product-gallery col-xs-12 col-sm-12 col-md-7">
-          <div class="product-gallery-item">
-            <img class="product-gallery-photo" src="files/product-img1.jpg" alt="Product photo 1">
-          </div>
-          <div class="product-gallery-item">
-            <img class="product-gallery-photo" src="files/product-img3.jpg" alt="Product photo 3">
-          </div>
-          <div class="product-gallery-item">
-            <img class="product-gallery-photo" src="files/product-img2.jpg" alt="Product photo 2">
-          </div>
-          <div class="product-gallery-item">
-            <img class="product-gallery-photo" src="files/product-img4.jpg" alt="Product photo 4">
-          </div>
-        </section>
-
-        <article class="product-details col-xs-12 col-sm-12 col-md-5">
-          <div class="product-details-header">
-            <h2 class="product-details-price">110 000 руб.</h2>
-            <p class="product-details-partnumber">Item 39428531</p>
-          </div>
-
-          <section class="product-colors-container">
-            <p class="product-colors-choosen">Colour: <span class="product-colors-choosen-name">Honey</span></p>
-            <div class="product-colors">
-              <button class="product-colors-button" type="button" style="background-color: #232122">Black color</button>
-              <button class="product-colors-button is-active" type="button" style="background-color: #cfa880">Honey
-                color
-              </button>
+        <div class="col-xs-12 col-sm-12 col-md-7">
+          <section class="product-gallery">
+            <div class="product-gallery-item">
+              <img class="product-gallery-photo" src="files/product-img1.jpg" alt="Product photo 1">
+            </div>
+            <div class="product-gallery-item">
+              <img class="product-gallery-photo" src="files/product-img3.jpg" alt="Product photo 3">
+            </div>
+            <div class="product-gallery-item">
+              <img class="product-gallery-photo" src="files/product-img2.jpg" alt="Product photo 2">
+            </div>
+            <div class="product-gallery-item">
+              <img class="product-gallery-photo" src="files/product-img4.jpg" alt="Product photo 4">
             </div>
           </section>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-5">
+          <article class="product-details">
+            <div class="product-details-header">
+              <h2 class="product-details-price">110 000 руб.</h2>
+              <p class="product-details-partnumber">Item 39428531</p>
+            </div>
 
-          <section class="product-controls">
-            <button class="btn btn-black" type="button">Select a size</button>
-            <button class="btn btn-white" type="button">Find in store</button>
-            <button class="btn btn-text" type="button">Need size help?</button>
-          </section>
-        </article>
+            <section class="product-colors-container">
+              <p class="product-colors-choosen">Colour: <span class="product-colors-choosen-name">Honey</span></p>
+              <div class="product-colors">
+                <button class="product-colors-button" type="button" style="background-color: #232122">Black color
+                </button>
+                <button class="product-colors-button is-active" type="button" style="background-color: #cfa880">Honey
+                  color
+                </button>
+              </div>
+            </section>
+
+            <section class="product-controls">
+              <button class="btn btn-black" type="button">Select a size</button>
+              <button class="btn btn-white" type="button">Find in store</button>
+              <button class="btn btn-text" type="button">Need size help?</button>
+            </section>
+          </article>
+        </div>
       </div>
     </div>
 
     <div class="dropdown is-active">
-      <button class="dropdown-button" type="button">Description</button>
-      <div class="dropdown-content">
-        <p>A refined car coat crafted in protective cotton gabardine.</p>
-        <p>Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable
-          fabric that protects
-          against wind and rain.</p>
-        <p>Raglan sleeves and a concealed button closure complement the clean tailored lines.</p>
-        <p>The piece is finished with a distinctive check undercollar.</p>
-        <ul>
-          <li>Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change
-            slightly according to size.
-          </li>
-          <li>Outer: 100% cotton</li>
-          <li>Check lining: 100% cotton</li>
-          <li>Sleeve lining: 100% viscose</li>
-          <li>Buttons: buffalo horn</li>
-          <li>Specialist dry clean</li>
-          <li>Made in Europe</li>
-          <li>Item 39428531</li>
-        </ul>
+      <div class="container">
+        <div class="dropdown-button-container">
+          <button class="dropdown-button" type="button">Description</button>
+        </div>
+        <div class="dropdown-content">
+          <p>A refined car coat crafted in protective cotton gabardine.</p>
+          <p>Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable
+            fabric that protects
+            against wind and rain.</p>
+          <p>Raglan sleeves and a concealed button closure complement the clean tailored lines.</p>
+          <p>The piece is finished with a distinctive check undercollar.</p>
+          <ul>
+            <li>Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change
+              slightly according to size.
+            </li>
+            <li>Outer: 100% cotton</li>
+            <li>Check lining: 100% cotton</li>
+            <li>Sleeve lining: 100% viscose</li>
+            <li>Buttons: buffalo horn</li>
+            <li>Specialist dry clean</li>
+            <li>Made in Europe</li>
+            <li>Item 39428531</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7 hidden-xs">
-          <img class="delivery-img" src="files/delivery.jpg" alt="Delivery box">
-        </div>
-        <div class="deliverry-options dropdown col-xs-12 col-md-5">
-          <button class="dropdown-button" type="button">DELIVERY</button>
-          <div class="dropdown-content">
-            <h5>Free Next Day Delivery</h5>
-            <p>Order before 7pm Monday to Thursday for delivery the next day</p>
-            <h5>Collect-in-Store</h5>
-            <p>Order online today and pick up your items in store as early as tomorrow</p>
-            <h5>Free Returns</h5>
-            <p>Enjoy free returns on your order</p>
-            <h5>Free Gift Packaging</h5>
-            <p>Discover our gift packaging, a gold lined box tied with a coloured ribbon</p>
+    <div class="dropdown dropdown-delivery-options">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <img class="delivery-img" src="files/delivery.jpg" alt="Delivery box">
+          </div>
+          <div class="col-xs-12 col-md-5">
+            <div class="dropdown-button-container">
+              <button class="dropdown-button" type="button">Delivery</button>
+            </div>
+            <div class="dropdown-content">
+              <h5>Free Next Day Delivery</h5>
+              <p>Order before 7pm Monday to Thursday for delivery the next day</p>
+              <h5>Collect-in-Store</h5>
+              <p>Order online today and pick up your items in store as early as tomorrow</p>
+              <h5>Free Returns</h5>
+              <p>Enjoy free returns on your order</p>
+              <h5>Free Gift Packaging</h5>
+              <p>Discover our gift packaging, a gold lined box tied with a coloured ribbon</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="product-section product-section-recommend">
-      <h2 class="product-section-title">We recommend</h2>
-      <ul class="product-recomendation-list">
-        <li class="product-recomendation-list-item">
-          <a class="product-recomendation-list-link" href="#">
-            <img class="product-recomendation-list-img" src="files/recommend1.jpg" alt="Emroided Hooded">
-            <h3 class="product-recomendation-list-name">Emroided Hooded Content For Three Lines</h3>
-            <h5 class="product-recomendation-list-price">27 000 руб</h5>
-          </a>
-        </li>
-        <li class="product-recomendation-list-item">
-          <a class="product-recomendation-list-link" href="#">
-            <img class="product-recomendation-list-img" src="files/recommend2.jpg" alt="Relaxed Fit Stretch Jeans">
-            <h3 class="product-recomendation-list-name">Relaxed Fit Stretch Jeans</h3>
-            <h5 class="product-recomendation-list-price">22 500 руб</h5>
-          </a>
-        </li>
-        <li class="product-recomendation-list-item">
-          <a class="product-recomendation-list-link" href="#">
-            <img class="product-recomendation-list-img" src="files/recommend3.jpg" alt="Leather and House Check">
-            <h3 class="product-recomendation-list-name">Leather and House Check</h3>
-            <h5 class="product-recomendation-list-price">120 000 руб</h5>
-          </a>
-        </li>
-        <li class="product-recomendation-list-item">
-          <a class="product-recomendation-list-link" href="#">
-            <img class="product-recomendation-list-img" src="files/recommend4.jpg" alt="Leather Wingtip Check">
-            <h3 class="product-recomendation-list-name">Leather Wingtip Check</h3>
-            <h5 class="product-recomendation-list-price">46 000 руб</h5>
-          </a>
-        </li>
-      </ul>
-    </section>
+    <div class="container">
+      <section class="product-section product-section-recommend">
+        <h2 class="product-section-title">We recommend</h2>
+        <ul class="product-recomendation-list">
+          <li class="product-recomendation-list-item">
+            <a class="product-recomendation-list-link" href="#">
+              <img class="product-recomendation-list-img" src="files/recommend1.jpg" alt="Emroided Hooded">
+              <h3 class="product-recomendation-list-name">Emroided Hooded Content For Three Lines</h3>
+              <h5 class="product-recomendation-list-price">27 000 руб</h5>
+            </a>
+          </li>
+          <li class="product-recomendation-list-item">
+            <a class="product-recomendation-list-link" href="#">
+              <img class="product-recomendation-list-img" src="files/recommend2.jpg" alt="Relaxed Fit Stretch Jeans">
+              <h3 class="product-recomendation-list-name">Relaxed Fit Stretch Jeans</h3>
+              <h5 class="product-recomendation-list-price">22 500 руб</h5>
+            </a>
+          </li>
+          <li class="product-recomendation-list-item">
+            <a class="product-recomendation-list-link" href="#">
+              <img class="product-recomendation-list-img" src="files/recommend3.jpg" alt="Leather and House Check">
+              <h3 class="product-recomendation-list-name">Leather and House Check</h3>
+              <h5 class="product-recomendation-list-price">120 000 руб</h5>
+            </a>
+          </li>
+          <li class="product-recomendation-list-item">
+            <a class="product-recomendation-list-link" href="#">
+              <img class="product-recomendation-list-img" src="files/recommend4.jpg" alt="Leather Wingtip Check">
+              <h3 class="product-recomendation-list-name">Leather Wingtip Check</h3>
+              <h5 class="product-recomendation-list-price">46 000 руб</h5>
+            </a>
+          </li>
+        </ul>
+      </section>
 
-    <section class="product-section product-section-seo hidden-md">
-      <h2 class="product-section-title">More for you</h2>
-      <ul class="help-links">
-        <li class="help-links-item">
-          <a class="help-links-link" href="#">Men’s Black Trench Coats</a>
-        </li>
-        <li class="help-links-item">
-          <a class="help-links-link" href="#">Men’s Short Trench Coats</a>
-        </li>
-        <li class="help-links-item">
-          <a class="help-links-link" href="#">Men’s Long Trench Coats</a>
-        </li>
-      </ul>
-    </section>
+      <section class="product-section product-section-seo">
+        <h2 class="product-section-title">More for you</h2>
+        <ul class="help-links">
+          <li class="help-links-item">
+            <a class="help-links-link" href="#">Men’s Black Trench Coats</a>
+          </li>
+          <li class="help-links-item">
+            <a class="help-links-link" href="#">Men’s Short Trench Coats</a>
+          </li>
+          <li class="help-links-item">
+            <a class="help-links-link" href="#">Men’s Long Trench Coats</a>
+          </li>
+        </ul>
+      </section>
+    </div>
   </section>
 
   <footer class="page-footer">
-    <div class="row visible-md">
-      <nav class="page-footer-nav col-md-3">
-        <p class="page-footer-nav-title">Customer service</p>
-        <ul class="page-footer-nav-list">
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Contact Us</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Payment</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Shipping</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Returns</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Faqs</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Live Chat</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">The Burberry App</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Store Locator</a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="page-footer-nav col-md-3">
-        <p class="page-footer-nav-title">Our company</p>
-        <ul class="page-footer-nav-list">
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Our History</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Burberry Group Plc</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Careers</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Corporate Responsibility</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Site Map</a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="page-footer-nav col-md-3">
-        <p class="page-footer-nav-title">Legal & Cookies</p>
-        <ul class="page-footer-nav-list">
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Terms & Conditions</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Privacy Policy</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Cookie Policy</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Accessibility Statement</a>
-          </li>
-          <li class="page-footer-nav-item">
-            <a class="page-footer-nav-link" href="#">Japan Only - SCTL indications</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="page-footer-buttons">
-      <button class="page-footer-button" type="button">Shipping country: Russian Federation</button>
-      <button class="page-footer-button" type="button">Language: English</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <nav class="page-footer-nav">
+            <p class="page-footer-nav-title">Customer service</p>
+            <ul class="page-footer-nav-list">
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Payment</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Shipping</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Returns</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Faqs</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Live Chat</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">The Burberry App</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Store Locator</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3">
+          <nav class="page-footer-nav">
+            <p class="page-footer-nav-title">Our company</p>
+            <ul class="page-footer-nav-list">
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Our History</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Burberry Group Plc</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Careers</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Corporate Responsibility</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Site Map</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3">
+          <nav class="page-footer-nav">
+            <p class="page-footer-nav-title">Legal & Cookies</p>
+            <ul class="page-footer-nav-list">
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Terms & Conditions</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Privacy Policy</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Cookie Policy</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Accessibility Statement</a>
+              </li>
+              <li class="page-footer-nav-item">
+                <a class="page-footer-nav-link" href="#">Japan Only - SCTL indications</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="page-footer-buttons">
+        <button class="page-footer-button" type="button">Shipping country: Russian Federation</button>
+        <button class="page-footer-button" type="button">Language: English</button>
+      </div>
     </div>
     <h5 class="page-footer-help">Need help?</h5>
     <a class="page-footer-help-link" href="#">Find out more and contact us</a>
