@@ -41,13 +41,12 @@
 
 .product-gallery-photo {
   object-fit: contain;
-  width: 300px;
+  width: auto;
   height: 400px;
 }
 
 @media (min-width: 48rem) {
   .product-gallery-photo {
-    width: 432px;
     height: 576px;
 
   }
