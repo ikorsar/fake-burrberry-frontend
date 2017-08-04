@@ -9,7 +9,7 @@
   margin: 0;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-title {
     padding: 1.5rem 0;
     font-size: 1.5rem;
@@ -24,7 +24,7 @@
   margin: 0 -.5rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-gallery {
     margin: 0;
   }
@@ -34,7 +34,7 @@
   flex-shrink: 0;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-gallery-item {
   }
 }
@@ -45,7 +45,7 @@
   height: 400px;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-gallery-photo {
     height: 576px;
 
@@ -56,7 +56,7 @@
   margin: 0 -.5rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-details {
     margin: 0;
   }
@@ -69,7 +69,7 @@
   padding: 1rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-details-header {
     padding: 0 0 1rem;
   }
@@ -97,7 +97,7 @@
   margin: 0 1rem 2rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-colors-container {
     margin: 0 0 2rem;
   }
@@ -134,7 +134,7 @@
   flex-flow: column;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-controls {
     padding: 0;
   }
@@ -144,7 +144,7 @@
   padding: 0;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .dropdown-delivery-options .dropdown-button {
     padding: 0 0 1rem;
     line-height: 1.188rem;
@@ -155,14 +155,14 @@
   display: none;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .delivery-img {
     display: block;
     width: 100%;
   }
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .dropdown-delivery-options .dropdown-content {
     padding: 0;
   }
@@ -188,7 +188,7 @@
   margin: 0 -.5rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-section {
     padding-top: 1.563rem;
   }
@@ -202,7 +202,7 @@
   padding-top: 1rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-section-seo {
     display: none;
   }
@@ -222,7 +222,7 @@
   margin: 0 1rem 1.5rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-section-title {
     margin: 0 .5rem 1rem;
     line-height: 1rem;
@@ -236,7 +236,7 @@
   padding: 0 .125rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-recomendation-list {
     padding: 0;
   }
@@ -247,7 +247,7 @@
   margin: 0 .875rem 2rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-recomendation-list-item {
     flex-basis: calc(25% - 1rem);
     margin: 0 .5rem .5rem;
@@ -265,7 +265,7 @@
   width: 100%;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .product-recomendation-list-img {
   }
 }

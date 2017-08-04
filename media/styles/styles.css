@@ -132,7 +132,7 @@ p {
   border-top: 1px solid #c6c6c6;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .dropdown {
     border-top: none;
   }
@@ -142,7 +142,7 @@ p {
   border-bottom: 1px solid #c6c6c6;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .dropdown + .dropdown {
     border-bottom: none;
   }
@@ -175,7 +175,7 @@ p {
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .dropdown-button {
     padding: 1.563rem 0 1rem;
   }
@@ -194,7 +194,7 @@ p {
   transform: translateY(-50%);
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .dropdown-button:after {
     display: none;
   }
@@ -205,7 +205,7 @@ p {
   padding: 0 .5rem 2rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .dropdown-content {
     display: block;
     padding: 0 0 1.438rem;
@@ -247,7 +247,7 @@ p {
   padding: 1rem 0;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .page-header {
     padding: 1.5rem;
   }
@@ -272,7 +272,7 @@ p {
   padding-bottom: 4rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .page-content {
     padding-bottom: 3.5rem;
   }
@@ -287,7 +287,7 @@ p {
   padding: 2rem 0;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .page-footer {
     padding-left: 0;
     padding-right: 0;
@@ -299,7 +299,7 @@ p {
   padding-right: .5rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .page-footer-buttons {
     display: flex;
     padding-left: 0;
@@ -321,7 +321,7 @@ p {
   border: none;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .page-footer-button {
     margin: 0 1.5rem 0 0;
   }
@@ -335,7 +335,7 @@ p {
   font-size: 1rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .page-footer-help {
     display: none;
   }
@@ -353,7 +353,7 @@ p {
   padding: 0 1rem;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .page-footer-help-link {
     display: none;
   }
@@ -364,7 +364,7 @@ p {
   display: none;
 }
 
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   .page-footer-nav {
     display: block;
   }
