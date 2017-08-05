@@ -1,26 +1,26 @@
 /* product styles */
 
 .product-title {
-  padding: 1rem .5rem;
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
   font-family: 'Lora', Helvetica, Arial, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5rem;
   margin: 0;
+  padding: 1rem .5rem;
 }
 
 @media screen and (min-width: 48rem) {
   .product-title {
-    padding: 1.5rem 0;
     font-size: 1.5rem;
     line-height: 1.813rem;
+    padding: 1.5rem 0;
   }
 }
 
 .product-gallery {
   display: flex;
-  overflow-y: hidden;
   overflow-x: scroll;
+  overflow-y: hidden;
   margin: 0 -.5rem;
 }
 
@@ -31,9 +31,9 @@
 }
 
 .product-gallery-photo {
+  flex-shrink: 0;
   width: auto;
   height: 400px;
-  flex-shrink: 0;
 }
 
 @media screen and (min-width: 48rem) {
@@ -54,8 +54,8 @@
 
 .product-details-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
 }
 
@@ -66,25 +66,27 @@
 }
 
 .product-details-price {
-  font-weight: normal;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1rem;
+  font-weight: normal;
   line-height: 1.19;
+  margin: 0;
   padding: 0;
   text-transform: none;
-  margin: 0;
+  color: #171717;
 }
 
 .product-details-partnumber {
-  color: #171717;
   font-size: .75rem;
   line-height: 1.19;
   margin: 0;
+  color: #171717;
 }
 
 .product-colors-container {
-  border-bottom: 1px solid #c6c6c6;
-  padding-bottom: 2rem;
   margin: 0 1rem 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #c6c6c6;
 }
 
 @media screen and (min-width: 48rem) {
@@ -96,6 +98,7 @@
 .product-colors-choosen {
   font-size: .75rem;
   line-height: 1rem;
+  margin: 0 0 1rem;
 }
 
 .product-colors {
@@ -103,15 +106,15 @@
 }
 
 .product-colors-button {
+  font-size: 0;
   display: block;
-  height: 40px;
   width: 40px;
+  height: 40px;
   margin-right: 1rem;
   padding: 0;
-  font-size: 0;
-  border-radius: 50%;
-  border: 1px solid transparent;
   transition: border-color .25s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 50%;
 }
 
 .product-colors-button.is-active {
@@ -119,9 +122,9 @@
 }
 
 .product-controls {
-  padding: 0 1rem 3rem;
   display: flex;
   flex-flow: column;
+  padding: 0 1rem 3rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -136,8 +139,8 @@
 
 @media screen and (min-width: 48rem) {
   .dropdown-delivery-options .dropdown-button {
-    padding: 0 0 1rem;
     line-height: 1.188rem;
+    padding: 0 0 1rem;
   }
 }
 
@@ -153,18 +156,18 @@
 }
 
 .delivery-description .delivery-description-title {
-  font-weight: bold;
-  font-size: .75rem;
-  line-height: .875rem;
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .75rem;
+  font-weight: bold;
+  line-height: .875rem;
   margin: 0 0 .25rem;
 }
 
 .delivery-description .delivery-description-text {
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   line-height: 1rem;
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 .delivery-description-text:last-child {
@@ -198,23 +201,23 @@
 }
 
 .product-section-title {
-  display: inline-block;
-  padding-bottom: .5rem;
-  border-bottom: 1px solid #171717;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.1875rem;
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  color: #171717;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.1875rem;
   position: relative;
+  display: inline-block;
   margin: 0 0 1.5rem;
+  padding-bottom: .5rem;
+  text-transform: uppercase;
+  color: #171717;
+  border-bottom: 1px solid #171717;
 }
 
 @media screen and (min-width: 48rem) {
   .product-section-title {
-    margin: 0 0 1rem;
     line-height: 1rem;
+    margin: 0 0 1rem;
     padding-bottom: .565rem;
   }
 }
@@ -232,10 +235,10 @@
 }
 
 .product-recommendation-card {
-  color: #171717;
-  text-decoration: none;
   display: block;
   margin-bottom: 2rem;
+  text-decoration: none;
+  color: #171717;
 }
 
 @media screen and (min-width: 48rem) {
@@ -250,26 +253,32 @@
 }
 
 .product-recommendation-card-name {
-  padding: 0;
+  font-family: 'Lora', Helvetica, Arial, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.19;
   margin: .5rem 0;
+  padding: 0;
 }
 
 .product-recommendation-card-price {
-  color: #999;
-  margin: 0;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
+  font-weight: 400;
   line-height: 1.17;
+  margin: 0;
+  color: #999;
 }
 
 .help-links-link {
-  color: #171717;
-  text-decoration: none;
-  font-size: .875rem;
-  line-height: 1.063rem;
   font-family: 'Lora', Helvetica, Arial, serif;
+  font-size: .875rem;
   font-style: italic;
-  margin-bottom: 1rem;
+  line-height: 1.063rem;
   display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #171717;
 }
 
 .help-links-link:last-child {

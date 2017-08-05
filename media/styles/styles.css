@@ -1,90 +1,50 @@
 /* default styles */
 
 body {
-  background-color: #fff;
-  padding: 0;
-  font-size: 16px;
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  padding: 0;
   color: #171717;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
   max-width: 100%;
 }
 
-h1 {
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: 'Lora', Helvetica, Arial, serif;
-  margin: 0 0 1rem;
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.1875rem;
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  color: #171717;
-  text-transform: uppercase;
-  position: relative;
-  margin: 0 1rem 1.5rem;
-}
-
-h3 {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.19;
-  font-family: 'Lora', Helvetica, Arial, serif;
-  padding: 0 1rem;
-}
-
-h5 {
-  font-weight: 400;
-  font-size: .75rem;
-  line-height: 1.17;
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-p {
-  font-size: .875rem;
-  line-height: 1.71;
-  margin: 0 0 1rem;
-}
-
 .btn {
-  padding: 1rem 0;
-  background-color: #fff;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75em;
   line-height: .875rem;
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  border: 1px solid #999;
-  text-align: center;
-  text-transform: uppercase;
-  color: #171717;
-  border-radius: 2px;
   display: block;
   margin: 0 0 1rem;
+  padding: 1rem 0;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  color: #171717;
+  border: 1px solid #999;
+  border-radius: 2px;
+  background-color: #fff;
 }
 
 .btn-black {
-  background-color: #171717;
-  border-color: #171717;
   color: #fff;
+  border-color: #171717;
+  background-color: #171717;
 }
 
 .btn-text {
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   line-height: 1rem;
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  margin: .5rem 0 0;
-  background-color: transparent;
-  border: none;
-  text-align: left;
-  padding: 0;
   align-self: flex-start;
+  margin: .5rem 0 0;
+  padding: 0;
+  text-align: left;
+  border: none;
+  background-color: transparent;
 }
 
 .dropdown {
@@ -121,17 +81,17 @@ p {
 }
 
 .dropdown-button {
-  display: block;
-  background-color: transparent;
-  padding: 2rem .5rem;
-  border: none;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
   position: relative;
+  display: block;
+  padding: 2rem .5rem;
   text-align: left;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  border: none;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 48rem) {
@@ -141,16 +101,16 @@ p {
 }
 
 .dropdown-button:after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 5px 0;
-  border-color: #171717 transparent transparent;
   position: absolute;
   top: 50%;
   right: .5rem;
+  width: 0;
+  height: 0;
+  content: '';
   transform: translateY(-50%);
+  border-width: 10px 5px 0;
+  border-style: solid;
+  border-color: #171717 transparent transparent;
 }
 
 @media screen and (min-width: 48rem) {
@@ -172,10 +132,10 @@ p {
 }
 
 .dropdown-content p {
+  font-family: 'Lora', Helvetica, Arial, serif;
   font-size: .875rem;
   line-height: 1.5rem;
-  font-family: 'Lora', Helvetica, Arial, serif;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .dropdown-content p + ul {
@@ -189,9 +149,9 @@ p {
 }
 
 .dropdown-content li {
+  font-family: 'Lora', Helvetica, Arial, serif;
   font-size: .875rem;
   line-height: 1.5rem;
-  font-family: 'Lora', Helvetica, Arial, serif;
 }
 
 .dropdown-content li:last-child {
@@ -203,8 +163,8 @@ p {
 /* header styles */
 
 .page-header {
-  border-bottom: 1px solid #c6c6c6;
   padding: 1rem 0;
+  border-bottom: 1px solid #c6c6c6;
 }
 
 @media screen and (min-width: 48rem) {
@@ -215,8 +175,8 @@ p {
 
 .page-header-link {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .page-header-logo {
@@ -243,42 +203,42 @@ p {
 /* footer styles */
 
 .page-footer {
-  background-color: #f3f3f3;
   padding: 2rem 0;
+  background-color: #f3f3f3;
 }
 
 @media screen and (min-width: 48rem) {
   .page-footer {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 }
 
 .page-footer-buttons {
-  padding-left: .5rem;
   padding-right: .5rem;
+  padding-left: .5rem;
 }
 
 @media screen and (min-width: 48rem) {
   .page-footer-buttons {
     display: flex;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 }
 
 .page-footer-button {
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
   display: block;
-  color: #999;
-  text-decoration: none;
   margin-bottom: 1rem;
   padding: 0;
-  background-color: transparent;
-  font-weight: 400;
-  font-size: .75rem;
-  line-height: 1rem;
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #999;
   border: none;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 48rem) {
@@ -288,11 +248,11 @@ p {
 }
 
 .page-footer-help {
-  text-align: center;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1.188rem;
   margin: 1.5rem 0 1rem;
-  font-size: 1rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 48rem) {
@@ -302,15 +262,15 @@ p {
 }
 
 .page-footer-help-link {
-  color: #171717;
-  text-decoration: none;
-  text-align: center;
-  font-size: .875rem;
-  line-height: 1.063rem;
   font-family: 'Lora', Helvetica, Arial, serif;
+  font-size: .875rem;
   font-style: italic;
+  line-height: 1.063rem;
   display: block;
   padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #171717;
 }
 
 @media screen and (min-width: 48rem) {
@@ -320,8 +280,8 @@ p {
 }
 
 .page-footer-nav {
-  margin-bottom: 2rem;
   display: none;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -331,21 +291,21 @@ p {
 }
 
 .page-footer-nav-title {
-  font-weight: bold;
   font-size: .75rem;
+  font-weight: bold;
   line-height: .875rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   text-transform: uppercase;
 }
 
 .page-footer-nav-link {
-  color: #999;
-  text-decoration: none;
-  font-weight: 600;
   font-size: .75rem;
+  font-weight: 600;
   line-height: 1rem;
-  margin-bottom: .75rem;
   display: block;
+  margin-bottom: .75rem;
+  text-decoration: none;
+  color: #999;
 }
 
 .page-footer-nav-link:last-child {
