@@ -2,52 +2,11 @@
 
 body {
   background-color: #fff;
-  margin: 0 auto;
   padding: 0;
   font-size: 16px;
-  min-height: 100vh;
   font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #171717;
-}
-
-audio,
-canvas,
-img,
-video {
-  vertical-align: middle;
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.strike,
-del {
-  text-decoration: line-through;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-ol {
-  list-style-position: outside;
-  padding: 0 0 0 1.25rem;
-  margin: 0 0 1.25rem;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
 }
 
 img {
@@ -190,7 +149,7 @@ p {
   border-color: #171717 transparent transparent;
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: .5rem;
   transform: translateY(-50%);
 }
 
@@ -226,6 +185,7 @@ p {
 .dropdown-content ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .dropdown-content li {
