@@ -96,7 +96,7 @@ img {
 
 @media screen and (min-width: 48rem) {
   .dropdown-button {
-    padding: 1.563rem 0 1rem;
+    padding: 1.5rem 0 1rem;
   }
 }
 
@@ -127,7 +127,7 @@ img {
 @media screen and (min-width: 48rem) {
   .dropdown-content {
     display: block;
-    padding: 0 0 1.438rem;
+    padding: 0 0 1.5rem;
   }
 }
 
@@ -250,7 +250,7 @@ img {
 .page-footer-help {
   font-size: 1rem;
   font-weight: bold;
-  line-height: 1.188rem;
+  line-height: 1.25rem;
   margin: 1.5rem 0 1rem;
   text-align: center;
 }
