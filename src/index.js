@@ -1,8 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import Header from "./components/Header/Header";
+import App from './App';
+import Footer from './components/Footer/Footer';
+
+import '../node_modules/normalize.css/normalize.css';
+import './styles/flexboxgrid.css';
+import './styles/styles.css';
+import './styles/product-card.css';
+
+ReactDOM.render(
+  <div>
+    <Header/>
+
+    <App/>
+
+    <Footer/>
+  </div>,
+  document.getElementById('root')
+);
