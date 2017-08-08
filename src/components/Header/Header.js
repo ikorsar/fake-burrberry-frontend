@@ -1,16 +1,31 @@
-import React, {Component} from 'react';
+import React from 'react';
 import logo from './logo.svg';
+import styled from 'styled-components';
 
-class Header extends Component {
-  render() {
-    return (
-      <header className="page-header">
-        <a className="page-header-link" href="/" title="Burberry">
-          <img className="page-header-logo" src={logo} alt="Burberry Logo"/>
-        </a>
-      </header>
-    );
+const PageHeader = styled.header`
+  padding: 1rem 0;
+  border-bottom: 1px solid #c6c6c6;
+  
+  @media screen and (min-width: 48rem) {
+    padding: 1.5rem;
   }
-}
+`;
 
-export default Header;
+const PageHeaderlLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const PageHeaderLogo = styled.img`
+  width: 138px;
+  height: 10px;
+`;
+
+export default () => (
+  <PageHeader>
+    <PageHeaderlLink href="/">
+      <PageHeaderLogo src={logo} alt="Burberry Logo"/>
+    </PageHeaderlLink>
+  </PageHeader>
+);

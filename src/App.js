@@ -1,14 +1,23 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 
 import Gallery from './components/Gallery/Gallery';
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import Accordion from "./components/Accordion/Accordion";
 import ProductCardRecommended from "./components/ProductCardRecommended/ProductCardRecommended";
 
+const PageContent = styled.div`
+  padding-bottom: 4rem;
+
+  @media screen and (min-width: 48rem) {
+    padding-bottom: 3.5rem;
+  }
+`;
+
 class App extends Component {
   render() {
     return (
-      <section className="page-content" role="main">
+      <PageContent role="main">
         <div className="container">
           <h1 className="product-title">Long Cotton Gabardine Car Coat</h1>
           <div className="row">
@@ -40,7 +49,7 @@ class App extends Component {
             </div>
           </section>
         </div>
-      </section>
+      </PageContent>
     );
   }
 }
