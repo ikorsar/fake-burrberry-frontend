@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import App from './App';
 import Footer from './components/Footer/Footer';
 
-import '../node_modules/normalize.css/normalize.css';
+import 'normalize.css';
 import './styles/flexboxgrid.css';
 import './styles/styles.css';
 import './styles/product-card.css';

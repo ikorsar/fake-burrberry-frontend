@@ -26,6 +26,9 @@ class App extends Component {
             <h2 className="product-section-title">We recommend</h2>
             <div className="row">
               <ProductCardRecommended/>
+              <ProductCardRecommended/>
+              <ProductCardRecommended/>
+              <ProductCardRecommended/>
             </div>
           </section>
           <section className="product-section product-section-more">
