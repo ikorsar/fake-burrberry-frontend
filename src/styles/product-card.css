@@ -221,54 +221,6 @@
   }
 }
 
-.product-recomendation-list {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 0 .125rem;
-}
-
-@media screen and (min-width: 48rem) {
-  .product-recomendation-list {
-    padding: 0;
-  }
-}
-
-.product-recommendation-card {
-  display: block;
-  margin-bottom: 2rem;
-  text-decoration: none;
-  color: #171717;
-}
-
-@media screen and (min-width: 48rem) {
-  .product-recommendation-card {
-    margin-bottom: .5rem;
-  }
-}
-
-.product-recommendation-card-photo {
-  display: block;
-  width: 100%;
-}
-
-.product-recommendation-card-name {
-  font-family: 'Lora', Helvetica, Arial, serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.19;
-  margin: .5rem 0;
-  padding: 0;
-}
-
-.product-recommendation-card-price {
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
-  font-weight: 400;
-  line-height: 1.17;
-  margin: 0;
-  color: #999;
-}
-
 .help-links-link {
   font-family: 'Lora', Helvetica, Arial, serif;
   font-size: .875rem;

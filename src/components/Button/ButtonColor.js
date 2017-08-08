@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-const Button = styled.button`
+const ButtonColor = styled.button`
 	font-size: 0;
   display: block;
   width: 40px;
@@ -14,5 +14,5 @@ const Button = styled.button`
 `;
 
 export default () => (
-  <Button type="button" />
+  <ButtonColor type="button" />
 );

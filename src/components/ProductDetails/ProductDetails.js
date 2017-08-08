@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Button from "../Button/Button";
+import ButtonColor from "../Button/ButtonColor";
 
 class ProductDetails extends Component {
   render() {
@@ -14,8 +14,8 @@ class ProductDetails extends Component {
           <p className="product-colors-choosen">Colour: <span
             className="product-colors-choosen-name">Honey</span></p>
           <div className="product-colors">
-            <Button label="Black color"/>
-            <Button className="is-active" label="Honey color"/>
+            <ButtonColor label="Black color"/>
+            <ButtonColor className="is-active" label="Honey color"/>
           </div>
         </section>
 

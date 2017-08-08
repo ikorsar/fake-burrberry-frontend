@@ -47,115 +47,12 @@ img {
   background-color: transparent;
 }
 
-.dropdown {
-  border-top: 1px solid #c6c6c6;
-}
-
-@media screen and (min-width: 48rem) {
-  .dropdown {
-    border-top: none;
-  }
-}
-
-.dropdown + .dropdown {
-  border-bottom: 1px solid #c6c6c6;
-}
-
-@media screen and (min-width: 48rem) {
-  .dropdown + .dropdown {
-    border-bottom: none;
-  }
-}
-
 .dropdown.is-active .dropdown-content {
   display: block;
 }
 
 .dropdown.is-active .dropdown-button:after {
   transform: translateY(-50%) rotate(180deg);
-}
-
-.dropdown-button-container {
-  display: flex;
-  flex-flow: column;
-}
-
-.dropdown-button {
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  position: relative;
-  display: block;
-  padding: 2rem .5rem;
-  text-align: left;
-  text-transform: uppercase;
-  border: none;
-  background-color: transparent;
-}
-
-@media screen and (min-width: 48rem) {
-  .dropdown-button {
-    padding: 1.5rem 0 1rem;
-  }
-}
-
-.dropdown-button:after {
-  position: absolute;
-  top: 50%;
-  right: .5rem;
-  width: 0;
-  height: 0;
-  content: '';
-  transform: translateY(-50%);
-  border-width: 10px 5px 0;
-  border-style: solid;
-  border-color: #171717 transparent transparent;
-}
-
-@media screen and (min-width: 48rem) {
-  .dropdown-button:after {
-    display: none;
-  }
-}
-
-.dropdown-content {
-  display: none;
-  padding: 0 .5rem 2rem;
-}
-
-@media screen and (min-width: 48rem) {
-  .dropdown-content {
-    display: block;
-    padding: 0 0 1.5rem;
-  }
-}
-
-.dropdown-content p {
-  font-family: 'Lora', Helvetica, Arial, serif;
-  font-size: .875rem;
-  line-height: 1.5rem;
-  margin: 0;
-}
-
-.dropdown-content p + ul {
-  margin-top: 1.5rem;
-}
-
-.dropdown-content ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.dropdown-content li {
-  font-family: 'Lora', Helvetica, Arial, serif;
-  font-size: .875rem;
-  line-height: 1.5rem;
-}
-
-.dropdown-content li:last-child {
-  margin-bottom: 0;
 }
 
 /* default styles end */

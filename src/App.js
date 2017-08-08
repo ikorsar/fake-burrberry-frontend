@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Gallery from './components/Gallery/Gallery';
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import Accordion from "./components/Accordion/Accordion";
-import ProductCardRecommended from "./components/ProductCardRecommended/ProductCardRecommended";
+import ProductCardRecommended from "./components/ProductCardRecommended/ProductCardRecommended"
 
 const PageContent = styled.div`
   padding-bottom: 4rem;
