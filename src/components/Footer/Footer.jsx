@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import PageFooterNav from "./Nav";
-import PageFooteButtons from "./Btns";
+import PageFooterNav from './Nav';
+import PageFooteButtons from './Btns';
 
 const PageFooter = styled.footer`
   padding: 2rem 0;
   background-color: #f3f3f3;
-  
+
   @media screen and (min-width: 48rem) {
     padding-right: 0;
     padding-left: 0;
@@ -43,11 +43,13 @@ const PageFooterHelpLink = styled.a`
 `;
 
 export default () =>
-  ( <PageFooter>
+  (<PageFooter>
     <div className="container">
-      <PageFooterNav/>
-      <PageFooteButtons/>
+      <PageFooterNav />
+      <PageFooteButtons />
     </div>
-    <PageFooterHelp/>
-    <PageFooterHelpLink href="#" title="Find out more and contact us">Find out more and contact us</PageFooterHelpLink>
+    <PageFooterHelp />
+    <PageFooterHelpLink href="#" title="Find out more and contact us">
+      Find out more and contact us
+    </PageFooterHelpLink>
   </PageFooter>);

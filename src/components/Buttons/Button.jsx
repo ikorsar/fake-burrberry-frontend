@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Button = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -14,11 +14,12 @@ const Button = styled.button`
   border-width: 1px;
   border-style: solid;
   border-radius: 2px;
-  background-color: ${props => props.secondary ? "#171717" : "#fff"};
-  color: ${props => props.secondary ? "#fff" : "#171717"};
-  border-color: ${props => props.secondary ? "#171717" : "#999"};
+  background-color: ${props => (props.secondary ? '#171717' : '#fff')};
+  color: ${props => (props.secondary ? '#fff' : '#171717')};
+  border-color: ${props => (props.secondary ? '#171717' : '#999')};
 `;
 
-export default props => (
-  <Button type="button">{props.label}</Button>
-);
+export default props =>
+  (<Button type="button">
+    {props.label}
+  </Button>);

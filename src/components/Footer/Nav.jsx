@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const PageFooterNav = styled.nav`
   display: none;
   margin-bottom: 2rem;
-  
+
   @media screen and (min-width: 48rem) {
     display: block;
   }
@@ -26,14 +26,14 @@ const PageFooterNavLink = styled.a`
   margin-bottom: .75rem;
   text-decoration: none;
   color: #999;
-  
+
   &:last-child {
     margin-bottom: 0;
   }
 `;
 
-export default () => (
-  <div className="row">
+export default () =>
+  (<div className="row">
     <div className="col-md-3">
       <PageFooterNav>
         <PageFooterNavTitle>Customer service</PageFooterNavTitle>
@@ -67,5 +67,4 @@ export default () => (
         <PageFooterNavLink href="#">Japan Only - SCTL indications</PageFooterNavLink>
       </PageFooterNav>
     </div>
-  </div>
-);
+  </div>);

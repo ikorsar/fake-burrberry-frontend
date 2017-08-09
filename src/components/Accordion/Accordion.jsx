@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Accordion = styled.div`
   border-top: 1px solid #c6c6c6;
-  
+
   @media screen and (min-width: 48rem) {
     border-top: none;
   }
-  
+
   & + & {
     border-bottom: 1px solid #c6c6c6;
-    
+
     @media screen and (min-width: 48rem) {
       border-bottom: none;
     }
@@ -33,11 +33,11 @@ export const AccordionButton = styled.button`
   text-transform: uppercase;
   border: none;
   background-color: transparent;
-  
+
   @media screen and (min-width: 48rem) {
     padding: 1.5rem 0 1rem;
   }
-  
+
   &:after {
     position: absolute;
     top: 50%;
@@ -49,12 +49,12 @@ export const AccordionButton = styled.button`
     border-width: 10px 5px 0;
     border-style: solid;
     border-color: #171717 transparent transparent;
-    
+
     @media screen and (min-width: 48rem) {
       display: none;
     }
   }
-  
+
   .is-active &:after {
     transform: translateY(-50%) rotate(180deg);
   }
@@ -68,7 +68,7 @@ export const AccordionContent = styled.div`
     display: block;
     padding: 0 0 1.5rem;
   }
-  
+
   .is-active & {
     display: block;
   }

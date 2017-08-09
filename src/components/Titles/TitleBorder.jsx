@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const TitleBorder = styled.h2`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -20,6 +20,7 @@ const TitleBorder = styled.h2`
   }
 `;
 
-export default props => (
-  <TitleBorder>{props.label}</TitleBorder>
-);
+export default props =>
+  (<TitleBorder>
+    {props.label}
+  </TitleBorder>);

@@ -1,10 +1,19 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
 
-import ButtonColor from "../../components/Buttons/ButtonColor";
-import Button from "../../components/Buttons/Button";
-import ButtonText from "../../components/Buttons/ButtonText";
+import ButtonColor from '../../components/Buttons/ButtonColor';
+import Button from '../../components/Buttons/Button';
+import ButtonText from '../../components/Buttons/ButtonText';
 
-import {Product, ProductHeader, ProductPrice, ProductPartNumber, ProductControls, ProductColors, ProductColorsChoosen, ProductColorsContainer} from "./styled";
+import {
+  Product,
+  ProductHeader,
+  ProductPrice,
+  ProductPartNumber,
+  ProductControls,
+  ProductColors,
+  ProductColorsChoosen,
+  ProductColorsContainer,
+} from './styled';
 
 class Details extends Component {
   render() {
@@ -18,15 +27,15 @@ class Details extends Component {
         <ProductColors>
           <ProductColorsChoosen>Color: Honey</ProductColorsChoosen>
           <ProductColorsContainer>
-            <ButtonColor label="Black color"/>
-            <ButtonColor label="Honey color" isActive/>
+            <ButtonColor label="Black color" />
+            <ButtonColor label="Honey color" isActive />
           </ProductColorsContainer>
         </ProductColors>
 
         <ProductControls>
-          <Button label="Select a size" secondary/>
-          <Button label="Find in store"/>
-          <ButtonText label="Need size help?"/>
+          <Button label="Select a size" secondary />
+          <Button label="Find in store" />
+          <ButtonText label="Need size help?" />
         </ProductControls>
       </Product>
     );

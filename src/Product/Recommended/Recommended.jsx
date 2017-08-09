@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const ProductCardRecommended = styled.a`
   display: block;
@@ -35,10 +35,9 @@ const ProductCardRecommendedPrice = styled.h4`
   color: #999;
 `;
 
-export default () => (
-  <ProductCardRecommended href="#" title="Emroided Hooded">
-    <ProductCardRecommendedPhoto src="/files/recommend1.jpg" alt="Emroided Hooded"/>
+export default () =>
+  (<ProductCardRecommended href="#" title="Emroided Hooded">
+    <ProductCardRecommendedPhoto src="/files/recommend1.jpg" alt="Emroided Hooded" />
     <ProductCardRecommendedName>Emroided Hooded Content For Three Lines</ProductCardRecommendedName>
     <ProductCardRecommendedPrice>27 000 руб</ProductCardRecommendedPrice>
-  </ProductCardRecommended>
-);
+  </ProductCardRecommended>);

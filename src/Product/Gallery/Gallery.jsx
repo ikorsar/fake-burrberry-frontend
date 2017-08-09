@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Gallery = styled.section`
   display: flex;
@@ -22,11 +22,10 @@ const GalleryPhoto = styled.img`
   }
 `;
 
-export default () => (
-  <Gallery>
-    <GalleryPhoto src="/files/product-img1.jpg" alt="Product photo 1"/>
-    <GalleryPhoto src="/files/product-img3.jpg" alt="Product photo 3"/>
-    <GalleryPhoto src="/files/product-img2.jpg" alt="Product photo 2"/>
-    <GalleryPhoto src="/files/product-img4.jpg" alt="Product photo 4"/>
-  </Gallery>
-);
+export default () =>
+  (<Gallery>
+    <GalleryPhoto src="/files/product-img1.jpg" alt="Product photo 1" />
+    <GalleryPhoto src="/files/product-img3.jpg" alt="Product photo 3" />
+    <GalleryPhoto src="/files/product-img2.jpg" alt="Product photo 2" />
+    <GalleryPhoto src="/files/product-img4.jpg" alt="Product photo 4" />
+  </Gallery>);

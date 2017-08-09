@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const ProductTitle = styled.h1`
   font-family: "Lora", Helvetica, Arial, serif;
@@ -16,6 +16,7 @@ const ProductTitle = styled.h1`
   }
 `;
 
-export default props => (
-  <ProductTitle>{props.label}</ProductTitle>
-);
+export default props =>
+  (<ProductTitle>
+    {props.label}
+  </ProductTitle>);

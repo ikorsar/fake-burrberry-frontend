@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Product = styled.article`
   margin: 0 -.5rem;
@@ -53,15 +53,13 @@ export const ProductColorsChoosen = styled.p`
   margin: 0 0 1rem;
 `;
 
-export const ProductColorsContainer = styled.div`
-  display: flex;
-`;
+export const ProductColorsContainer = styled.div`display: flex;`;
 
 export const ProductControls = styled.section`
   display: flex;
   flex-flow: column;
   padding: 0 1rem 3rem;
-  
+
   @media screen and (min-width: 48rem) {
     padding: 0;
   }

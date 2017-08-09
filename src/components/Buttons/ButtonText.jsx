@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const ButtonText = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -16,6 +16,7 @@ const ButtonText = styled.button`
   background-color: transparent;
 `;
 
-export default props => (
-  <ButtonText type="button">{props.label}</ButtonText>
-);
+export default props =>
+  (<ButtonText type="button">
+    {props.label}
+  </ButtonText>);
