@@ -6,7 +6,7 @@ import App from "./App";
 import PageFooter from "./components/Footer/Footer";
 
 import "normalize.css";
-import "./styles/flexboxgrid.css";
+import "flexboxgrid2";
 import "./styles/styles.css";
 
 ReactDOM.render(

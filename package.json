@@ -1,8 +1,9 @@
 {
-  "name": "fake-burrberry-frontend",
+  "name": "Burberry-Shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "flexboxgrid2": "^7.0.0-alpha6",
     "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
