@@ -13,40 +13,6 @@ img {
   max-width: 100%;
 }
 
-.btn {
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75em;
-  line-height: .875rem;
-  display: block;
-  margin: 0 0 1rem;
-  padding: 1rem 0;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #171717;
-  border: 1px solid #999;
-  border-radius: 2px;
-  background-color: #fff;
-}
-
-.btn-black {
-  color: #fff;
-  border-color: #171717;
-  background-color: #171717;
-}
-
-.btn-text {
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
-  line-height: 1rem;
-  align-self: flex-start;
-  margin: .5rem 0 0;
-  padding: 0;
-  text-align: left;
-  border: none;
-  background-color: transparent;
-}
-
 .dropdown.is-active .dropdown-content {
   display: block;
 }

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import PageFooterNav from './Nav/Nav';
-import PageFooteButtons from './Buttons/Btns';
+import PageFooterNav from "./Nav";
+import PageFooteButtons from "./Btns";
 
 const PageFooter = styled.footer`
   padding: 2rem 0;
@@ -27,7 +27,7 @@ const PageFooterHelp = styled.h3`
 `;
 
 const PageFooterHelpLink = styled.a`
-  font-family: 'Lora', Helvetica, Arial, serif;
+  font-family: "Lora", Helvetica, Arial, serif;
   font-size: .875rem;
   font-style: italic;
   line-height: 1rem;

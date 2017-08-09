@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const ProductCardRecommended = styled.a`
   display: block;
@@ -18,7 +18,7 @@ const ProductCardRecommendedPhoto = styled.img`
 `;
 
 const ProductCardRecommendedName = styled.h3`
-  font-family: 'Lora', Helvetica, Arial, serif;
+  font-family: "Lora", Helvetica, Arial, serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.19;
@@ -27,7 +27,7 @@ const ProductCardRecommendedName = styled.h3`
 `;
 
 const ProductCardRecommendedPrice = styled.h4`
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   font-weight: 400;
   line-height: 1.17;
