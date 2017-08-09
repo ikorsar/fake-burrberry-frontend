@@ -54,6 +54,10 @@ export const AccordionButton = styled.button`
       display: none;
     }
   }
+  
+  .is-active &:after {
+    transform: translateY(-50%) rotate(180deg);
+  }
 `;
 
 export const AccordionContent = styled.div`

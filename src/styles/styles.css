@@ -13,12 +13,4 @@ img {
   max-width: 100%;
 }
 
-.dropdown.is-active .dropdown-content {
-  display: block;
-}
-
-.dropdown.is-active .dropdown-button:after {
-  transform: translateY(-50%) rotate(180deg);
-}
-
 /* default styles end */
