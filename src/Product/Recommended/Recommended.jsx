@@ -36,11 +36,9 @@ const ProductCardRecommendedPrice = styled.h4`
 `;
 
 export default () => (
-  <div className="col-xs-6 col-md-3">
-    <ProductCardRecommended href="#" title="Emroided Hooded">
-      <ProductCardRecommendedPhoto src="/files/recommend1.jpg" alt="Emroided Hooded"/>
-      <ProductCardRecommendedName>Emroided Hooded Content For Three Lines</ProductCardRecommendedName>
-      <ProductCardRecommendedPrice>27 000 руб</ProductCardRecommendedPrice>
-    </ProductCardRecommended>
-  </div>
+  <ProductCardRecommended href="#" title="Emroided Hooded">
+    <ProductCardRecommendedPhoto src="/files/recommend1.jpg" alt="Emroided Hooded"/>
+    <ProductCardRecommendedName>Emroided Hooded Content For Three Lines</ProductCardRecommendedName>
+    <ProductCardRecommendedPrice>27 000 руб</ProductCardRecommendedPrice>
+  </ProductCardRecommended>
 );

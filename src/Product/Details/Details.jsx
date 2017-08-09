@@ -6,7 +6,7 @@ import ButtonText from "../../components/Buttons/ButtonText";
 
 import {Product, ProductHeader, ProductPrice, ProductPartNumber, ProductControls, ProductColors, ProductColorsChoosen, ProductColorsContainer} from "./styled";
 
-class ProductDetails extends Component {
+class Details extends Component {
   render() {
     return (
       <Product>
@@ -33,4 +33,4 @@ class ProductDetails extends Component {
   }
 }
 
-export default ProductDetails;
+export default Details;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import {Accordion, AccordionButton, AccordionButtons, AccordionContent} from "../../components/Accordion/Accordion";
 
-const ProductDescriptionArticle = styled.article`
+const DescriptionArticle = styled.article`
   p {
     font-family: "Lora", Helvetica, Arial, serif;
     font-size: .875rem;
@@ -31,7 +31,7 @@ const ProductDescriptionArticle = styled.article`
   }
 `;
 
-class ProductDescription extends Component {
+class Description extends Component {
   render() {
     return (
       <Accordion className="is-active">
@@ -40,7 +40,7 @@ class ProductDescription extends Component {
             <AccordionButton type="button">Description</AccordionButton>
           </AccordionButtons>
           <AccordionContent>
-            <ProductDescriptionArticle>
+            <DescriptionArticle>
               <p>A refined car coat crafted in protective cotton gabardine.</p>
               <p>Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and
                 rain.</p>
@@ -56,7 +56,7 @@ class ProductDescription extends Component {
                 <li>Made in Europe</li>
                 <li>Item 39428531</li>
               </ul>
-            </ProductDescriptionArticle>
+            </DescriptionArticle>
           </AccordionContent>
         </div>
       </Accordion>
@@ -64,4 +64,4 @@ class ProductDescription extends Component {
   }
 }
 
-export default ProductDescription;
+export default Description;

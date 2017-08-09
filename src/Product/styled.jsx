@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProductRecommends = styled.section`
+export const Recommends = styled.section`
   padding: 3rem .5rem 0;
 
   @media screen and (min-width: 48rem) {
@@ -8,7 +8,7 @@ export const ProductRecommends = styled.section`
   }
 `;
 
-export const ProductMore = ProductRecommends.extend`
+export const More = Recommends.extend`
   padding-top: 1rem;
 
   @media screen and (min-width: 48rem) {
@@ -16,7 +16,7 @@ export const ProductMore = ProductRecommends.extend`
   }
 `;
 
-export const ProductMoreLink = styled.a`
+export const MoreLink = styled.a`
   font-family: "Lora", Helvetica, Arial, serif;
   font-size: .875rem;
   font-style: italic;

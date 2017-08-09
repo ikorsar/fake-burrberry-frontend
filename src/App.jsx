@@ -1,7 +1,7 @@
-import React, {Component} from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import Product from "./Product/Product";
+import Product from './Product/Product';
 
 const PageContent = styled.div`
   padding-bottom: 4rem;
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <PageContent role="main">
-        <Product/>
+        <Product />
       </PageContent>
     );
   }
