@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 
 import TitleBorder from '../components/Titles/TitleBorder';
 
@@ -15,6 +16,10 @@ class Product extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Long Cotton Gabardine Car Coat</title>
+        </Helmet>
+
         <div className="container">
           <Title label="Long Cotton Gabardine Car Coat" />
           <div className="row">

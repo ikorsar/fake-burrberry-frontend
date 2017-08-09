@@ -1,21 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import PageHeader from "./components/Header/Header";
-import App from "./App";
-import PageFooter from "./components/Footer/Footer";
+import App from './App';
 
-import "normalize.css";
-import "flexboxgrid2";
-import "./styles/styles.css";
+import 'normalize.css';
+import 'flexboxgrid2';
+import './styles/styles.css';
 
-ReactDOM.render(
-  <div>
-    <PageHeader/>
-
-    <App/>
-
-    <PageFooter/>
-  </div>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById('root'));

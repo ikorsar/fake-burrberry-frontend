@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
+import PageHeader from './components/Header/Header';
 import Product from './Product/Product';
+import PageFooter from './components/Footer/Footer';
 
 const PageContent = styled.div`
   padding-bottom: 4rem;
@@ -14,9 +17,27 @@ const PageContent = styled.div`
 class App extends Component {
   render() {
     return (
-      <PageContent role="main">
-        <Product />
-      </PageContent>
+      <div>
+        <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry">
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i"
+          />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700"
+          />
+        </Helmet>
+
+        <PageHeader />
+        <PageContent role="main">
+          <Product />
+        </PageContent>
+        <PageFooter />
+      </div>
     );
   }
 }
