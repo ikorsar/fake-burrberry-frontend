@@ -4,11 +4,11 @@ import { Helmet } from 'react-helmet';
 import TitleBorder from '../components/Titles/TitleBorder';
 
 import Title from './Title';
-import Gallery from './Gallery/Gallery';
-import Details from './Details/Details';
-import Description from './Description/Description';
-import Delivery from './Delivery/Delivery';
-import Recommended from './Recommended/Recommended';
+import Gallery from './Gallery/';
+import Details from './Details/';
+import Description from './Description/';
+import Delivery from './Delivery/';
+import Recommended from './Recommended/';
 
 import { Recommends, More, MoreLink } from './styled';
 
