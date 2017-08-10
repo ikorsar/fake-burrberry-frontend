@@ -8,6 +8,7 @@ const Button = styled.button`
   display: block;
   margin: 0 0 1rem;
   padding: 1rem 0;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -19,10 +20,7 @@ const Button = styled.button`
   border-color: ${props => (props.secondary ? '#171717' : '#999')};
 `;
 
-export default (props) => {
-  return (
-    <Button type="button" secondary={props.secondary}>
-      {props.label}
-    </Button>
-  );
-}
+export default props =>
+  (<Button type={props.type} secondary={props.secondary}>
+    {props.label}
+  </Button>);

@@ -10,7 +10,7 @@ import Description from './Description/';
 import Delivery from './Delivery/';
 import Recommended from './Recommended/';
 
-import { Recommends, More, MoreLink } from './styled';
+import { More, MoreLink, Recommends } from './styled';
 
 class Product extends Component {
   render() {

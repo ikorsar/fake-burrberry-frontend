@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import GalleryPhoto from './GalleryPhoto';
+
 const Gallery = styled.section`
   display: flex;
   overflow-x: scroll;
@@ -12,20 +14,10 @@ const Gallery = styled.section`
   }
 `;
 
-const GalleryPhoto = styled.img`
-  flex-shrink: 0;
-  width: auto;
-  height: 400px;
-
-  @media screen and (min-width: 48rem) {
-    height: 576px;
-  }
-`;
-
 export default () =>
   (<Gallery>
-    <GalleryPhoto src="/files/product-img1.jpg" alt="Product photo 1" />
-    <GalleryPhoto src="/files/product-img3.jpg" alt="Product photo 3" />
-    <GalleryPhoto src="/files/product-img2.jpg" alt="Product photo 2" />
-    <GalleryPhoto src="/files/product-img4.jpg" alt="Product photo 4" />
+    <GalleryPhoto photoName="product-img1" alt="Long Cotton Gabardine Car Coat" />
+    <GalleryPhoto photoName="product-img3" alt="Long Cotton Gabardine Car Coat" />
+    <GalleryPhoto photoName="product-img2" alt="Long Cotton Gabardine Car Coat" />
+    <GalleryPhoto photoName="product-img4" alt="Long Cotton Gabardine Car Coat" />
   </Gallery>);

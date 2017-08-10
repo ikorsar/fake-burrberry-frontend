@@ -14,9 +14,11 @@ const ButtonText = styled.button`
   text-transform: uppercase;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 `;
 
-export default props =>
-  (<ButtonText type="button">
+export default props => (
+  <ButtonText type={props.type}>
     {props.label}
-  </ButtonText>);
+  </ButtonText>
+  );

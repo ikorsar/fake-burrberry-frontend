@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Product = styled.article`
+export const ProductDetails = styled.article`
   margin: 0 -.5rem;
 
   @media screen and (min-width: 48rem) {
@@ -17,24 +17,6 @@ export const ProductHeader = styled.header`
   @media screen and (min-width: 48rem) {
     padding: 0 0 1rem;
   }
-`;
-
-export const ProductPrice = styled.h2`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.19;
-  margin: 0;
-  padding: 0;
-  text-transform: none;
-  color: #171717;
-`;
-
-export const ProductPartNumber = styled.p`
-  font-size: .75rem;
-  line-height: 1.19;
-  margin: 0;
-  color: #171717;
 `;
 
 export const ProductColors = styled.section`

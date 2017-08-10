@@ -4,24 +4,25 @@ import Button from '../../components/Buttons/Button';
 import ButtonText from '../../components/Buttons/ButtonText';
 import ButtonColor from '../ButtonColor';
 
+import Price from './Price';
+import PartNumber from './PartNumber';
+
 import {
-  Product,
-  ProductHeader,
-  ProductPrice,
-  ProductPartNumber,
-  ProductControls,
   ProductColors,
   ProductColorsChoosen,
-  ProductColorsContainer
+  ProductColorsContainer,
+  ProductControls,
+  ProductDetails,
+  ProductHeader,
 } from './styled';
 
 class Details extends Component {
   render() {
     return (
-      <Product>
+      <ProductDetails>
         <ProductHeader>
-          <ProductPrice>110 000 руб.</ProductPrice>
-          <ProductPartNumber>Item 39428531</ProductPartNumber>
+          <Price priceValue="110 000" priceCurrency="руб" />
+          <PartNumber partNumber="39428531" />
         </ProductHeader>
 
         <ProductColors>
@@ -33,11 +34,11 @@ class Details extends Component {
         </ProductColors>
 
         <ProductControls>
-          <Button label="Select a size" secondary />
-          <Button label="Find in store" />
-          <ButtonText label="Need size help?" />
+          <Button type="button" label="Select a size" secondary />
+          <Button type="button" label="Find in store" />
+          <ButtonText type="button" label="Need size help?" />
         </ProductControls>
-      </Product>
+      </ProductDetails>
     );
   }
 }

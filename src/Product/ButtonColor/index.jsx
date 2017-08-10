@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const ButtonColor = styled.button`
   font-size: 0;
@@ -14,12 +14,11 @@ const ButtonColor = styled.button`
   border-style: solid;
   border-color: ${props => (props.active ? '#232122' : 'transparent')};
   border-radius: 50%;
+  cursor: ${props => (props.active ? 'default' : 'pointer')};
 `;
 
-export default (props) => {
-  return (
-    <ButtonColor bgColor={props.bgColorValue} active={props.active} type="button">
-      {props.label} color
+export default props => (
+  <ButtonColor type="button" bgColor={props.bgColorValue} active={props.active}>
+    {props.label} color
     </ButtonColor>
-  )
-}
+  );
