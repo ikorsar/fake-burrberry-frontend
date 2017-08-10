@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Nav from './Nav';
 import Buttons from './Btns';
+import HelpLink from './HelpLink';
 
 const PageFooter = styled.footer`
   padding: 2rem 0;
@@ -26,30 +27,14 @@ const Help = styled.h3`
   }
 `;
 
-const HelpLink = styled.a`
-  font-family: "Lora", Helvetica, Arial, serif;
-  font-size: .875rem;
-  font-style: italic;
-  line-height: 1rem;
-  display: block;
-  padding: 0 1rem;
-  text-align: center;
-  text-decoration: none;
-  color: #171717;
-
-  @media screen and (min-width: 48rem) {
-    display: none;
-  }
-`;
-
 export default () =>
   (<PageFooter>
     <div className="container">
       <Nav />
       <Buttons />
     </div>
-    <Help />
-    <HelpLink href="#" title="Find out more and contact us">
-      Find out more and contact us
-    </HelpLink>
+
+    <Help>Need Help?</Help>
+
+    <HelpLink href="#" title="Find out more and contact us" />
   </PageFooter>);

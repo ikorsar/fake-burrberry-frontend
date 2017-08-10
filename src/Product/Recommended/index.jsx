@@ -35,9 +35,9 @@ const ProductCardRecommendedPrice = styled.h4`
   color: #999;
 `;
 
-export default () =>
-  (<ProductCardRecommended href="#" title="Emroided Hooded">
-    <ProductCardRecommendedPhoto src="/files/recommend1.jpg" alt="Emroided Hooded" />
-    <ProductCardRecommendedName>Emroided Hooded Content For Three Lines</ProductCardRecommendedName>
-    <ProductCardRecommendedPrice>27 000 руб</ProductCardRecommendedPrice>
+export default props =>
+  (<ProductCardRecommended href='#' title={props.title}>
+    <ProductCardRecommendedPhoto src={`/files/${props.photoName}.jpg`} alt={props.title} />
+    <ProductCardRecommendedName>{props.title}</ProductCardRecommendedName>
+    <ProductCardRecommendedPrice>{props.price} {props.currency}</ProductCardRecommendedPrice>
   </ProductCardRecommended>);
