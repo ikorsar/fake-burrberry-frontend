@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import ButtonColor from '../../components/Buttons/ButtonColor';
 import Button from '../../components/Buttons/Button';
 import ButtonText from '../../components/Buttons/ButtonText';
+import ButtonColor from '../ButtonColor';
 
 import {
   Product,
@@ -12,7 +12,7 @@ import {
   ProductControls,
   ProductColors,
   ProductColorsChoosen,
-  ProductColorsContainer,
+  ProductColorsContainer
 } from './styled';
 
 class Details extends Component {
@@ -27,8 +27,8 @@ class Details extends Component {
         <ProductColors>
           <ProductColorsChoosen>Color: Honey</ProductColorsChoosen>
           <ProductColorsContainer>
-            <ButtonColor label="Black color" />
-            <ButtonColor label="Honey color" isActive />
+            <ButtonColor label="Black" bgColorValue="#232122" />
+            <ButtonColor label="Honey" bgColorValue="#cfa880" active />
           </ProductColorsContainer>
         </ProductColors>
 

@@ -19,7 +19,10 @@ const Button = styled.button`
   border-color: ${props => (props.secondary ? '#171717' : '#999')};
 `;
 
-export default props =>
-  (<Button type="button">
-    {props.label}
-  </Button>);
+export default function (props) {
+  return (
+    <Button type="button" secondary={props.secondary}>
+      {props.label}
+    </Button>
+  );
+}
