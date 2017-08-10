@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PageFooterButtons = styled.div`
+const Buttons = styled.div`
   padding-right: .5rem;
   padding-left: .5rem;
 
@@ -12,7 +12,7 @@ const PageFooterButtons = styled.div`
   }
 `;
 
-const PageFooterButton = styled.button`
+const Button = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   font-weight: 400;
@@ -31,7 +31,7 @@ const PageFooterButton = styled.button`
 `;
 
 export default () =>
-  (<PageFooterButtons>
-    <PageFooterButton type="button">Shipping country: Russian Federation</PageFooterButton>
-    <PageFooterButton type="button">Language: English</PageFooterButton>
-  </PageFooterButtons>);
+  (<Buttons>
+    <Button type="button">Shipping country: Russian Federation</Button>
+    <Button type="button">Language: English</Button>
+  </Buttons>);

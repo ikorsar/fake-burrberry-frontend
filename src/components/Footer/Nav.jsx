@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PageFooterNav = styled.nav`
+const Nav = styled.nav`
   display: none;
   margin-bottom: 2rem;
 
@@ -10,7 +10,7 @@ const PageFooterNav = styled.nav`
   }
 `;
 
-const PageFooterNavTitle = styled.h3`
+const NavTitle = styled.h3`
   font-size: .75rem;
   font-weight: bold;
   line-height: .875rem;
@@ -18,7 +18,7 @@ const PageFooterNavTitle = styled.h3`
   text-transform: uppercase;
 `;
 
-const PageFooterNavLink = styled.a`
+const NavLink = styled.a`
   font-size: .75rem;
   font-weight: 600;
   line-height: 1rem;
@@ -35,36 +35,36 @@ const PageFooterNavLink = styled.a`
 export default () =>
   (<div className="row">
     <div className="col-md-3">
-      <PageFooterNav>
-        <PageFooterNavTitle>Customer service</PageFooterNavTitle>
-        <PageFooterNavLink href="#">Contact Us</PageFooterNavLink>
-        <PageFooterNavLink href="#">Payment</PageFooterNavLink>
-        <PageFooterNavLink href="#">Shipping</PageFooterNavLink>
-        <PageFooterNavLink href="#">Returns</PageFooterNavLink>
-        <PageFooterNavLink href="#">Faqs</PageFooterNavLink>
-        <PageFooterNavLink href="#">Live Chat</PageFooterNavLink>
-        <PageFooterNavLink href="#">The Burberry App</PageFooterNavLink>
-        <PageFooterNavLink href="#">Store Locator</PageFooterNavLink>
-      </PageFooterNav>
+      <Nav>
+        <NavTitle>Customer service</NavTitle>
+        <NavLink href="#">Contact Us</NavLink>
+        <NavLink href="#">Payment</NavLink>
+        <NavLink href="#">Shipping</NavLink>
+        <NavLink href="#">Returns</NavLink>
+        <NavLink href="#">Faqs</NavLink>
+        <NavLink href="#">Live Chat</NavLink>
+        <NavLink href="#">The Burberry App</NavLink>
+        <NavLink href="#">Store Locator</NavLink>
+      </Nav>
     </div>
     <div className="col-md-3">
-      <PageFooterNav>
-        <PageFooterNavTitle>Our company</PageFooterNavTitle>
-        <PageFooterNavLink href="#">Our History</PageFooterNavLink>
-        <PageFooterNavLink href="#">Burberry Group Plc</PageFooterNavLink>
-        <PageFooterNavLink href="#">Careers</PageFooterNavLink>
-        <PageFooterNavLink href="#">Corporate Responsibility</PageFooterNavLink>
-        <PageFooterNavLink href="#">Site Map</PageFooterNavLink>
-      </PageFooterNav>
+      <Nav>
+        <NavTitle>Our company</NavTitle>
+        <NavLink href="#">Our History</NavLink>
+        <NavLink href="#">Burberry Group Plc</NavLink>
+        <NavLink href="#">Careers</NavLink>
+        <NavLink href="#">Corporate Responsibility</NavLink>
+        <NavLink href="#">Site Map</NavLink>
+      </Nav>
     </div>
     <div className="col-md-3">
-      <PageFooterNav>
-        <PageFooterNavTitle>Legal & Cookies</PageFooterNavTitle>
-        <PageFooterNavLink href="#">Terms & Conditions</PageFooterNavLink>
-        <PageFooterNavLink href="#">Privacy Policy</PageFooterNavLink>
-        <PageFooterNavLink href="#">Cookie Policy</PageFooterNavLink>
-        <PageFooterNavLink href="#">Accessibility</PageFooterNavLink>
-        <PageFooterNavLink href="#">Japan Only - SCTL indications</PageFooterNavLink>
-      </PageFooterNav>
+      <Nav>
+        <NavTitle>Legal & Cookies</NavTitle>
+        <NavLink href="#">Terms & Conditions</NavLink>
+        <NavLink href="#">Privacy Policy</NavLink>
+        <NavLink href="#">Cookie Policy</NavLink>
+        <NavLink href="#">Accessibility</NavLink>
+        <NavLink href="#">Japan Only - SCTL indications</NavLink>
+      </Nav>
     </div>
   </div>);

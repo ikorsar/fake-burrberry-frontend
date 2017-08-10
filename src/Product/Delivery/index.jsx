@@ -6,7 +6,7 @@ import {
   AccordionButtons,
   AccordionButton,
   AccordionContent,
-} from '../../components/Accordion/Accordion';
+} from '../../components/Accordion/index';
 
 const DeliveryDescription = styled.article``;
 

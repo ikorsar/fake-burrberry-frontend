@@ -6,7 +6,7 @@ import {
   AccordionButton,
   AccordionButtons,
   AccordionContent,
-} from '../../components/Accordion/Accordion';
+} from '../../components/Accordion/index';
 
 const DescriptionArticle = styled.article`
   p {

@@ -9,7 +9,7 @@ const ButtonColor = styled.button`
   margin-right: 1rem;
   padding: 0;
   transition: border-color .25s ease-in-out;
-  background-color: ${props => props.color};
+  background-color: ${props => props.bgColor};
   border-width: 1px;
   border-style: solid;
   border-color: ${props => (props.active ? '#232122' : 'transparent')};
@@ -18,8 +18,8 @@ const ButtonColor = styled.button`
 
 export default function(props) {
   return (
-    <ButtonColor color={props.colorValue} active={props.active} type="button">
-      Select {props.colorName} color
+    <ButtonColor bgColor={props.bgColorValue} active={props.active} type="button">
+      {props.label} color
     </ButtonColor>
   )
 }

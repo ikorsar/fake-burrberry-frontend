@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import PageFooterNav from './Nav';
-import PageFooteButtons from './Btns';
+import Nav from './Nav';
+import Buttons from './Btns';
 
 const PageFooter = styled.footer`
   padding: 2rem 0;
@@ -14,7 +14,7 @@ const PageFooter = styled.footer`
   }
 `;
 
-const PageFooterHelp = styled.h3`
+const Help = styled.h3`
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.25rem;
@@ -26,7 +26,7 @@ const PageFooterHelp = styled.h3`
   }
 `;
 
-const PageFooterHelpLink = styled.a`
+const HelpLink = styled.a`
   font-family: "Lora", Helvetica, Arial, serif;
   font-size: .875rem;
   font-style: italic;
@@ -45,11 +45,11 @@ const PageFooterHelpLink = styled.a`
 export default () =>
   (<PageFooter>
     <div className="container">
-      <PageFooterNav />
-      <PageFooteButtons />
+      <Nav />
+      <Buttons />
     </div>
-    <PageFooterHelp />
-    <PageFooterHelpLink href="#" title="Find out more and contact us">
+    <Help />
+    <HelpLink href="#" title="Find out more and contact us">
       Find out more and contact us
-    </PageFooterHelpLink>
+    </HelpLink>
   </PageFooter>);

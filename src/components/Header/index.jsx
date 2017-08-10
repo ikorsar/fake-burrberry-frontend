@@ -11,20 +11,20 @@ const PageHeader = styled.header`
   }
 `;
 
-const PageHeaderlLink = styled.a`
+const Link = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-const PageHeaderLogo = styled.img`
+const Logo = styled.img`
   width: 138px;
   height: 10px;
 `;
 
 export default () =>
   (<PageHeader>
-    <PageHeaderlLink href="/">
-      <PageHeaderLogo src={logo} alt="Burberry Logo" />
-    </PageHeaderlLink>
+    <Link href="/">
+      <Logo src={logo} alt="Burberry Logo" />
+    </Link>
   </PageHeader>);

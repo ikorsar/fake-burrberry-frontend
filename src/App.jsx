@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-import PageHeader from './components/Header/Header';
-import Product from './Product/Product';
-import PageFooter from './components/Footer/Footer';
+import PageHeader from './components/Header/';
+import Product from './Product/';
+import PageFooter from './components/Footer/';
 
 const PageContent = styled.div`
   padding-bottom: 4rem;
