@@ -16,7 +16,7 @@ const ButtonColor = styled.button`
   border-radius: 50%;
 `;
 
-export default function(props) {
+export default (props) => {
   return (
     <ButtonColor bgColor={props.bgColorValue} active={props.active} type="button">
       {props.label} color
