@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ProductPrice = styled.h2`
+const Price = styled.h2`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
@@ -12,8 +12,7 @@ const ProductPrice = styled.h2`
   color: #171717;
 `;
 
-export default props => (
-  <ProductPrice>
+export default props =>
+  (<Price>
     {props.priceValue} {props.priceCurrency}
-  </ProductPrice>
-  );
+  </Price>);

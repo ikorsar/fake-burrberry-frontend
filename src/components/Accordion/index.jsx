@@ -1,27 +1,20 @@
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
-export const Accordion = styled.div`
+export const Container = styled.div`
   border-top: 1px solid #c6c6c6;
 
   @media screen and (min-width: 48rem) {
     border-top: none;
   }
-
-  & + & {
-    border-bottom: 1px solid #c6c6c6;
-
-    @media screen and (min-width: 48rem) {
-      border-bottom: none;
-    }
-  }
 `;
 
-export const AccordionButtons = styled.div`
+export const Buttons = styled.div`
   display: flex;
   flex-flow: column;
 `;
 
-export const AccordionButton = styled.button`
+export const Button = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -45,7 +38,7 @@ export const AccordionButton = styled.button`
     width: 0;
     height: 0;
     content: "";
-    transform: translateY(-50%);
+    transform: ${props => (props.active ? 'translateY(-50%) rotate(180deg)' : 'translateY(-50%)')};
     border-width: 10px 5px 0;
     border-style: solid;
     border-color: #171717 transparent transparent;
@@ -54,22 +47,49 @@ export const AccordionButton = styled.button`
       display: none;
     }
   }
-
-  .is-active &:after {
-    transform: translateY(-50%) rotate(180deg);
-  }
 `;
 
-export const AccordionContent = styled.div`
-  display: none;
+export const Content = styled.div`
+  display: ${props => (props.active ? 'block' : 'none')};
   padding: 0 .5rem 2rem;
 
   @media screen and (min-width: 48rem) {
     display: block;
     padding: 0 0 1.5rem;
   }
-
-  .is-active & {
-    display: block;
-  }
 `;
+
+class Accordion extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      active: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState((state, props) => ({
+      active: !state.active,
+    }));
+  }
+
+  render() {
+    return (
+      <Container>
+        <div className="container">
+          <Buttons>
+            <Button type="button" active={this.state.active} onClick={this.handleClick}>
+              {this.props.title}
+            </Button>
+          </Buttons>
+          <Content active={this.state.active}>
+            {this.props.children}
+          </Content>
+        </div>
+      </Container>
+    );
+  }
+}
+
+export default Accordion;

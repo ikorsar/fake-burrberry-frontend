@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ProductDetails = styled.article`
+export const Details = styled.article`
   margin: 0 -.5rem;
 
   @media screen and (min-width: 48rem) {
@@ -8,7 +8,7 @@ export const ProductDetails = styled.article`
   }
 `;
 
-export const ProductHeader = styled.header`
+export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +19,7 @@ export const ProductHeader = styled.header`
   }
 `;
 
-export const ProductColors = styled.section`
+export const Colors = styled.section`
   margin: 0 1rem 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
@@ -29,15 +29,15 @@ export const ProductColors = styled.section`
   }
 `;
 
-export const ProductColorsChoosen = styled.p`
+export const ColorsChoosen = styled.p`
   font-size: .75rem;
   line-height: 1rem;
   margin: 0 0 1rem;
 `;
 
-export const ProductColorsContainer = styled.div`display: flex;`;
+export const ColorsContainer = styled.div`display: flex;`;
 
-export const ProductControls = styled.section`
+export const Controls = styled.section`
   display: flex;
   flex-flow: column;
   padding: 0 1rem 3rem;

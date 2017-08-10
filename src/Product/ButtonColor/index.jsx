@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const ButtonColor = styled.button`
+const Button = styled.button`
   font-size: 0;
   display: block;
   width: 40px;
@@ -17,8 +17,32 @@ const ButtonColor = styled.button`
   cursor: ${props => (props.active ? 'default' : 'pointer')};
 `;
 
-export default props => (
-  <ButtonColor type="button" bgColor={props.bgColorValue} active={props.active}>
-    {props.label} color
-    </ButtonColor>
-  );
+class ButtonColor extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      active: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState((state, props) => ({
+      active: !state.active,
+    }));
+  }
+
+  render() {
+    return (
+      <Button
+        bgColor={this.props.bgColorValue}
+        active={this.state.active}
+        onClick={this.handleClick}
+      >
+        {this.props.label} color
+      </Button>
+    );
+  }
+}
+
+export default ButtonColor;

@@ -17,8 +17,7 @@ const ButtonText = styled.button`
   cursor: pointer;
 `;
 
-export default props => (
-  <ButtonText type={props.type}>
+export default props =>
+  (<ButtonText type={props.type}>
     {props.label}
-  </ButtonText>
-  );
+  </ButtonText>);

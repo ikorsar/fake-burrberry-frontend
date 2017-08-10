@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
@@ -14,32 +14,12 @@ const PageContent = styled.div`
   }
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry">
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i"
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700"
-          />
-        </Helmet>
-
-        <PageHeader />
-        <PageContent role="main">
-          <Product />
-        </PageContent>
-        <PageFooter />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default () =>
+  (<div>
+    <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry" />
+    <PageHeader />
+    <PageContent role="main">
+      <Product />
+    </PageContent>
+    <PageFooter />
+  </div>);

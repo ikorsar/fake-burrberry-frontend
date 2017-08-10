@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-import {
-  Accordion,
-  AccordionButtons,
-  AccordionButton,
-  AccordionContent,
-} from '../../components/Accordion/index';
+import AccordionDelivery from './Accordion';
 
-const DeliveryDescription = styled.article``;
+const Description = styled.article`
+  padding: 0 .5rem;
 
-const DeliveryDescriptionImg = styled.img`
+  @media screen and (min-width: 48rem) {
+    padding: 0;
+  }
+`;
+
+const Img = styled.img`
   display: none;
 
   @media screen and (min-width: 48rem) {
@@ -19,7 +20,26 @@ const DeliveryDescriptionImg = styled.img`
   }
 `;
 
-const DeliveryDescriptionTitle = styled.h4`
+const Title = styled.h2`
+  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  padding: 0 0 1rem;
+  margin: 0;
+  display: none;
+
+  @media screen and (min-width: 48rem) {
+    display: block;
+  }
+`;
+
+const SubTitle = styled.h4`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   font-weight: bold;
@@ -27,7 +47,7 @@ const DeliveryDescriptionTitle = styled.h4`
   margin: 0 0 .25rem;
 `;
 
-const DeliveryDescriptionText = styled.p`
+const Text = styled.p`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   line-height: 1rem;
@@ -38,52 +58,26 @@ const DeliveryDescriptionText = styled.p`
   }
 `;
 
-const DeliveryAccordionButton = AccordionButton.extend`
-  @media screen and (min-width: 48rem) {
-    line-height: 1.25rem;
-    padding: 0 0 1rem;
-  }
-`;
-
-class Delivery extends Component {
-  render() {
-    return (
-      <Accordion>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-7">
-              <DeliveryDescriptionImg src="/files/delivery.jpg" alt="Delivery box" />
-            </div>
-            <div className="col-xs-12 col-md-5">
-              <AccordionButtons>
-                <DeliveryAccordionButton type="button">Delivery</DeliveryAccordionButton>
-              </AccordionButtons>
-              <AccordionContent>
-                <DeliveryDescription>
-                  <DeliveryDescriptionTitle>Free Next Day Delivery</DeliveryDescriptionTitle>
-                  <DeliveryDescriptionText>
-                    Order before 7pm Monday to Thursday for delivery the next day
-                  </DeliveryDescriptionText>
-                  <DeliveryDescriptionTitle>Collect-in-Store</DeliveryDescriptionTitle>
-                  <DeliveryDescriptionText>
-                    Order online today and pick up your items in store as early as tomorrow
-                  </DeliveryDescriptionText>
-                  <DeliveryDescriptionTitle>Free Returns</DeliveryDescriptionTitle>
-                  <DeliveryDescriptionText>
-                    Enjoy free returns on your order
-                  </DeliveryDescriptionText>
-                  <DeliveryDescriptionTitle>Free Gift Packaging</DeliveryDescriptionTitle>
-                  <DeliveryDescriptionText>
-                    Discover our gift packaging, a gold lined box tied with a coloured ribbon
-                  </DeliveryDescriptionText>
-                </DeliveryDescription>
-              </AccordionContent>
-            </div>
-          </div>
+export default () =>
+  (<AccordionDelivery title="Shipping & Returns">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-7">
+          <Img src="/files/delivery.jpg" alt="Delivery box" />
         </div>
-      </Accordion>
-    );
-  }
-}
-
-export default Delivery;
+        <div className="col-xs-12 col-md-5">
+          <Description>
+            <Title>Delivery</Title>
+            <SubTitle>Free Next Day Delivery</SubTitle>
+            <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
+            <SubTitle>Collect-in-Store</SubTitle>
+            <Text>Order online today and pick up your items in store as early as tomorrow</Text>
+            <SubTitle>Free Returns</SubTitle>
+            <Text>Enjoy free returns on your order</Text>
+            <SubTitle>Free Gift Packaging</SubTitle>
+            <Text>Discover our gift packaging, a gold lined box tied with a coloured ribbon</Text>
+          </Description>
+        </div>
+      </div>
+    </div>
+  </AccordionDelivery>);

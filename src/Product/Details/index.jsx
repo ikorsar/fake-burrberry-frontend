@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Button from '../../components/Buttons/Button';
 import ButtonText from '../../components/Buttons/ButtonText';
@@ -7,40 +7,26 @@ import ButtonColor from '../ButtonColor';
 import Price from './Price';
 import PartNumber from './PartNumber';
 
-import {
-  ProductColors,
-  ProductColorsChoosen,
-  ProductColorsContainer,
-  ProductControls,
-  ProductDetails,
-  ProductHeader,
-} from './styled';
+import { Colors, ColorsChoosen, ColorsContainer, Controls, Details, Header } from './styled';
 
-class Details extends Component {
-  render() {
-    return (
-      <ProductDetails>
-        <ProductHeader>
-          <Price priceValue="110 000" priceCurrency="руб" />
-          <PartNumber partNumber="39428531" />
-        </ProductHeader>
+export default () =>
+  (<Details>
+    <Header>
+      <Price priceValue="110 000" priceCurrency="руб" />
+      <PartNumber partNumber="39428531" />
+    </Header>
 
-        <ProductColors>
-          <ProductColorsChoosen>Color: Honey</ProductColorsChoosen>
-          <ProductColorsContainer>
-            <ButtonColor label="Black" bgColorValue="#232122" />
-            <ButtonColor label="Honey" bgColorValue="#cfa880" active />
-          </ProductColorsContainer>
-        </ProductColors>
+    <Colors>
+      <ColorsChoosen>Color: Honey</ColorsChoosen>
+      <ColorsContainer>
+        <ButtonColor label="Black" bgColorValue="#232122" />
+        <ButtonColor label="Honey" bgColorValue="#cfa880" />
+      </ColorsContainer>
+    </Colors>
 
-        <ProductControls>
-          <Button type="button" label="Select a size" secondary />
-          <Button type="button" label="Find in store" />
-          <ButtonText type="button" label="Need size help?" />
-        </ProductControls>
-      </ProductDetails>
-    );
-  }
-}
-
-export default Details;
+    <Controls>
+      <Button type="button" label="Select a size" secondary />
+      <Button type="button" label="Find in store" />
+      <ButtonText type="button" label="Need size help?" />
+    </Controls>
+  </Details>);
