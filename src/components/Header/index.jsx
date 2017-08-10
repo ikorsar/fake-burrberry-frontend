@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import styled from 'styled-components';
 
-const PageHeader = styled.header`
+const Header = styled.header`
   padding: 1rem 0;
   border-bottom: 1px solid #c6c6c6;
 
@@ -23,8 +23,8 @@ const Logo = styled.img`
 `;
 
 export default () =>
-  (<PageHeader>
+  (<Header>
     <Link href="/">
       <Logo src={logo} alt="Burberry Logo" />
     </Link>
-  </PageHeader>);
+  </Header>);

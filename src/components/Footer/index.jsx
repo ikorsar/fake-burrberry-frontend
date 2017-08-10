@@ -5,7 +5,7 @@ import Nav from './Nav';
 import Buttons from './Btns';
 import HelpLink from './HelpLink';
 
-const PageFooter = styled.footer`
+const Footer = styled.footer`
   padding: 2rem 0;
   background-color: #f3f3f3;
 
@@ -28,7 +28,7 @@ const Help = styled.h3`
 `;
 
 export default () =>
-  (<PageFooter>
+  (<Footer>
     <div className="container">
       <Nav />
       <Buttons />
@@ -37,4 +37,4 @@ export default () =>
     <Help>Need Help?</Help>
 
     <HelpLink href="#" title="Find out more and contact us" />
-  </PageFooter>);
+  </Footer>);

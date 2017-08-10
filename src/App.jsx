@@ -2,11 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-import PageHeader from './components/Header/';
+import Header from './components/Header/';
 import Product from './Product/';
-import PageFooter from './components/Footer/';
+import Footer from './components/Footer/';
 
-const PageContent = styled.div`
+const Content = styled.div`
   padding-bottom: 4rem;
 
   @media screen and (min-width: 48rem) {
@@ -17,9 +17,9 @@ const PageContent = styled.div`
 export default () =>
   (<div>
     <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry" />
-    <PageHeader />
-    <PageContent role="main">
+    <Header />
+    <Content role="main">
       <Product />
-    </PageContent>
-    <PageFooter />
+    </Content>
+    <Footer />
   </div>);
