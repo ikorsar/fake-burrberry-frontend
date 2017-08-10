@@ -17,8 +17,7 @@ const HelpLink = styled.a`
   }
 `;
 
-export default props => (
-  <HelpLink href="#" title={props.title}>
-    {props.title}
-  </HelpLink>
-)
+export default props =>
+  (<HelpLink href="#" title={props.children}>
+    {props.children}
+  </HelpLink>);

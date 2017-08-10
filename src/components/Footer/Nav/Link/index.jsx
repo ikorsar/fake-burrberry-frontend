@@ -15,6 +15,7 @@ const Link = styled.a`
   }
 `;
 
-export default props => (
-  <Link href="#" title={props.title}>{props.title}</Link>
-)
+export default props =>
+  (<Link href="#" title={props.children}>
+    {props.children}
+  </Link>);

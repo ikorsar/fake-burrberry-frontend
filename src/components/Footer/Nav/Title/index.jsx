@@ -9,6 +9,7 @@ const Title = styled.h3`
   text-transform: uppercase;
 `;
 
-export default props => (
-  <Title>{props.title}</Title>
-)
+export default props =>
+  (<Title>
+    {props.children}
+  </Title>);

@@ -36,5 +36,5 @@ export default () =>
 
     <Help>Need Help?</Help>
 
-    <HelpLink href="#" title="Find out more and contact us" />
+    <HelpLink href="#">Find out more and contact us</HelpLink>
   </Footer>);

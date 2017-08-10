@@ -20,7 +20,7 @@ export default () =>
     </Helmet>
 
     <div className="container">
-      <Title label="Long Cotton Gabardine Car Coat" />
+      <Title>Long Cotton Gabardine Car Coat</Title>
       <div className="row">
         <div className="col-xs-12 col-sm-12 col-md-7">
           <Gallery />

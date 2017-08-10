@@ -17,35 +17,35 @@ export default () =>
   (<div className="row">
     <div className="col-md-3">
       <Nav>
-        <Title title="Customer service" />
-        <Link href="#" title="Contact Us" />
-        <Link href="#" title="Payment" />
-        <Link href="#" title="Shipping" />
-        <Link href="#" title="Returns" />
-        <Link href="#" title="Faqs" />
-        <Link href="#" title="Live Chat" />
-        <Link href="#" title="The Burberry App" />
-        <Link href="#" title="Store Locator" />
+        <Title>Customer service</Title>
+        <Link href="#">Contact Us</Link>
+        <Link href="#">Payment</Link>
+        <Link href="#">Shipping</Link>
+        <Link href="#">Returns</Link>
+        <Link href="#">Faqs</Link>
+        <Link href="#">Live Chat</Link>
+        <Link href="#">The Burberry App</Link>
+        <Link href="#">Store Locator</Link>
       </Nav>
     </div>
     <div className="col-md-3">
       <Nav>
-        <Title title="Our company" />
-        <Link href="#" title="Our History" />
-        <Link href="#" title="Burberry Group Plc" />
-        <Link href="#" title="Careers" />
-        <Link href="#" title="Corporate Responsibility" />
-        <Link href="#" title="Site Map" />
+        <Title>Our company</Title>
+        <Link href="#">Our History</Link>
+        <Link href="#">Burberry Group Plc</Link>
+        <Link href="#">Careers</Link>
+        <Link href="#">Corporate Responsibility</Link>
+        <Link href="#">Site Map</Link>
       </Nav>
     </div>
     <div className="col-md-3">
       <Nav>
-        <Title title="Legal & Cookies" />
-        <Link href="#" title="Terms & Conditions" />
-        <Link href="#" title="Privacy Policy" />
-        <Link href="#" title="Cookie Policy" />
-        <Link href="#" title="Accessibility" />
-        <Link href="#" title="Japan Only - SCTL indications" />
+        <Title>Legal & Cookies</Title>
+        <Link href="#">Terms & Conditions</Link>
+        <Link href="#">Privacy Policy</Link>
+        <Link href="#">Cookie Policy</Link>
+        <Link href="#">Accessibility</Link>
+        <Link href="#">Japan Only - SCTL indications</Link>
       </Nav>
     </div>
   </div>);

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ProductTitle = styled.h1`
+const Title = styled.h1`
   font-family: "Lora", Helvetica, Arial, serif;
   font-size: 1.25rem;
   font-weight: 400;
@@ -17,6 +17,6 @@ const ProductTitle = styled.h1`
 `;
 
 export default props =>
-  (<ProductTitle>
-    {props.label}
-  </ProductTitle>);
+  (<Title>
+    {props.children}
+  </Title>);
