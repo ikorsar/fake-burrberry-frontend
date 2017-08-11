@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = styled.button`
+export const Button = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75em;
+  font-weight: ${props => (props.active ? 'bold' : '400')};
   line-height: .875rem;
-  display: block;
   margin: 0 0 1rem;
-  padding: 1rem 0;
+  padding: ${props => (props.small ? '.5rem 1rem' : '1rem')};
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -19,9 +19,14 @@ const Button = styled.button`
   color: ${props => (props.secondary ? '#fff' : '#171717')};
   border-color: ${props => (props.secondary ? '#171717' : '#999')};
   
+  @media screen and (min-width: 62rem) {
+    background-color: ${props => (props.secondary ? '#171717' : 'transparent')};
+    color: ${props => (props.secondary ? '#fff' : '#171717')};
+    border-color: ${props => (props.secondary ? '#171717' : '#171717')}; 
+  }
 `;
 
 export default props =>
-  (<Button type={props.type} secondary={props.secondary}>
+  (<Button type={props.type} secondary={props.secondary} small={props.small} active={props.active}>
     {props.label}
   </Button>);

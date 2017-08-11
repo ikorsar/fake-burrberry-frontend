@@ -15,11 +15,10 @@ export const Description = styled.article`
   }
   
   @media screen and (min-width: 62rem) {
-    padding-left: 6.25rem;
+    padding-left: 5.25rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    height: 100%;
   }
 `;
 

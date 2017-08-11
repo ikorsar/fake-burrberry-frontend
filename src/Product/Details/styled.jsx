@@ -32,6 +32,8 @@ export const Colors = styled.section`
     border-bottom: none;
     padding-bottom: 0;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-flow: column;
   }
 `;
 
@@ -41,7 +43,13 @@ export const ColorsChoosen = styled.p`
   margin: 0 0 1rem;
 `;
 
-export const ColorsContainer = styled.div`display: flex;`;
+export const ColorsContainer = styled.div`
+  display: flex;
+  
+  @media screen and (min-width: 62rem) {
+    padding-top: 1rem;
+  } 
+`;
 
 export const Controls = styled.section`
   display: flex;

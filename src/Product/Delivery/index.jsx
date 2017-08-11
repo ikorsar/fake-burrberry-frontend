@@ -44,7 +44,7 @@ export const Title = styled.h2`
 export default () =>
   (<Delivery>
     <div className="container">
-      <div className="row">
+      <div className="row middle-lg">
         <div className="col-md-7">
           <Img src="/files/delivery.jpg" alt="Delivery box" />
         </div>

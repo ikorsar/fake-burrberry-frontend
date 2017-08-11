@@ -61,7 +61,7 @@ const Article = styled.article`
 `;
 
 const Images = styled.section`
-  padding-top: 3rem;
+  padding-top: 4rem;
 `;
 
 export default () =>

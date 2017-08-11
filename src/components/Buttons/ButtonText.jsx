@@ -7,7 +7,7 @@ const ButtonText = styled.button`
   line-height: 1rem;
   display: block;
   align-self: flex-start;
-  margin: .5rem 0 0;
+  margin: 0;
   padding: 0;
   text-align: left;
   text-decoration: none;
