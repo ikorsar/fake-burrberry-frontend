@@ -15,7 +15,13 @@ export const Choose = styled.p`
   }
 `;
 
-export const Value = styled.span`@media screen and (min-width: 62rem) {font-weight: bold;}`;
+export const Value = styled.span`
+  margin-left: 2px;
+  
+  @media screen and (min-width: 62rem) {
+    font-weight: bold;
+  }
+`;
 
 export default props =>
   (<Choose>
