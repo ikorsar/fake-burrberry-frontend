@@ -7,7 +7,7 @@ const Delivery = styled.section`
   @media screen and (min-width: 48rem) {
     margin-bottom: 1.5rem;
   }
-  
+
   @media screen and (min-width: 62rem) {
     margin-bottom: 4rem;
   }

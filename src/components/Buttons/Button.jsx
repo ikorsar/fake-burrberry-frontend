@@ -18,11 +18,11 @@ export const Button = styled.button`
   background-color: ${props => (props.secondary ? '#171717' : '#fff')};
   color: ${props => (props.secondary ? '#fff' : '#171717')};
   border-color: ${props => (props.secondary ? '#171717' : '#999')};
-  
+
   @media screen and (min-width: 62rem) {
     background-color: ${props => (props.secondary ? '#171717' : 'transparent')};
     color: ${props => (props.secondary ? '#fff' : '#171717')};
-    border-color: ${props => (props.secondary ? '#171717' : '#171717')}; 
+    border-color: ${props => (props.secondary ? '#171717' : '#171717')};
   }
 `;
 

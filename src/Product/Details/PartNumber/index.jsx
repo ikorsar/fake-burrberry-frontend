@@ -8,8 +8,7 @@ const PartNumber = styled.p`
   color: #171717;
 `;
 
-export default props => (
-  <PartNumber>
-      Item {props.partNumber}
-  </PartNumber>
-  );
+export default props =>
+  (<PartNumber>
+    Item {props.partNumber}
+  </PartNumber>);

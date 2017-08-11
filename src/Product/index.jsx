@@ -1,11 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { Mobile, DesktopLess, TabletAndMore, Desktop } from '../components/Breakpoints';
+import { TabletAndMore } from '../components/Breakpoints';
 
-import Title from './Title';
-import Gallery from './Gallery';
-import Details from './Details';
 import Description from './Description';
 import Shipping from './Shipping';
 import Delivery from './Delivery';
@@ -20,39 +17,19 @@ export default () =>
       <title>Long Cotton Gabardine Car Coat</title>
     </Helmet>
 
-    <DesktopLess>
-    <div className="container">
-      <Title>Long Cotton Gabardine Car Coat</Title>
-      <div className="row">
-        <div className="col-xs-12 col-sm-12 col-md-7">
-          <Gallery />
-        </div>
-        <div className="col-xs-12 col-sm-12 col-md-5">
-          <Details />
-        </div>
-      </div>
-    </div>
-    </DesktopLess>
-
-    <Desktop>
-      <Info color="#d4bdad"/>
-    </Desktop>
+    <Info color="#d4bdad" />
 
     <Description />
 
-    <Mobile>
-      <Shipping />
-    </Mobile>
+    <Shipping />
 
     <TabletAndMore>
       <Delivery />
     </TabletAndMore>
 
     <div className="container">
+      <Recommend />
 
-      <Recommend/>
-      
       <More />
-
     </div>
   </div>);

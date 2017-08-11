@@ -5,9 +5,14 @@ const GalleryPhoto = styled.img`
   flex-shrink: 0;
   width: auto;
   height: 400px;
+  display: block;
 
   @media screen and (min-width: 48rem) {
     height: 576px;
+  }
+
+  @media screen and (min-width: 62rem) {
+    height: 650px;
   }
 `;
 

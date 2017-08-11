@@ -25,12 +25,12 @@ const Title = styled.h3`
   line-height: 1.19;
   margin: .5rem 0;
   padding: 0;
-  
+
   @media screen and (min-width: 62rem) {
     font-size: .75rem;
     font-weight: 600;
     line-height: 1.67;
-    margin-top: 1rem; 
+    margin-top: 1rem;
   }
 `;
 
@@ -41,7 +41,7 @@ const Price = styled.h4`
   line-height: 1.17;
   margin: 0;
   color: #999;
-  
+
   @media screen and (min-width: 62rem) {
     line-height: 1.33;
     color: #171717;

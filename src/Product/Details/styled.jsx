@@ -1,33 +1,32 @@
 import styled from 'styled-components';
 
-export const Details = styled.article`
-  margin: 0 -.5rem;
-
-  @media screen and (min-width: 48rem) {
-    margin: 0;
-  }
-`;
+export const Details = styled.article`@media screen and (min-width: 48rem) {margin: 0;}`;
 
 export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem .5rem;
 
   @media screen and (min-width: 48rem) {
     padding: 0 0 1rem;
   }
+
+  @media screen and (min-width: 62rem) {
+    display: block;
+    padding-bottom: 3rem;
+  }
 `;
 
 export const Colors = styled.section`
-  margin: 0 1rem 2rem;
+  margin: 0 .5rem 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
 
   @media screen and (min-width: 48rem) {
     margin: 0 0 2rem;
   }
-  
+
   @media screen and (min-width: 62rem) {
     border-bottom: none;
     padding-bottom: 0;
@@ -45,10 +44,10 @@ export const ColorsChoosen = styled.p`
 
 export const ColorsContainer = styled.div`
   display: flex;
-  
+
   @media screen and (min-width: 62rem) {
     padding-top: 1rem;
-  } 
+  }
 `;
 
 export const Controls = styled.section`

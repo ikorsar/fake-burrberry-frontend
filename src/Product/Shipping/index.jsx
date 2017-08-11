@@ -5,6 +5,10 @@ import Accordion from '../../components/Accordion';
 
 const Shipping = styled.section`
   border-bottom: 1px solid #c6c6c6;
+
+  @media screen and (min-width: 48rem) {
+    display: none;
+  }
 `;
 
 export const Description = styled.article`
@@ -13,7 +17,7 @@ export const Description = styled.article`
   @media screen and (min-width: 48rem) {
     padding: 0;
   }
-  
+
   @media screen and (min-width: 62rem) {
     padding-left: 5.25rem;
     display: flex;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Button from './Button'
+import Button from './Button';
 
 const Buttons = styled.div`
   padding-right: .5rem;
@@ -16,6 +16,6 @@ const Buttons = styled.div`
 
 export default () =>
   (<Buttons>
-    <Button type="button" label="Shipping country: Russian Federation"/>
-    <Button type="button" label="Language: English"/>
+    <Button type="button" label="Shipping country: Russian Federation" />
+    <Button type="button" label="Language: English" />
   </Buttons>);

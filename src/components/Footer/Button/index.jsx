@@ -19,8 +19,7 @@ const Button = styled.button`
   }
 `;
 
-export default props => (
-  <Button href="#">
+export default props =>
+  (<Button href="#">
     {props.label}
-  </Button>
-)
+  </Button>);

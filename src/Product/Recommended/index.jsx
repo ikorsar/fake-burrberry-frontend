@@ -5,7 +5,7 @@ import Card from './Card';
 
 const Recommend = styled.section`
   padding: 3rem .5rem 0;
-  
+
   @media screen and (min-width: 48rem) {
     padding: 0;
   }
@@ -17,28 +17,24 @@ const Title = styled.h2`
   font-weight: 500;
   line-height: 1.1875rem;
   position: relative;
-  display: inline-block;
-  margin: 0 0 1.5rem;
-  padding-bottom: .5rem;
+  margin: 0 0 1rem;
   text-transform: uppercase;
   color: #171717;
-  border-bottom: 1px solid #171717;
 
   @media screen and (min-width: 48rem) {
     line-height: 19px;
     margin: 0 0 1rem;
   }
-  
+
   @media screen and (min-width: 62rem) {
-    border-bottom-color: transparent;
-    text-align: center;  
-    display: block;
-    margin-bottom: 1.5rem;
+    margin-top: -2px;
+    text-align: center;
+    margin-bottom: 2rem;
   }
 `;
 
-export default () => (
-  <Recommend>
+export default () =>
+  (<Recommend>
     <Title>We recommend</Title>
     <div className="row">
       <div className="col-xs-6 col-md-3">
@@ -66,13 +62,7 @@ export default () => (
         />
       </div>
       <div className="col-xs-6 col-md-3">
-        <Card
-          title="Leather Wingtip Check"
-          photoName="recommend4"
-          price={46000}
-          currency="RUB"
-        />
+        <Card title="Leather Wingtip Check" photoName="recommend4" price={46000} currency="RUB" />
       </div>
     </div>
-  </Recommend>
-)
+  </Recommend>);
