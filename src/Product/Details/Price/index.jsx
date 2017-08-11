@@ -11,6 +11,10 @@ const Price = styled.h2`
   padding: 0;
   text-transform: none;
   color: #171717;
+  
+  @media screen and (min-width: 62rem) {
+    margin: 0 0 3rem;
+  }
 `;
 
 export default props =>

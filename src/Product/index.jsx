@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { Mobile, TabletAndMore } from '../components/Breakpoints';
+import { Mobile, DesktopLess, TabletAndMore, Desktop } from '../components/Breakpoints';
 
 import Title from './Title';
 import Gallery from './Gallery';
@@ -12,12 +12,15 @@ import Delivery from './Delivery';
 import Recommend from './Recommended';
 import More from './More';
 
+import Info from './Info';
+
 export default () =>
   (<div>
     <Helmet>
       <title>Long Cotton Gabardine Car Coat</title>
     </Helmet>
 
+    <DesktopLess>
     <div className="container">
       <Title>Long Cotton Gabardine Car Coat</Title>
       <div className="row">
@@ -29,6 +32,11 @@ export default () =>
         </div>
       </div>
     </div>
+    </DesktopLess>
+
+    <Desktop>
+      <Info color="#d4bdad"/>
+    </Desktop>
 
     <Description />
 

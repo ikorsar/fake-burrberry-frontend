@@ -27,6 +27,12 @@ export const Colors = styled.section`
   @media screen and (min-width: 48rem) {
     margin: 0 0 2rem;
   }
+  
+  @media screen and (min-width: 62rem) {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const ColorsChoosen = styled.p`

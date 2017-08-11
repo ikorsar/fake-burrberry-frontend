@@ -33,6 +33,7 @@ const Title = styled.h2`
     border-bottom-color: transparent;
     text-align: center;  
     display: block;
+    margin-bottom: 1.5rem;
   }
 `;
 

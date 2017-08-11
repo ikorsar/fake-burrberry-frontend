@@ -14,6 +14,11 @@ const Title = styled.h1`
     line-height: 1.75rem;
     padding: 1.5rem 0;
   }
+  
+  @media screen and (min-width: 62rem) {
+    margin: 0 0 .5rem;
+    padding: 0;
+  }
 `;
 
 export default props =>
