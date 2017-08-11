@@ -2,9 +2,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
+import { IntlProvider, addLocaleData } from 'react-intl';
+import en from 'react-intl/locale-data/en';
+import ru from 'react-intl/locale-data/ru';
+
 import Header from './components/Header/';
 import Product from './Product/';
 import Footer from './components/Footer/';
+
+addLocaleData([...en, ...ru]);
 
 const Content = styled.div`
   padding-bottom: 4rem;
@@ -15,11 +21,13 @@ const Content = styled.div`
 `;
 
 export default () =>
-  (<div>
-    <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry" />
-    <Header />
-    <Content role="main">
-      <Product />
-    </Content>
-    <Footer />
-  </div>);
+  (<IntlProvider locale={navigator.language}>
+    <div>
+      <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry" />
+      <Header />
+      <Content role="main">
+        <Product />
+      </Content>
+      <Footer />
+    </div>
+  </IntlProvider>);
