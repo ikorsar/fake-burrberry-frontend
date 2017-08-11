@@ -35,7 +35,7 @@ class ButtonColor extends Component {
   render() {
     return (
       <Button color={this.props.color} active={this.state.active} onClick={this.handleClick}>
-        {this.props.label} color
+        {this.props.label} colour
       </Button>
     );
   }
