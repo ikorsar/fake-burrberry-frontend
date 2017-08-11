@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
 
 const ProductCardRecommended = styled.a`
   display: block;
@@ -36,8 +37,18 @@ const ProductCardRecommendedPrice = styled.h4`
 `;
 
 export default props =>
-  (<ProductCardRecommended href='#' title={props.title}>
+  (<ProductCardRecommended href="#" title={props.title}>
     <ProductCardRecommendedPhoto src={`/files/${props.photoName}.jpg`} alt={props.title} />
-    <ProductCardRecommendedName>{props.title}</ProductCardRecommendedName>
-    <ProductCardRecommendedPrice>{props.price} {props.currency}</ProductCardRecommendedPrice>
+    <ProductCardRecommendedName>
+      {props.title}
+    </ProductCardRecommendedName>
+    <ProductCardRecommendedPrice>
+      <FormattedNumber
+        value={props.price}
+        style="currency"
+        currency={props.currency}
+        currencyDisplay="symbol"
+        minimumFractionDigits={0}
+      />
+    </ProductCardRecommendedPrice>
   </ProductCardRecommended>);

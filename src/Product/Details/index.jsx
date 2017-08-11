@@ -12,7 +12,7 @@ import { Colors, ColorsChoosen, ColorsContainer, Controls, Details, Header } fro
 export default () =>
   (<Details>
     <Header>
-      <Price priceValue="110 000" priceCurrency="руб" />
+      <Price price={110000} currency="RUB" />
       <PartNumber partNumber="39428531" />
     </Header>
 

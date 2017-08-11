@@ -15,5 +15,11 @@ const Price = styled.h2`
 
 export default props =>
   (<Price>
-    {props.priceValue} {props.priceCurrency}
+    <FormattedNumber
+      value={props.price}
+      style="currency"
+      currency={props.currency}
+      currencyDisplay="symbol"
+      minimumFractionDigits={0}
+    />
   </Price>);

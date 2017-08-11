@@ -51,32 +51,32 @@ export default () =>
             <Recommended
               title="Emroided Hooded Content For Three Lines"
               photoName="recommend1"
-              price="27 000"
-              currency="руб"
+              price={27000}
+              currency="RUB"
             />
           </div>
           <div className="col-xs-6 col-md-3">
             <Recommended
               title="Relaxed Fit Stretch Jeans"
               photoName="recommend2"
-              price="22 500"
-              currency="руб"
+              price={22500}
+              currency="RUB"
             />
           </div>
           <div className="col-xs-6 col-md-3">
             <Recommended
               title="Leather and House Check"
               photoName="recommend3"
-              price="120 000"
-              currency="руб"
+              price={120000}
+              currency="RUB"
             />
           </div>
           <div className="col-xs-6 col-md-3">
             <Recommended
               title="Leather Wingtip Check"
               photoName="recommend4"
-              price="46 000"
-              currency="руб"
+              price={46000}
+              currency="RUB"
             />
           </div>
         </div>
