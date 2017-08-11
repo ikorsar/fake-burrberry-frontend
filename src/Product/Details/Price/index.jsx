@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
 
 const Price = styled.h2`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
