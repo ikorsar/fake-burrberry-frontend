@@ -1,54 +1,77 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormattedNumber } from 'react-intl';
 
-const ProductCardRecommended = styled.a`
-  display: block;
-  margin-bottom: 2rem;
-  text-decoration: none;
-  color: #171717;
+import Card from './Card';
 
+const Recommend = styled.section`
+  padding: 3rem .5rem 0;
+  
   @media screen and (min-width: 48rem) {
-    margin-bottom: .5rem;
+    padding: 0;
   }
 `;
 
-const ProductCardRecommendedPhoto = styled.img`
-  display: block;
-  width: 100%;
-`;
-
-const ProductCardRecommendedName = styled.h3`
-  font-family: "Lora", Helvetica, Arial, serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.19;
-  margin: .5rem 0;
-  padding: 0;
-`;
-
-const ProductCardRecommendedPrice = styled.h4`
+const Title = styled.h2`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
-  font-weight: 400;
-  line-height: 1.17;
-  margin: 0;
-  color: #999;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.1875rem;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding-bottom: .5rem;
+  text-transform: uppercase;
+  color: #171717;
+  border-bottom: 1px solid #171717;
+
+  @media screen and (min-width: 48rem) {
+    line-height: 19px;
+    margin: 0 0 1rem;
+  }
+  
+  @media screen and (min-width: 62rem) {
+    border-bottom-color: transparent;
+    text-align: center;  
+    display: block;
+  }
 `;
 
-export default props =>
-  (<ProductCardRecommended href="#" title={props.title}>
-    <ProductCardRecommendedPhoto src={`/files/${props.photoName}.jpg`} alt={props.title} />
-    <ProductCardRecommendedName>
-      {props.title}
-    </ProductCardRecommendedName>
-    <ProductCardRecommendedPrice>
-      <FormattedNumber
-        value={props.price}
-        style="currency"
-        currency={props.currency}
-        currencyDisplay="symbol"
-        minimumFractionDigits={0}
-      />
-    </ProductCardRecommendedPrice>
-  </ProductCardRecommended>);
+export default () => (
+  <Recommend>
+    <Title>We recommend</Title>
+    <div className="row">
+      <div className="col-xs-6 col-md-3">
+        <Card
+          title="Lightweight Crew Neck Cashmere Sweater with Check Trim"
+          photoName="recommend1"
+          price={27000}
+          currency="RUB"
+        />
+      </div>
+      <div className="col-xs-6 col-md-3">
+        <Card
+          title="Relaxed Fit Stretch Jeans"
+          photoName="recommend2"
+          price={22500}
+          currency="RUB"
+        />
+      </div>
+      <div className="col-xs-6 col-md-3">
+        <Card
+          title="Leather and House Check"
+          photoName="recommend3"
+          price={120000}
+          currency="RUB"
+        />
+      </div>
+      <div className="col-xs-6 col-md-3">
+        <Card
+          title="Leather Wingtip Check"
+          photoName="recommend4"
+          price={46000}
+          currency="RUB"
+        />
+      </div>
+    </div>
+  </Recommend>
+)

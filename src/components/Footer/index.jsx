@@ -9,9 +9,8 @@ const Footer = styled.footer`
   padding: 2rem 0;
   background-color: #f3f3f3;
 
-  @media screen and (min-width: 48rem) {
-    padding-right: 0;
-    padding-left: 0;
+  @media screen and (min-width: 62rem) {
+    padding: 4rem 0;
   }
 `;
 

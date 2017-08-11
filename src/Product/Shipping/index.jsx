@@ -1,58 +1,59 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Description, SubTitle, Text } from '../Delivery';
+import Accordion from '../../components/Accordion';
 
-const Shipping = styled.section``;
+const Shipping = styled.section`
+  border-bottom: 1px solid #c6c6c6;
+`;
 
-const Img = styled.img`
-  display: none;
+export const Description = styled.article`
+  padding: 0 .5rem;
 
   @media screen and (min-width: 48rem) {
-    display: block;
-    width: 100%;
+    padding: 0;
+  }
+  
+  @media screen and (min-width: 62rem) {
+    padding-left: 6.25rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
   }
 `;
 
-export const Title = styled.h2`
+export const SubTitle = styled.h4`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  position: relative;
-  text-align: left;
-  text-transform: uppercase;
-  border: none;
-  background-color: transparent;
-  padding: 0 0 1rem;
-  margin: 0;
-  display: none;
+  font-size: .75rem;
+  font-weight: bold;
+  line-height: .875rem;
+  margin: 0 0 .25rem;
+`;
 
-  @media screen and (min-width: 48rem) {
-    display: block;
+export const Text = styled.p`
+  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .75rem;
+  line-height: 1rem;
+  margin: 0 0 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 `;
 
 export default () =>
   (<Shipping>
-    <div className="container">
-      <div className="row">
-        <div className="col-md-7">
-          <Img src="/files/delivery.jpg" alt="Delivery box" />
-        </div>
-        <div className="col-xs-12 col-md-5">
-          <Description>
-            <Title>Delivery</Title>
-            <SubTitle>Free Next Day Delivery</SubTitle>
-            <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
-            <SubTitle>Collect-in-Store</SubTitle>
-            <Text>Order online today and pick up your items in store as early as tomorrow</Text>
-            <SubTitle>Free Returns</SubTitle>
-            <Text>Enjoy free returns on your order</Text>
-            <SubTitle>Free Gift Packaging</SubTitle>
-            <Text>Discover our gift packaging, a gold lined box tied with a coloured ribbon</Text>
-          </Description>
-        </div>
-      </div>
-    </div>
+    <Accordion title="Shipping & Returns">
+      <Description>
+        <SubTitle>Free Next Day Delivery</SubTitle>
+        <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
+        <SubTitle>Collect-in-Store</SubTitle>
+        <Text>Order online today and pick up your items in store as early as tomorrow</Text>
+        <SubTitle>Free Returns</SubTitle>
+        <Text>Enjoy free returns on your order</Text>
+        <SubTitle>Free Gift Packaging</SubTitle>
+        <Text>Discover our gift packaging, a gold lined box tied with a coloured ribbon</Text>
+      </Description>
+    </Accordion>
   </Shipping>);
