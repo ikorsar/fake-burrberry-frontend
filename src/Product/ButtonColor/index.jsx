@@ -9,7 +9,7 @@ const Button = styled.button`
   margin-right: 1rem;
   padding: 0;
   transition: border-color .25s ease-in-out;
-  background-color: ${props => props.bgColor};
+  background-color: ${props => props.color};
   border-width: 1px;
   border-style: solid;
   border-color: ${props => (props.active ? '#232122' : 'transparent')};
@@ -34,11 +34,7 @@ class ButtonColor extends Component {
 
   render() {
     return (
-      <Button
-        bgColor={this.props.bgColorValue}
-        active={this.state.active}
-        onClick={this.handleClick}
-      >
+      <Button color={this.props.color} active={this.state.active} onClick={this.handleClick}>
         {this.props.label} color
       </Button>
     );

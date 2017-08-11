@@ -1,13 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import TitleBorder from '../components/Titles/TitleBorder';
+import { Desktop, Tablet, Mobile } from '../components/Breakpoints';
 
+import TitleBorder from '../components/Titles/TitleBorder';
 import Title from './Title';
 import Gallery from './Gallery';
 import Details from './Details';
 import Description from './Description';
 import Delivery from './Delivery';
+import Shipping from './Shipping';
 import Recommended from './Recommended';
 import More from './More';
 
@@ -33,7 +35,13 @@ export default () =>
 
     <Description />
 
-    <Delivery />
+    <Mobile>
+      <Delivery />
+    </Mobile>
+
+    <Tablet>
+      <Shipping />
+    </Tablet>
 
     <div className="container">
       <Recommends>

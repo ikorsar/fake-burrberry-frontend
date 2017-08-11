@@ -19,8 +19,8 @@ export default () =>
     <Colors>
       <ColorsChoosen>Color: Honey</ColorsChoosen>
       <ColorsContainer>
-        <ButtonColor label="Black" bgColorValue="#232122" />
-        <ButtonColor label="Honey" bgColorValue="#cfa880" />
+        <ButtonColor label="Black" color="#232122" />
+        <ButtonColor label="Honey" color="#cfa880" />
       </ColorsContainer>
     </Colors>
 
