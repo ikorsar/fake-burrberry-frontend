@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Button from '../../components/Buttons/Button';
-import ButtonText from '../../components/Buttons/ButtonText';
+import { ButtonText } from '../../components/Buttons/ButtonText';
 
 const Sizes = styled.div`
   padding-top: .5rem;
