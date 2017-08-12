@@ -30,7 +30,7 @@ const Delivery = Description.extend`
   }
 `;
 
-const ButtonContainer = styled.div`
+const Buttons = styled.div`
   padding: 0 .5rem;
   display: flex;
   flex-flow: column;
@@ -73,9 +73,9 @@ export default () =>
     <div className="row">
       <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
         <Colors />
-        <ButtonContainer>
+        <Buttons>
           <Button type="button" label="Add to bag" secondary />
-        </ButtonContainer>
+        </Buttons>
       </div>
       <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
         <Sizes />
