@@ -32,6 +32,6 @@ const Button = styled.button`
 
 export default () =>
   (<Buttons>
-    <Button type="button" label="Shipping country: Russian Federation" />
-    <Button type="button" label="Language: English" />
+    <Button type="button">Shipping country: Russian Federation</Button>
+    <Button type="button">Language: English</Button>
   </Buttons>);
