@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Responsive from 'react-responsive';
+import MediaQuery from 'react-responsive';
 
 import { Title } from './styled';
 import Gallery from './Gallery';
 import Details from './Details';
-
-const MediaQuery = require('react-responsive');
 
 const Info = styled.section`
   @media screen and (min-width: 62rem) {

@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Responsive from 'react-responsive';
+import MediaQuery from 'react-responsive';
 
 import Accordion from '../../components/Accordion';
 import Img from './Img';
 import { TitleSection } from '../styled';
-
-const MediaQuery = require('react-responsive');
 
 const Description = styled.section`
   @media screen and (min-width: 48rem) {

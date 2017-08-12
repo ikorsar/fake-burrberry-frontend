@@ -45,9 +45,7 @@ const ColorChoosen = styled.p`
 
 export default () =>
   (<Colors>
-    <ColorChoosen>
-      {' '}Colour: <strong>Honey</strong>
-    </ColorChoosen>
+    <ColorChoosen>Colour: <strong>Honey</strong></ColorChoosen>
     <ColorsContainer>
       <ColorButton label="Black" color="#232122" />
       <ColorButton label="Honey" color="#cfa880" />

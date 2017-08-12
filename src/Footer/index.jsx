@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Nav from './Nav/index';
+import Nav from './Nav';
 import Buttons from './Buttons';
 import HelpLink from './HelpLink';
 
