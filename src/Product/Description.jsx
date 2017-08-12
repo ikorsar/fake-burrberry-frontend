@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
 
-import Accordion from '../../components/Accordion';
-import Img from './Img';
-import { TitleSection } from '../styled';
+import Accordion from '../components/Accordion';
+import { TitleSection } from './styled';
 
 const Description = styled.section`
   @media screen and (min-width: 48rem) {
@@ -63,6 +62,11 @@ const Images = styled.section`
   .row div:nth-child(2) img {
     margin-top: 6rem;
   }
+`;
+
+const Img = styled.img`
+  display: block;
+  width: 100%;
 `;
 
 export default () =>
@@ -126,7 +130,7 @@ export default () =>
           </div>
           <MediaQuery minWidth={992}>
             <div className="col-lg-8">
-              <Img photoName="description-big" alt="Description Photo" />
+              <Img src="/files/description-big.jpg" alt="Description Photo" />
             </div>
           </MediaQuery>
         </div>
@@ -134,13 +138,13 @@ export default () =>
           <Images>
             <div className="row">
               <div className="col-lg-4">
-                <Img photoName="description-small1" alt="Description Photo Small" />
+                <Img src="/files/description-small1.jpg" alt="Description Photo Small" />
               </div>
               <div className="col-lg-4">
-                <Img photoName="description-small2" alt="Description Photo Small" />
+                <Img src="/files/description-small2.jpg" alt="Description Photo Small" />
               </div>
               <div className="col-lg-4">
-                <Img photoName="description-small3" alt="Description Photo Small" />
+                <Img src="/files/description-small3.jpg" alt="Description Photo Small" />
               </div>
             </div>
           </Images>
