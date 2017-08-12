@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Accordion from '../../components/Accordion';
+import Accordion from '../components/Accordion';
 
 const Shipping = styled.section`
   border-bottom: 1px solid #c6c6c6;

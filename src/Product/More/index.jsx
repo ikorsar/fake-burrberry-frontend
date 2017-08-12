@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Recommends } from '../styled';
-
-import Title from '../../components/Titles/Title';
+import { TitleSection } from '../styled';
 import Link from './Link';
 
 const More = Recommends.extend`
@@ -15,7 +14,7 @@ const More = Recommends.extend`
 
 export default () =>
   (<More>
-    <Title>More for you</Title>
+    <TitleSection>More for you</TitleSection>
     <Link href="#" title="Men’s Black Trench Coats" />
     <Link href="#" title="Men’s Short Trench Coats" />
     <Link href="#" title="Men’s Long Trench Coats" />

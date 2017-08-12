@@ -1,20 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import Responsive from 'react-responsive';
 
 import Button from '../../components/Buttons/Button';
-import ButtonText from '../../components/Buttons/ButtonText';
-import { Choose, Value } from '../../components/ChooseVariant';
 
-import Title from '../Title';
-import ButtonColor from '../ButtonColor';
-import Sizes from '../Sizes';
+import { Title } from '../styled';
+import Colors from './Colors';
+import Sizes from './Sizes';
+
 import { Description, SubTitle, Text } from '../Shipping';
 
 import Price from './Price';
-import PartNumber from './PartNumber';
 
-import { Colors, ColorsContainer, Details, Header } from './styled';
-import { Desktop, DesktopLess } from '../../components/Breakpoints';
+const MediaQuery = require('react-responsive');
+
+const PartNumber = styled.p`
+  font-size: .75rem;
+  line-height: 1.19;
+  margin: 0;
+  color: #171717;
+`;
 
 const Delivery = Description.extend`
   display: none;
@@ -35,44 +40,45 @@ const ButtonContainer = styled.div`
   }
 `;
 
+const Details = styled.article`@media screen and (min-width: 48rem) {margin: 0;}`;
+
+const Header = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem .5rem;
+
+  @media screen and (min-width: 48rem) {
+    padding: 0 0 1rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    display: block;
+    padding-bottom: 3rem;
+  }
+`;
+
 export default () =>
   (<Details>
     <Header>
-      <Desktop>
+      <MediaQuery minWidth={992}>
         <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
-      </Desktop>
+      </MediaQuery>
       <Price price={110000} currency="RUB" />
-      <DesktopLess>
-        <PartNumber partNumber="39428531" />
-      </DesktopLess>
+      <MediaQuery maxWidth={991}>
+        <PartNumber>Item 39428531</PartNumber>
+      </MediaQuery>
     </Header>
 
     <div className="row">
       <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-        <Colors>
-          <Choose>
-            Colour:
-            <Value>Honey</Value>
-          </Choose>
-          <ColorsContainer>
-            <ButtonColor label="Black" color="#232122" />
-            <ButtonColor label="Honey" color="#cfa880" />
-          </ColorsContainer>
-        </Colors>
+        <Colors />
         <ButtonContainer>
           <Button type="button" label="Add to bag" secondary />
         </ButtonContainer>
       </div>
       <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-        <Desktop>
-          <Sizes />
-        </Desktop>
-        <ButtonContainer>
-          <Button type="button" label="Find in store" />
-        </ButtonContainer>
-        <DesktopLess>
-          <ButtonText type="button" label="Need size help?" />
-        </DesktopLess>
+        <Sizes />
       </div>
     </div>
     <Delivery>

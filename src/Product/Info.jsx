@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Responsive from 'react-responsive';
 
-import Title from '../Title';
-import Gallery from '../Gallery';
-import Details from '../Details';
+import { Title } from './styled';
+import Gallery from './Gallery';
+import Details from './Details';
 
-import { DesktopLess } from '../../components/Breakpoints';
+const MediaQuery = require('react-responsive');
 
 const Info = styled.section`
   @media screen and (min-width: 62rem) {
@@ -16,9 +17,9 @@ const Info = styled.section`
 export default props =>
   (<Info color={props.color}>
     <div className="container">
-      <DesktopLess>
+      <MediaQuery maxWidth={991}>
         <Title>Long Cotton Gabardine Car Coat</Title>
-      </DesktopLess>
+      </MediaQuery>
       <div className="row middle-lg">
         <div className="col-xs-12 col-sm-12 col-md-7 col-lg-6">
           <Gallery />

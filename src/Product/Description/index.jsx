@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Responsive from 'react-responsive';
 
 import Accordion from '../../components/Accordion';
-import { Desktop, Mobile, TabletAndMore } from '../../components/Breakpoints';
-import ImgBig from './ImgBig';
 import Img from './Img';
+import { TitleSection } from '../styled';
+
+const MediaQuery = require('react-responsive');
 
 const Description = styled.section`
   @media screen and (min-width: 48rem) {
@@ -17,19 +19,8 @@ const Description = styled.section`
   }
 `;
 
-const Title = styled.h2`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  position: relative;
-  display: block;
-  padding: 1.5rem 0 1rem;
-  text-align: left;
-  text-transform: uppercase;
-  border: none;
-  background-color: transparent;
-  margin: 0;
+const Title = TitleSection.extend`
+  padding: 1.5rem 0 0;
 
   @media screen and (min-width: 62rem) {
     padding-top: 0;
@@ -64,11 +55,21 @@ const Article = styled.article`
   }
 `;
 
-const Images = styled.section`padding-top: 4rem;`;
+const Images = styled.section`
+  padding-top: 4rem;
+
+  .row div:first-child img {
+    margin-top: 2rem;
+  }
+
+  .row div:nth-child(2) img {
+    margin-top: 6rem;
+  }
+`;
 
 export default () =>
   (<Description>
-    <Mobile>
+    <MediaQuery maxWidth={767}>
       <Accordion title="Description">
         <Article>
           <p>A refined car coat crafted in protective cotton gabardine.</p>
@@ -94,8 +95,8 @@ export default () =>
           </ul>
         </Article>
       </Accordion>
-    </Mobile>
-    <TabletAndMore>
+    </MediaQuery>
+    <MediaQuery minWidth={768}>
       <div className="container">
         <div className="row">
           <div className="col-md-12 col-lg-4">
@@ -125,27 +126,27 @@ export default () =>
               </ul>
             </Article>
           </div>
-          <Desktop>
+          <MediaQuery minWidth={992}>
             <div className="col-lg-8">
-              <ImgBig photoName="description-big" alt="Description Photo" />
+              <Img photoName="description-big" alt="Description Photo" />
             </div>
-          </Desktop>
+          </MediaQuery>
         </div>
-        <Desktop>
+        <MediaQuery minWidth={992}>
           <Images>
             <div className="row">
               <div className="col-lg-4">
-                <Img photoName="description-small1" alt="Description Photo Small" margin={2} />
+                <Img photoName="description-small1" alt="Description Photo Small" />
               </div>
               <div className="col-lg-4">
-                <Img photoName="description-small2" alt="Description Photo Small" margin={6} />
+                <Img photoName="description-small2" alt="Description Photo Small" />
               </div>
               <div className="col-lg-4">
                 <Img photoName="description-small3" alt="Description Photo Small" />
               </div>
             </div>
           </Images>
-        </Desktop>
+        </MediaQuery>
       </div>
-    </TabletAndMore>
+    </MediaQuery>
   </Description>);

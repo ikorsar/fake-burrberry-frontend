@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import GalleryPhoto from './GalleryPhoto';
+import Photo from './Photo';
 
 const Gallery = styled.section`
   display: flex;
@@ -16,8 +16,8 @@ const Gallery = styled.section`
 
 export default () =>
   (<Gallery>
-    <GalleryPhoto photoName="product-img1" alt="Long Cotton Gabardine Car Coat" />
-    <GalleryPhoto photoName="product-img3" alt="Long Cotton Gabardine Car Coat" />
-    <GalleryPhoto photoName="product-img2" alt="Long Cotton Gabardine Car Coat" />
-    <GalleryPhoto photoName="product-img4" alt="Long Cotton Gabardine Car Coat" />
+    <Photo photoName="product-img1" alt="Long Cotton Gabardine Car Coat" />
+    <Photo photoName="product-img3" alt="Long Cotton Gabardine Car Coat" />
+    <Photo photoName="product-img2" alt="Long Cotton Gabardine Car Coat" />
+    <Photo photoName="product-img4" alt="Long Cotton Gabardine Car Coat" />
   </Gallery>);

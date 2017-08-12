@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
+import { TitleSection } from '../styled';
 
 const Recommend = styled.section`
   padding: 3rem .5rem 0;
@@ -11,23 +12,8 @@ const Recommend = styled.section`
   }
 `;
 
-const Title = styled.h2`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.1875rem;
-  position: relative;
-  margin: 0 0 1rem;
-  text-transform: uppercase;
-  color: #171717;
-
-  @media screen and (min-width: 48rem) {
-    line-height: 19px;
-    margin: 0 0 1rem;
-  }
-
+const Title = TitleSection.extend`
   @media screen and (min-width: 62rem) {
-    margin-top: -2px;
     text-align: center;
     margin-bottom: 2rem;
   }

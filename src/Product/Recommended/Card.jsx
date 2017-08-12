@@ -11,6 +11,10 @@ const Card = styled.a`
   @media screen and (min-width: 48rem) {
     margin-bottom: .5rem;
   }
+
+  @media screen and (min-width: 62rem) {
+    padding-bottom: 1rem;
+  }
 `;
 
 const Photo = styled.img`
@@ -45,6 +49,7 @@ const Price = styled.h4`
   @media screen and (min-width: 62rem) {
     line-height: 1.33;
     color: #171717;
+    po
   }
 `;
 

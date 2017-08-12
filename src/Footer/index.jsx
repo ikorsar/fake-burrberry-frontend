@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Nav from './Nav';
-import Buttons from './Btns';
+import Nav from './Nav/index';
+import Buttons from './Buttons';
 import HelpLink from './HelpLink';
 
 const Footer = styled.footer`

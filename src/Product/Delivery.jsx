@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Description, SubTitle, Text } from '../Shipping';
+import { Description, SubTitle, Text } from './Shipping';
+import { TitleSection } from './styled';
 
 const Delivery = styled.section`
   @media screen and (min-width: 48rem) {
@@ -22,22 +23,13 @@ const Img = styled.img`
   }
 `;
 
-export const Title = styled.h2`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
+const Title = TitleSection.extend`
   line-height: 1.25rem;
-  position: relative;
-  text-align: left;
-  text-transform: uppercase;
-  border: none;
-  background-color: transparent;
-  padding: 0 0 1rem;
-  margin: 0;
   display: none;
 
   @media screen and (min-width: 48rem) {
     display: block;
+    line-height: 1.25rem;
   }
 `;
 

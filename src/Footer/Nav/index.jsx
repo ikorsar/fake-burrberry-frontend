@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Title from './Title';
 import Link from './Link';
 
 const Nav = styled.nav`
@@ -11,6 +10,14 @@ const Nav = styled.nav`
   @media screen and (min-width: 48rem) {
     display: block;
   }
+`;
+
+const Title = styled.h3`
+  font-size: .75rem;
+  font-weight: bold;
+  line-height: .875rem;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
 `;
 
 export default () =>
