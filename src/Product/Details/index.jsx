@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MediaQuery from 'react-responsive';
+import { SmallOnly, LargeOnly} from '../../components/Breakpoints';
 
 import Button from '../../components/Buttons/Button';
 
@@ -59,25 +59,25 @@ const Header = styled.header`
 export default () =>
   (<Details>
     <Header>
-      <MediaQuery minWidth={992}>
+      <LargeOnly>
         <Title>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Title>
-      </MediaQuery>
+      </LargeOnly>
       <Price price={110000} currency="RUB" />
-      <MediaQuery maxWidth={991}>
+      <SmallOnly>
         <PartNumber>Item 39428531</PartNumber>
-      </MediaQuery>
+      </SmallOnly>
     </Header>
 
     <div className="row">
       <div className="col-xs-12 col-lg-6">
         <Colors />
         <Buttons>
-          <MediaQuery maxWidth={991}>
+          <SmallOnly>
             <Button type="button" label="Select a size" secondary />
-          </MediaQuery>
-          <MediaQuery minWidth={992}>
+          </SmallOnly>
+          <LargeOnly>
             <Button type="button" label="Add to bag" secondary />
-          </MediaQuery>
+          </LargeOnly>
         </Buttons>
       </div>
       <div className="col-xs-12 col-lg-6">

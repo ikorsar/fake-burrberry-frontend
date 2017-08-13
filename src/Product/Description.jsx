@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MediaQuery from 'react-responsive';
+import { SmallOnly, LargeOnly} from '../components/Breakpoints';
 
 import Accordion from '../components/Accordion';
 import { TitleSection } from './styled';
@@ -114,13 +114,13 @@ export default () =>
               </ul>
             </Article>
           </div>
-          <MediaQuery minWidth={992}>
+          <LargeOnly>
             <div className="col-lg-8">
               <Img src="/files/description-big.jpg" alt="Description Photo" />
             </div>
-          </MediaQuery>
+          </LargeOnly>
         </div>
-        <MediaQuery minWidth={992}>
+        <LargeOnly>
           <div className="row">
             <div className="col-lg-12">
               <Images>
@@ -138,7 +138,7 @@ export default () =>
               </Images>
             </div>
           </div>
-        </MediaQuery>
+        </LargeOnly>
       </div>
     </Accordion>
   </Description>);

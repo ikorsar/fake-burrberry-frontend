@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MediaQuery from 'react-responsive';
+import { SmallOnly, LargeOnly} from '../components/Breakpoints';
 
 import { Title } from './styled';
 import Gallery from './Gallery';
@@ -15,9 +15,9 @@ const Info = styled.section`
 export default props =>
   (<Info color={props.color}>
     <div className="container">
-      <MediaQuery maxWidth={991}>
+      <SmallOnly>
         <Title>Long Cotton Gabardine Car Coat</Title>
-      </MediaQuery>
+      </SmallOnly>
       <div className="row middle-lg">
         <div className="col-xs-12 col-sm-12 col-md-7 col-lg-6">
           <Gallery />
