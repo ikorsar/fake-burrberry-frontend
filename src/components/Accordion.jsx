@@ -12,6 +12,10 @@ export const Container = styled.div`
 export const Buttons = styled.div`
   display: flex;
   flex-flow: column;
+
+  @media screen and (min-width: 48rem) {
+    display: none;
+  }
 `;
 
 export const Button = styled.button`
@@ -51,11 +55,15 @@ export const Button = styled.button`
 
 export const Content = styled.div`
   display: ${props => (props.active ? 'block' : 'none')};
-  padding: 0 .5rem 2rem;
+  padding: 0 0 2rem;
 
   @media screen and (min-width: 48rem) {
     display: block;
     padding: 0 0 1.5rem;
+  }
+
+  @media screen and (min-width: 62rem) {
+    padding: 0;
   }
 `;
 
@@ -83,10 +91,11 @@ class Accordion extends Component {
               {this.props.title}
             </Button>
           </Buttons>
-          <Content active={this.state.active}>
-            {this.props.children}
-          </Content>
         </div>
+        <Content active={this.state.active}>
+          {this.props.children}
+        </Content>
+        {/* </div> */}
       </Container>
     );
   }

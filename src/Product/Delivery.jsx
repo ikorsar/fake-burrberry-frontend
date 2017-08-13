@@ -6,7 +6,7 @@ import { TitleSection } from './styled';
 
 const Delivery = styled.section`
   @media screen and (min-width: 48rem) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
   }
 
   @media screen and (min-width: 62rem) {

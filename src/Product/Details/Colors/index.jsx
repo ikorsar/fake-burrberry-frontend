@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ColorButton from './ColorButton';
+import ButtonColor from './ColorButton';
 
 const Colors = styled.section`
   margin: 0 .5rem 2rem;
@@ -21,7 +21,7 @@ const Colors = styled.section`
   }
 `;
 
-const ColorsContainer = styled.div`
+const Container = styled.div`
   display: flex;
 
   @media screen and (min-width: 62rem) {
@@ -29,7 +29,7 @@ const ColorsContainer = styled.div`
   }
 `;
 
-const ColorChoosen = styled.p`
+const Choosen = styled.p`
   font-family: Raleway;
   font-size: .75rem;
   line-height: 1rem;
@@ -45,9 +45,11 @@ const ColorChoosen = styled.p`
 
 export default () =>
   (<Colors>
-    <ColorChoosen>Colour: <strong>Honey</strong></ColorChoosen>
-    <ColorsContainer>
-      <ColorButton label="Black" color="#232122" />
-      <ColorButton label="Honey" color="#cfa880" />
-    </ColorsContainer>
+    <Choosen>
+      Colour: <strong>Honey</strong>
+    </Choosen>
+    <Container>
+      <ButtonColor label="Black" color="#232122" />
+      <ButtonColor label="Honey" color="#cfa880" />
+    </Container>
   </Colors>);

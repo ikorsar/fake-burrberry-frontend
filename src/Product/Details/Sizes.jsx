@@ -5,21 +5,19 @@ import Button from '../../components/Buttons/Button';
 import { ButtonText } from '../../components/Buttons/ButtonText';
 
 const Sizes = styled.div`
-  padding-top: .5rem;
   display: flex;
   flex-flow: column;
-
-  @media screen and (min-width: 62rem) {
-    padding-top: 0;
-  }
 `;
 
 const Header = styled.div`
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
   display: flex;
   order: 2;
+
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 1rem;
+  }
 
   @media screen and (min-width: 62rem) {
     display: flex;
@@ -28,11 +26,14 @@ const Header = styled.div`
 `;
 
 const Content = styled.div`
-  margin-bottom: 1rem;
   display: none;
 
   button {
     margin-right: .5rem;
+  }
+
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 1rem;
   }
 
   @media screen and (min-width: 62rem) {
@@ -62,7 +63,7 @@ const Footer = styled.div`
   flex-flow: column;
   order: 1;
   padding: 0 .5rem;
-  
+
   @media screen and (min-width: 48rem) {
     padding: 0;
   }

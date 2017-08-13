@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Responsive from 'react-responsive';
+import MediaQuery from 'react-responsive';
 
 import Button from '../../components/Buttons/Button';
 
@@ -11,8 +11,6 @@ import Sizes from './Sizes';
 import { Description, SubTitle, Text } from '../Shipping';
 
 import Price from './Price';
-
-const MediaQuery = require('react-responsive');
 
 const PartNumber = styled.p`
   font-size: .75rem;
@@ -71,13 +69,18 @@ export default () =>
     </Header>
 
     <div className="row">
-      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+      <div className="col-xs-12 col-lg-6">
         <Colors />
         <Buttons>
-          <Button type="button" label="Add to bag" secondary />
+          <MediaQuery maxWidth={991}>
+            <Button type="button" label="Select a size" secondary />
+          </MediaQuery>
+          <MediaQuery minWidth={992}>
+            <Button type="button" label="Add to bag" secondary />
+          </MediaQuery>
         </Buttons>
       </div>
-      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+      <div className="col-xs-12 col-lg-6">
         <Sizes />
       </div>
     </div>

@@ -12,7 +12,7 @@ const Shipping = styled.section`
 `;
 
 export const Description = styled.article`
-  padding: 0 .5rem;
+  padding: 0 1rem;
 
   @media screen and (min-width: 48rem) {
     padding: 0;
