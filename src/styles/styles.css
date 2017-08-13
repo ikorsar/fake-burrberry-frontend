@@ -1,0 +1,16 @@
+/* default styles */
+
+body {
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  color: #171717;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* default styles end */
