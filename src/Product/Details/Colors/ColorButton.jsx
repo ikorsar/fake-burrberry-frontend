@@ -18,7 +18,7 @@ const Button = styled.button`
 `;
 
 class ButtonColor extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       active: false,
@@ -27,7 +27,7 @@ class ButtonColor extends Component {
   }
 
   handleClick() {
-    this.setState((state, props) => ({
+    this.setState(state => ({
       active: !state.active,
     }));
   }

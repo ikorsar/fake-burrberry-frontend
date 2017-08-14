@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ButtonText = styled.button`
+export const ButtonText = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   line-height: 1rem;

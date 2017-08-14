@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const Button = styled.button`
+const Button = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75em;
   font-weight: ${props => (props.active ? 'bold' : '400')};

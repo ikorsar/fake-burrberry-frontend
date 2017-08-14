@@ -68,7 +68,7 @@ export const Content = styled.div`
 `;
 
 class Accordion extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       active: false,
@@ -77,7 +77,7 @@ class Accordion extends Component {
   }
 
   handleClick() {
-    this.setState((state, props) => ({
+    this.setState(state => ({
       active: !state.active,
     }));
   }
