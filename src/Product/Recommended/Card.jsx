@@ -62,9 +62,7 @@ export default props =>
     <Price>
       <FormattedNumber
         value={props.price}
-        /* eslint-disable */
-        style="currency"
-        /* eslint-enable */
+        style="currency" // eslint-disable-line
         currency={props.currency}
         currencyDisplay="symbol"
         minimumFractionDigits={0}
