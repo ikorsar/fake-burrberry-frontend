@@ -95,7 +95,6 @@ class Accordion extends Component {
         <Content active={this.state.active}>
           {this.props.children}
         </Content>
-        {/* </div> */}
       </Container>
     );
   }

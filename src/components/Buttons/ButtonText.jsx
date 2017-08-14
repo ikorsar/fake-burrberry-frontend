@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-export const ButtonText = styled.button`
+const ButtonText = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   line-height: 1rem;
@@ -25,3 +24,5 @@ export const ButtonText = styled.button`
     margin: 0;
   }
 `;
+
+export default ButtonText;

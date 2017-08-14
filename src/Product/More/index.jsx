@@ -1,7 +1,5 @@
 import React from 'react';
-
-import { Recommends } from '../styled';
-import { TitleSection } from '../styled';
+import { Recommends, TitleSection } from '../styled';
 import Link from './Link';
 
 const More = Recommends.extend`

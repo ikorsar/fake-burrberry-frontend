@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SmallOnly, LargeOnly} from '../components/Breakpoints';
+import { LargeOnly } from '../components/Breakpoints';
 
 import Accordion from '../components/Accordion';
 import { TitleSection } from './styled';
