@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 export const Container = styled.div`
   border-top: 1px solid #c6c6c6;
@@ -101,3 +102,8 @@ class Accordion extends Component {
 }
 
 export default Accordion;
+
+Accordion.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Button = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -26,7 +27,24 @@ const Button = styled.button`
   }
 `;
 
-export default props =>
-  (<Button type={props.type} secondary={props.secondary} small={props.small} active={props.active}>
-    {props.label}
-  </Button>);
+export default function ButtonExport(props) {
+  return (
+    <Button type={props.type} secondary={props.secondary} small={props.small} active={props.active}>
+      {props.label}
+    </Button>
+  );
+}
+
+ButtonExport.defaultProps = {
+  secondary: false,
+  small: false,
+  active: false,
+};
+
+ButtonExport.propTypes = {
+  type: PropTypes.string.isRequired,
+  secondary: PropTypes.bool,
+  small: PropTypes.bool,
+  active: PropTypes.bool,
+  label: PropTypes.string.isRequired,
+};

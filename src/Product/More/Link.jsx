@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Link = styled.a`
   font-family: "Lora", Helvetica, Arial, serif;
@@ -16,7 +17,14 @@ const Link = styled.a`
   }
 `;
 
-export default props =>
-  (<Link href="#" title={props.title}>
-    {props.title}
-  </Link>);
+export default function LinkExport(props) {
+  return (
+    <Link href="#" title={props.title}>
+      {props.title}
+    </Link>
+  );
+}
+
+LinkExport.propTypes = {
+  title: PropTypes.string.isRequired,
+};

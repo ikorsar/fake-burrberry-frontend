@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 
 const Price = styled.h2`
@@ -13,13 +14,21 @@ const Price = styled.h2`
   color: #171717;
 `;
 
-export default props =>
-  (<Price>
-    <FormattedNumber
-      value={props.price}
-      style="currency" // eslint-disable-line
-      currency={props.currency}
-      currencyDisplay="symbol"
-      minimumFractionDigits={0}
-    />
-  </Price>);
+export default function PriceExport(props) {
+  return (
+    <Price>
+      <FormattedNumber
+        value={props.price}
+        style="currency" // eslint-disable-line
+        currency={props.currency}
+        currencyDisplay="symbol"
+        minimumFractionDigits={0}
+      />
+    </Price>
+  );
+}
+
+PriceExport.propTypes = {
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+};

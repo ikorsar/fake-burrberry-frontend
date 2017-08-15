@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 
 const Card = styled.a`
@@ -53,19 +54,29 @@ const Price = styled.h4`
   }
 `;
 
-export default props =>
-  (<Card href="#" title={props.title}>
-    <Photo src={`/files/${props.photoName}.jpg`} alt={props.title} />
-    <Title>
-      {props.title}
-    </Title>
-    <Price>
-      <FormattedNumber
-        value={props.price}
-        style="currency" // eslint-disable-line
-        currency={props.currency}
-        currencyDisplay="symbol"
-        minimumFractionDigits={0}
-      />
-    </Price>
-  </Card>);
+export default function CardExport(props) {
+  return (
+    <Card href="#" title={props.title}>
+      <Photo src={`/files/${props.photoName}.jpg`} alt={props.title} />
+      <Title>
+        {props.title}
+      </Title>
+      <Price>
+        <FormattedNumber
+          value={props.price}
+          style="currency" // eslint-disable-line
+          currency={props.currency}
+          currencyDisplay="symbol"
+          minimumFractionDigits={0}
+        />
+      </Price>
+    </Card>
+  );
+}
+
+CardExport.propTypes = {
+  title: PropTypes.string.isRequired,
+  photoName: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+};

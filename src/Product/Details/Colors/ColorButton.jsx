@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Button = styled.button`
   font-size: 0;
@@ -42,3 +43,8 @@ class ButtonColor extends Component {
 }
 
 export default ButtonColor;
+
+ButtonColor.propTypes = {
+  color: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+};
