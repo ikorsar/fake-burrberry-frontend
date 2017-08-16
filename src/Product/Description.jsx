@@ -33,8 +33,7 @@ const Article = styled.article`
   padding-right: 1rem;
 
   @media screen and (min-width: 48rem) {
-    margin-left: -.5rem;
-    margin-right: -.5rem;
+    padding-right: 0;
   }
 
   p {
