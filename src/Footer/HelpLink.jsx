@@ -8,7 +8,6 @@ const HelpLink = styled.a`
   font-style: italic;
   line-height: 1rem;
   display: block;
-  padding: 0 1rem;
   text-align: center;
   text-decoration: none;
   color: #171717;

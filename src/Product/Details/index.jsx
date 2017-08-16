@@ -29,13 +29,8 @@ const Delivery = Description.extend`
 `;
 
 const Buttons = styled.div`
-  padding: 0 .5rem;
   display: flex;
   flex-flow: column;
-
-  @media screen and (min-width: 48rem) {
-    padding: 0;
-  }
 `;
 
 const Details = styled.article`@media screen and (min-width: 48rem) {margin: 0;}`;
@@ -44,7 +39,7 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem .5rem;
+  padding: 1rem 0;
 
   @media screen and (min-width: 48rem) {
     padding: 0 0 1rem;

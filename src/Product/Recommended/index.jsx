@@ -5,7 +5,7 @@ import Card from './Card';
 import { TitleSection } from '../styled';
 
 const Recommend = styled.section`
-  padding: 3rem .5rem 0;
+  padding: 3rem 0 0;
 
   @media screen and (min-width: 48rem) {
     padding: 0;

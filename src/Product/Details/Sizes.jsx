@@ -62,11 +62,6 @@ const Footer = styled.div`
   display: flex;
   flex-flow: column;
   order: 1;
-  padding: 0 .5rem;
-
-  @media screen and (min-width: 48rem) {
-    padding: 0;
-  }
 
   @media screen and (min-width: 62rem) {
     order: 3;
