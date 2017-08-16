@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
 import Categories from '../Categories';
+import CategoryHeader from './CategoryHeader';
+import SubCategory from './SubCategory';
+import ShowMore from './ShowMore';
 
 class List extends Component {
   constructor(props) {
@@ -13,10 +16,17 @@ class List extends Component {
     return (
       <div>
         <Helmet>
-          <title>Trench Coats for Men</title>
+          <title>Men’s Clothing</title>
         </Helmet>
 
         <Categories />
+        <CategoryHeader />
+
+        <div className="container">
+          <SubCategory />
+
+          <ShowMore />
+        </div>
       </div>
     );
   }
