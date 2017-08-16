@@ -136,14 +136,16 @@ export default function CardExport(props) {
 
 CardExport.defaultProps = {
   fullCard: false,
+  label: '',
+  colourQuantity: 0,
 };
 
 CardExport.propTypes = {
   link: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   title: PropTypes.string.isRequired,
   photoName: PropTypes.string.isRequired,
-  colourQuantity: PropTypes.number.isRequired,
+  colourQuantity: PropTypes.number,
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
   fullCard: PropTypes.bool,
