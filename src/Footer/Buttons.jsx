@@ -21,8 +21,16 @@ const Button = styled.button`
   }
 `;
 
+const Text = styled.span`color: #171717;`;
+
 export default () =>
   (<Buttons>
-    <Button type="button">Shipping country: Russian Federation</Button>
-    <Button type="button">Language: English</Button>
+    <Button type="button">
+      Shipping country:
+      <Text> Russian Federation</Text>
+    </Button>
+    <Button type="button">
+      Language:
+      <Text> English</Text>
+    </Button>
   </Buttons>);

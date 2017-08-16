@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import MediaQuery from 'react-responsive';
 
+import Categories from './Categories';
 import Description from './Description';
 import Shipping from './Shipping';
 import Delivery from './Delivery';
@@ -14,6 +15,8 @@ export default () =>
     <Helmet>
       <title>Long Cotton Gabardine Car Coat</title>
     </Helmet>
+
+    <Categories />
 
     <Info color="#d4bdad" />
 
