@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import hamburger from './hamburger.svg';
 import logo from './logo.svg';
 import arrow from './arrow.svg';
@@ -32,7 +33,7 @@ const Hamburger = styled.img`
   height: 11px;
 `;
 
-const Link = styled.a`
+const LinkStyled = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,8 +87,8 @@ export default () =>
         Shopping in: United Kingdom (£)
         <Arrow src={arrow} />
       </Country>
-      <Link href="/">
+      <LinkStyled to="/">
         <Logo src={logo} alt="Burberry Logo" />
-      </Link>
+      </LinkStyled>
     </Header>
   </div>);
