@@ -7,7 +7,7 @@ import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 
 import Header from './Header';
-import Product from './Product';
+import Product from './Product/Show/index';
 import Footer from './Footer';
 
 addLocaleData([...en, ...ru]);

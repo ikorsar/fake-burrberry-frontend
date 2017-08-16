@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SmallOnly, LargeOnly } from '../../components/Breakpoints';
+import { SmallOnly, LargeOnly } from '../../../components/Breakpoints';
 
-import Button from '../../components/Buttons/Button';
+import Button from '../../../components/Buttons/Button';
 
 import { Title } from '../styled';
-import Colors from './Colors';
+import Colors from './Colors/index';
 import Sizes from './Sizes';
 
 import { Description, SubTitle, Text } from '../Shipping';
