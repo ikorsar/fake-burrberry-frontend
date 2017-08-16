@@ -26,7 +26,7 @@ export const Button = styled.button`
   line-height: 1.25rem;
   position: relative;
   display: block;
-  padding: 2rem .5rem;
+  padding: 2rem 0;
   text-align: left;
   text-transform: uppercase;
   border: none;
@@ -39,7 +39,7 @@ export const Button = styled.button`
   &:after {
     position: absolute;
     top: 50%;
-    right: .5rem;
+    right: 0;
     width: 0;
     height: 0;
     content: "";

@@ -1,16 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Buttons = styled.div`
-  padding-right: .5rem;
-  padding-left: .5rem;
-
-  @media screen and (min-width: 48rem) {
-    display: flex;
-    padding-right: 0;
-    padding-left: 0;
-  }
-`;
+const Buttons = styled.div`@media screen and (min-width: 48rem) {display: flex;}`;
 
 const Button = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;

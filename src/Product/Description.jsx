@@ -30,7 +30,7 @@ const Title = TitleSection.extend`
 `;
 
 const Article = styled.article`
-  padding: 0 .5rem;
+  padding-right: 1rem;
 
   @media screen and (min-width: 48rem) {
     margin-left: -.5rem;

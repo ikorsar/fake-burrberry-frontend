@@ -12,12 +12,6 @@ const Shipping = styled.section`
 `;
 
 export const Description = styled.article`
-  padding: 0 .5rem;
-
-  @media screen and (min-width: 48rem) {
-    padding: 0;
-  }
-
   @media screen and (min-width: 62rem) {
     padding-left: 5.25rem;
     display: flex;
@@ -47,7 +41,7 @@ export const Text = styled.p`
 
 export default () =>
   (<Shipping>
-    <Accordion title="Shipping & Returns">
+    <Accordion title="Delivery">
       <div className="container">
         <Description>
           <SubTitle>Free Next Day Delivery</SubTitle>

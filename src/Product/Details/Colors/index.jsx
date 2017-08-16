@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ButtonColor from './ColorButton';
 
 const Colors = styled.section`
-  margin: 0 .5rem 2rem;
+  margin: 0 0 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #c6c6c6;
 
