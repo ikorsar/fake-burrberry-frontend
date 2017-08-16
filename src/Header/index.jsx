@@ -6,16 +6,16 @@ import arrow from './arrow.svg';
 
 const Header = styled.header`
   display: flex;
-  padding: 1.125rem .5rem;
+  padding: 1.125rem 0;
   align-items: center;
   position: relative;
 
   @media screen and (min-width: 48rem) {
-    padding: 1.5rem .5rem;
+    padding: 1.5rem 0;
   }
 
   @media screen and (min-width: 64rem) {
-    padding: 2rem;
+    padding: 2rem 0;
   }
 `;
 
@@ -63,7 +63,6 @@ const Country = styled.button`
   color: #999;
   display: none;
   position: relative;
-  margin-left: .5rem;
 
   @media screen and (min-width: 48rem) {
     display: flex;
@@ -74,19 +73,21 @@ const Country = styled.button`
 const Arrow = styled.img`
   width: 12px;
   height: 6px;
-  margin-left: .75rem;
+  margin-left: .5rem;
 `;
 
 export default () =>
-  (<Header>
-    <ButtonMenu href="#">
-      <Hamburger src={hamburger} />
-    </ButtonMenu>
-    <Country>
-      Shopping in: United Kingdom (£)
-      <Arrow src={arrow} />
-    </Country>
-    <Link href="/">
-      <Logo src={logo} alt="Burberry Logo" />
-    </Link>
-  </Header>);
+  (<div className="container">
+    <Header>
+      <ButtonMenu href="#">
+        <Hamburger src={hamburger} />
+      </ButtonMenu>
+      <Country>
+        Shopping in: United Kingdom (£)
+        <Arrow src={arrow} />
+      </Country>
+      <Link href="/">
+        <Logo src={logo} alt="Burberry Logo" />
+      </Link>
+    </Header>
+  </div>);
