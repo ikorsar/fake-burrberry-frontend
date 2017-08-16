@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { SmallOnly } from '../components/Breakpoints';
+import { SmallOnly } from '../../components/Breakpoints';
 
 import { Title } from './styled';
 import Gallery from './Gallery';
