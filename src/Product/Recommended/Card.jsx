@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 
-const Card = styled.a`
+const CardStyled = styled.a`
   display: block;
   margin-bottom: 2rem;
   text-decoration: none;
@@ -54,9 +54,9 @@ const Price = styled.h4`
   }
 `;
 
-export default function CardComponent(props) {
+export default function Card(props) {
   return (
-    <Card href="#" title={props.title}>
+    <CardStyled href="#" title={props.title}>
       <Photo src={`/files/${props.photoName}.jpg`} alt={props.title} />
       <Title>
         {props.title}
@@ -70,11 +70,11 @@ export default function CardComponent(props) {
           minimumFractionDigits={0}
         />
       </Price>
-    </Card>
+    </CardStyled>
   );
 }
 
-CardComponent.propTypes = {
+Card.propTypes = {
   title: PropTypes.string.isRequired,
   photoName: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,

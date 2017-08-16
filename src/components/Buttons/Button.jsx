@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Button = styled.button`
+const ButtonStyled = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75em;
   font-weight: ${props => (props.active ? 'bold' : '400')};
@@ -27,22 +27,26 @@ const Button = styled.button`
   }
 `;
 
-export default function ButtonComponent(props) {
+export default function Button(props) {
   return (
-    <Button type={props.type} secondary={props.secondary} small={props.small} active={props.active}>
+    <ButtonStyled
+      type="button"
+      secondary={props.secondary}
+      small={props.small}
+      active={props.active}
+    >
       {props.label}
-    </Button>
+    </ButtonStyled>
   );
 }
 
-ButtonComponent.defaultProps = {
+Button.defaultProps = {
   secondary: false,
   small: false,
   active: false,
 };
 
-ButtonComponent.propTypes = {
-  type: PropTypes.string.isRequired,
+Button.propTypes = {
   secondary: PropTypes.bool,
   small: PropTypes.bool,
   active: PropTypes.bool,

@@ -7,15 +7,15 @@ import { Title } from './styled';
 import Gallery from './Gallery';
 import Details from './Details';
 
-const Info = styled.section`
+const InfoStyled = styled.section`
   @media screen and (min-width: 62rem) {
     background-color: ${props => props.color};
   }
 `;
 
-export default function InfoComponent(props) {
+export default function Info(props) {
   return (
-    <Info color={props.color}>
+    <InfoStyled color={props.color}>
       <div className="container">
         <SmallOnly>
           <Title>Long Cotton Gabardine Car Coat</Title>
@@ -29,10 +29,10 @@ export default function InfoComponent(props) {
           </div>
         </div>
       </div>
-    </Info>
+    </InfoStyled>
   );
 }
 
-InfoComponent.propTypes = {
+Info.propTypes = {
   color: PropTypes.string.isRequired,
 };

@@ -18,7 +18,7 @@ const Button = styled.button`
   cursor: ${props => (props.active ? 'default' : 'pointer')};
 `;
 
-class ButtonColorComponent extends Component {
+class ButtonColor extends Component {
   constructor() {
     super();
     this.state = {
@@ -42,9 +42,9 @@ class ButtonColorComponent extends Component {
   }
 }
 
-export default ButtonColorComponent;
+export default ButtonColor;
 
-ButtonColorComponent.propTypes = {
+ButtonColor.propTypes = {
   color: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
 };
