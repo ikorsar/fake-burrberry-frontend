@@ -13,7 +13,7 @@ const Info = styled.section`
   }
 `;
 
-export default function InfoExport(props) {
+export default function InfoComponent(props) {
   return (
     <Info color={props.color}>
       <div className="container">
@@ -33,6 +33,6 @@ export default function InfoExport(props) {
   );
 }
 
-InfoExport.propTypes = {
+InfoComponent.propTypes = {
   color: PropTypes.string.isRequired,
 };

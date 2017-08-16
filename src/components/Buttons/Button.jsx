@@ -27,7 +27,7 @@ const Button = styled.button`
   }
 `;
 
-export default function ButtonExport(props) {
+export default function ButtonComponent(props) {
   return (
     <Button type={props.type} secondary={props.secondary} small={props.small} active={props.active}>
       {props.label}
@@ -35,13 +35,13 @@ export default function ButtonExport(props) {
   );
 }
 
-ButtonExport.defaultProps = {
+ButtonComponent.defaultProps = {
   secondary: false,
   small: false,
   active: false,
 };
 
-ButtonExport.propTypes = {
+ButtonComponent.propTypes = {
   type: PropTypes.string.isRequired,
   secondary: PropTypes.bool,
   small: PropTypes.bool,

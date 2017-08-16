@@ -54,7 +54,7 @@ const Price = styled.h4`
   }
 `;
 
-export default function CardExport(props) {
+export default function CardComponent(props) {
   return (
     <Card href="#" title={props.title}>
       <Photo src={`/files/${props.photoName}.jpg`} alt={props.title} />
@@ -74,7 +74,7 @@ export default function CardExport(props) {
   );
 }
 
-CardExport.propTypes = {
+CardComponent.propTypes = {
   title: PropTypes.string.isRequired,
   photoName: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,

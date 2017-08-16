@@ -14,7 +14,7 @@ const Price = styled.h2`
   color: #171717;
 `;
 
-export default function PriceExport(props) {
+export default function PriceComponent(props) {
   return (
     <Price>
       <FormattedNumber
@@ -28,7 +28,7 @@ export default function PriceExport(props) {
   );
 }
 
-PriceExport.propTypes = {
+PriceComponent.propTypes = {
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
 };
