@@ -2,12 +2,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-import { IntlProvider, addLocaleData } from 'react-intl';
+import { addLocaleData, IntlProvider } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import List from './Product/List';
+import Show from './Product/Show';
+
 import Header from './Header';
-import Product from './Product/Show/index';
 import Footer from './Footer';
 
 addLocaleData([...en, ...ru]);
@@ -21,13 +24,16 @@ const Content = styled.div`
 `;
 
 export default () =>
-  (<IntlProvider locale={navigator.language}>
-    <div>
-      <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry" />
-      <Header />
-      <Content role="main">
-        <Product />
-      </Content>
-      <Footer />
-    </div>
-  </IntlProvider>);
+  (<Router>
+    <IntlProvider locale={navigator.language}>
+      <div>
+        <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry" />
+        <Header />
+        <Content role="main">
+          <Route exact path="/products" component={List} />
+          <Route path="/products/:id" component={Show} />
+        </Content>
+        <Footer />
+      </div>
+    </IntlProvider>
+  </Router>);
