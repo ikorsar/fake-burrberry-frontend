@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import heart from './heart.svg';
 
-const Card = styled(Link)`
+const CardStyled = styled(Link)`
   display: block;
   margin-bottom: 2rem;
   text-decoration: none;
@@ -100,47 +100,44 @@ const Price = styled.h4`
   }
 `;
 
-export default function CardExport(props) {
-  return (
-    <Card to={props.link} title={props.title}>
-      <Photo src={props.photoName} alt={props.title} />
-      <Header fullCard={props.fullCard}>
-        <Label>
-          {props.label}
-        </Label>
-        <Favorites>
-          <Heart src={heart} />
-        </Favorites>
-      </Header>
-      <Title>
-        {props.title}
-      </Title>
-      <Available fullCard={props.fullCard}>
-        <Text>
-          Available in&nbsp;
-          <Color>{props.colourQuantity} colours</Color>
-        </Text>
-      </Available>
-      <Price>
-        <FormattedNumber
-          value={props.price}
-          style="currency" // eslint-disable-line
-          currency={props.currency}
-          currencyDisplay="symbol"
-          minimumFractionDigits={0}
-        />
-      </Price>
-    </Card>
-  );
-}
+const Card = props =>
+  (<CardStyled to={props.link} title={props.title}>
+    <Photo src={props.photoName} alt={props.title} />
+    <Header fullCard={props.fullCard}>
+      <Label>
+        {props.label}
+      </Label>
+      <Favorites>
+        <Heart src={heart} />
+      </Favorites>
+    </Header>
+    <Title>
+      {props.title}
+    </Title>
+    <Available fullCard={props.fullCard}>
+      <Text>
+        Available in&nbsp;
+        <Color>{props.colourQuantity} colours</Color>
+      </Text>
+    </Available>
+    <Price>
+      <FormattedNumber
+        value={props.price}
+        style="currency" // eslint-disable-line
+        currency={props.currency}
+        currencyDisplay="symbol"
+        minimumFractionDigits={0}
+      />
+    </Price>
+  </CardStyled>);
 
-CardExport.defaultProps = {
+Card.defaultProps = {
   fullCard: false,
   label: '',
   colourQuantity: 0,
 };
 
-CardExport.propTypes = {
+Card.propTypes = {
   link: PropTypes.string.isRequired,
   label: PropTypes.string,
   title: PropTypes.string.isRequired,
@@ -150,3 +147,5 @@ CardExport.propTypes = {
   currency: PropTypes.string.isRequired,
   fullCard: PropTypes.bool,
 };
+
+export default Card;
