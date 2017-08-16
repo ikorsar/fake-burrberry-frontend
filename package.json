@@ -5,6 +5,7 @@
   "dependencies": {
     "flexboxgrid2": "^7.0.0-alpha6",
     "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-helmet": "^5.1.3",
@@ -17,14 +18,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src --fix --ext=js,jsx",
+    "prepush": "npm run lint"
   },
   "devDependencies": {
+    "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.14.3"
   },
   "main": "index.js",
   "repository": "git@github.com:ikorsar/fake-burrberry-frontend.git",

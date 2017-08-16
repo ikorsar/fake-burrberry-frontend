@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Button = styled.button`
   font-size: 0;
@@ -18,7 +19,7 @@ const Button = styled.button`
 `;
 
 class ButtonColor extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       active: false,
@@ -27,7 +28,7 @@ class ButtonColor extends Component {
   }
 
   handleClick() {
-    this.setState((state, props) => ({
+    this.setState(state => ({
       active: !state.active,
     }));
   }
@@ -42,3 +43,8 @@ class ButtonColor extends Component {
 }
 
 export default ButtonColor;
+
+ButtonColor.propTypes = {
+  color: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+};

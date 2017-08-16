@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 
-const Price = styled.h2`
+const PriceStyled = styled.h2`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
@@ -13,13 +14,21 @@ const Price = styled.h2`
   color: #171717;
 `;
 
-export default props =>
-  (<Price>
-    <FormattedNumber
-      value={props.price}
-      style="currency"
-      currency={props.currency}
-      currencyDisplay="symbol"
-      minimumFractionDigits={0}
-    />
-  </Price>);
+export default function Price(props) {
+  return (
+    <PriceStyled>
+      <FormattedNumber
+        value={props.price}
+        style="currency" // eslint-disable-line
+        currency={props.currency}
+        currencyDisplay="symbol"
+        minimumFractionDigits={0}
+      />
+    </PriceStyled>
+  );
+}
+
+Price.propTypes = {
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+};

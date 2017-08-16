@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 export const Container = styled.div`
   border-top: 1px solid #c6c6c6;
@@ -68,7 +69,7 @@ export const Content = styled.div`
 `;
 
 class Accordion extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       active: false,
@@ -77,7 +78,7 @@ class Accordion extends Component {
   }
 
   handleClick() {
-    this.setState((state, props) => ({
+    this.setState(state => ({
       active: !state.active,
     }));
   }
@@ -95,10 +96,14 @@ class Accordion extends Component {
         <Content active={this.state.active}>
           {this.props.children}
         </Content>
-        {/* </div> */}
       </Container>
     );
   }
 }
 
 export default Accordion;
+
+Accordion.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};

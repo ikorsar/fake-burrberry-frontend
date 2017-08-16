@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SmallOnly, LargeOnly} from '../../components/Breakpoints';
+import { SmallOnly, LargeOnly } from '../../components/Breakpoints';
 
 import Button from '../../components/Buttons/Button';
 

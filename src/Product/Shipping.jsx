@@ -12,7 +12,7 @@ const Shipping = styled.section`
 `;
 
 export const Description = styled.article`
-  padding: 0 1rem;
+  padding: 0 .5rem;
 
   @media screen and (min-width: 48rem) {
     padding: 0;
@@ -48,15 +48,17 @@ export const Text = styled.p`
 export default () =>
   (<Shipping>
     <Accordion title="Shipping & Returns">
-      <Description>
-        <SubTitle>Free Next Day Delivery</SubTitle>
-        <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
-        <SubTitle>Collect-in-Store</SubTitle>
-        <Text>Order online today and pick up your items in store as early as tomorrow</Text>
-        <SubTitle>Free Returns</SubTitle>
-        <Text>Enjoy free returns on your order</Text>
-        <SubTitle>Free Gift Packaging</SubTitle>
-        <Text>Discover our gift packaging, a gold lined box tied with a coloured ribbon</Text>
-      </Description>
+      <div className="container">
+        <Description>
+          <SubTitle>Free Next Day Delivery</SubTitle>
+          <Text>Order before 7pm Monday to Thursday for delivery the next day</Text>
+          <SubTitle>Collect-in-Store</SubTitle>
+          <Text>Order online today and pick up your items in store as early as tomorrow</Text>
+          <SubTitle>Free Returns</SubTitle>
+          <Text>Enjoy free returns on your order</Text>
+          <SubTitle>Free Gift Packaging</SubTitle>
+          <Text>Discover our gift packaging, a gold lined box tied with a coloured ribbon</Text>
+        </Description>
+      </div>
     </Accordion>
   </Shipping>);

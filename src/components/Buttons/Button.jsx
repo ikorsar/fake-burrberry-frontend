@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-export const Button = styled.button`
+const ButtonStyled = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75em;
   font-weight: ${props => (props.active ? 'bold' : '400')};
@@ -26,7 +27,28 @@ export const Button = styled.button`
   }
 `;
 
-export default props =>
-  (<Button type={props.type} secondary={props.secondary} small={props.small} active={props.active}>
-    {props.label}
-  </Button>);
+export default function Button(props) {
+  return (
+    <ButtonStyled
+      type="button"
+      secondary={props.secondary}
+      small={props.small}
+      active={props.active}
+    >
+      {props.label}
+    </ButtonStyled>
+  );
+}
+
+Button.defaultProps = {
+  secondary: false,
+  small: false,
+  active: false,
+};
+
+Button.propTypes = {
+  secondary: PropTypes.bool,
+  small: PropTypes.bool,
+  active: PropTypes.bool,
+  label: PropTypes.string.isRequired,
+};

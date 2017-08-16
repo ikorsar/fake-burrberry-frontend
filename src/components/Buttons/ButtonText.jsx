@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const ButtonText = styled.button`
@@ -25,3 +24,5 @@ export const ButtonText = styled.button`
     margin: 0;
   }
 `;
+
+export default ButtonText;
