@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
 import Card from '../Card/index';
-import Hr from '../../components/Hr';
+import Hr from './Hr';
 
 const SubCategory = styled.section`
-  padding: 3rem 0 0;
+  padding-top: 3rem;
 
   @media screen and (min-width: 48rem) {
-    padding: 0;
+    padding-top: 4rem;
   }
 `;
 
@@ -18,6 +19,12 @@ const Title = styled.h3`
   line-height: 1.25rem;
   font-weight: 400;
   margin: 0 0 1rem;
+
+  @media screen and (min-width: 48rem) {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 export default () =>
@@ -52,7 +59,7 @@ export default () =>
         <Card
           fullCard
           link="/products/product1"
-          label="Toilered fit"
+          label="Tailered fit"
           title="The Sandringham – Mid-length Heritage Trench Coat"
           photoName="https://assets.burberry.com/is/image/Burberryltd/fb6adea94455f2a73e97b5cf2d7811d9135dcbe2.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
           colourQuantity={3}
@@ -73,6 +80,58 @@ export default () =>
         />
       </div>
     </div>
+    <MediaQuery minWidth={768}>
+      <div className="row">
+        <div className="col-xs-6 col-md-3">
+          <Card
+            fullCard
+            link="/products/product1"
+            label="Relaxed fit"
+            title="The Westminster – Long Heritage Trench Coat"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/f1cdf8b71c19df8d42ed3ea90712c391e6823635.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            colourQuantity={3}
+            price={120000}
+            currency="RUB"
+          />
+        </div>
+        <div className="col-xs-6 col-md-3">
+          <Card
+            fullCard
+            link="/products/product1"
+            label="Classic fit"
+            title="The Kensington – Long Heritage Trench Coat"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/23b186def7725e3d4ce4745374ebf11267ed68ed.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            colourQuantity={4}
+            price={110000}
+            currency="RUB"
+          />
+        </div>
+        <div className="col-xs-6 col-md-3">
+          <Card
+            fullCard
+            link="/products/product1"
+            label="Tailered fit"
+            title="The Sandringham Short Heritage Trench Coat"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/6b7215e55e30cbeef5f011836cfdcf549bf78324.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            colourQuantity={3}
+            price={100000}
+            currency="RUB"
+          />
+        </div>
+        <div className="col-xs-6 col-md-3">
+          <Card
+            fullCard
+            link="/products/product1"
+            label="Slim fit"
+            title="The Chelsea – Long Heritage Trench Coat"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/f3e96bbcf8fa0aca509c9f5933110b8596d4f06e.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            colourQuantity={2}
+            price={110000}
+            currency="RUB"
+          />
+        </div>
+      </div>
+    </MediaQuery>
     <Hr />
     <Title>Single Breasted Trench Coats</Title>
     <div className="row">
@@ -125,4 +184,56 @@ export default () =>
         />
       </div>
     </div>
+    <MediaQuery minWidth={768}>
+      <div className="row">
+        <div className="col-xs-6 col-md-3">
+          <Card
+            fullCard
+            link="/products/product1"
+            label="New in"
+            title="The Camden – Mid-length Car Coat"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/3bbc6df8655e77f5a75880f03c3ab3f7c92d2ee9.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            colourQuantity={7}
+            price={120000}
+            currency="RUB"
+          />
+        </div>
+        <div className="col-xs-6 col-md-3">
+          <Card
+            fullCard
+            link="/products/product1"
+            label="New in"
+            title="The Camden – Mid-length Car Coat"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/499e46c07518da4b2d208164cb6202b415346661.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            colourQuantity={7}
+            price={110000}
+            currency="RUB"
+          />
+        </div>
+        <div className="col-xs-6 col-md-3">
+          <Card
+            fullCard
+            link="/products/product1"
+            label="New in"
+            title="The Camden – Mid-length Car Coat"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/b340592f566593645f37fd61fdafe720e2c224b7.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            colourQuantity={7}
+            price={100000}
+            currency="RUB"
+          />
+        </div>
+        <div className="col-xs-6 col-md-3">
+          <Card
+            fullCard
+            link="/products/product1"
+            label="New in"
+            title="The Camden – Mid-length Car Coat"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/1297c5d67c810e003eed53e02959843669f1ce9c.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            colourQuantity={7}
+            price={110000}
+            currency="RUB"
+          />
+        </div>
+      </div>
+    </MediaQuery>
   </SubCategory>);

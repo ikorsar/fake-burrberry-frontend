@@ -13,7 +13,7 @@ const CardStyled = styled(Link)`
   color: #171717;
 
   @media screen and (min-width: 48rem) {
-    margin-bottom: .5rem;
+    margin-bottom: 2rem;
   }
 
   @media screen and (min-width: 62rem) {
@@ -75,14 +75,14 @@ const Title = styled.h3`
   margin: 0 0 .5rem;
 
   @media screen and (min-width: 48rem) {
-    margin-bottom: .5rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
   }
 
   @media screen and (min-width: 62rem) {
-    font-size: .75rem;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 1.67;
-    margin-top: 1rem;
+    line-height: 1.25;
   }
 `;
 

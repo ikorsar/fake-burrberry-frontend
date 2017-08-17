@@ -14,11 +14,21 @@ const Title = styled.h4`
   line-height: 1rem;
   font-weight: 400;
   margin: 0 2rem 0 0;
+
+  @media screen and (min-width: 48rem) {
+    display: none;
+  }
 `;
 
 const Container = styled.div`
   overflow-x: scroll;
   display: flex;
+
+  @media screen and (min-width: 48rem) {
+    flex-basis: 100%;
+    justify-content: flex-start;
+    overflow-x: visible;
+  }
 `;
 
 const Filter = styled.button`
@@ -30,7 +40,7 @@ const Filter = styled.button`
   text-align: left;
   position: relative;
   display: flex;
-  padding: 0;
+  padding: 1.5rem 0;
   margin-right: 1rem;
   align-items: center;
 
@@ -42,6 +52,16 @@ const Filter = styled.button`
     width: 12px;
     height: 6px;
     margin-left: .5rem;
+  }
+
+  @media screen and (min-width: 48rem) {
+    margin-right: 3rem;
+
+    &:last-child {
+      justify-self: flex-end;
+      margin-left: auto;
+      margin-right: .5rem;
+    }
   }
 `;
 
