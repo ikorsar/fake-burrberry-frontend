@@ -4,6 +4,10 @@ import styled from 'styled-components';
 const ShowMore = styled.div`
   text-align: center;
   padding: 1rem 0;
+
+  @media screen and (min-width: 48rem) {
+    padding: 3rem 0 1.5rem;
+  }
 `;
 
 const Showing = styled.h4`
@@ -12,6 +16,12 @@ const Showing = styled.h4`
   line-height: 1.25rem;
   font-weight: 400;
   margin: 0 0 1rem;
+
+  @media screen and (min-width: 48rem) {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Button = styled.button`
