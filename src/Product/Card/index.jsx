@@ -27,18 +27,16 @@ const Photo = styled.img`
   margin-bottom: 1rem;
 `;
 
-const Header = styled.header`
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0 .5rem;
-  display: ${props => (props.fullCard ? 'flex' : 'none')};
+const Info = styled.section`
+  display: flex;
+  align-items: flex-start;
 `;
 
 const Label = styled.h4`
   font-size: .75rem;
   line-height: 1rem;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 .5rem;
 `;
 
 const Favorites = styled.button`
@@ -46,25 +44,28 @@ const Favorites = styled.button`
   padding: 0;
   background-color: transparent;
   border: none;
-  }
+  flex-shrink: 0;
+  margin-left: .25rem;
 `;
 
 const Heart = styled.img`display: block;`;
 
-const Available = styled.div`
+const Colours = styled.div`
   font-size: 12px;
   line-height: 1rem;
   margin-bottom: .25rem;
-  display: ${props => (props.fullCard ? 'block' : 'none')};
 `;
 
 const Text = styled.p`margin: 0;`;
 
 const Color = styled.button`
+  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 0;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #171717;
+  font-size: .75rem;
+  line-height: 1rem;
 `;
 
 const Title = styled.h3`
@@ -103,37 +104,40 @@ const Price = styled.h4`
 const Card = props =>
   (<CardStyled to={props.link} title={props.title}>
     <Photo src={props.photoName} alt={props.title} />
-    <Header fullCard={props.fullCard}>
-      <Label>
-        {props.label}
-      </Label>
+    <Info>
+      <div>
+        {props.label !== ' ' &&
+          <Label label={props.label}>
+            {props.label}
+          </Label>}
+        <Title>
+          {props.title}
+        </Title>
+        {props.colourQuantity > 0 &&
+          <Colours colourQuantity={props.colourQuantity}>
+            <Text>
+              Available in&nbsp;
+              <Color>{props.colourQuantity} colours</Color>
+            </Text>
+          </Colours>}
+        <Price>
+          <FormattedNumber
+            value={props.price}
+            style="currency" // eslint-disable-line
+            currency={props.currency}
+            currencyDisplay="symbol"
+            minimumFractionDigits={0}
+          />
+        </Price>
+      </div>
       <Favorites>
         <Heart src={heart} />
       </Favorites>
-    </Header>
-    <Title>
-      {props.title}
-    </Title>
-    <Available fullCard={props.fullCard}>
-      <Text>
-        Available in&nbsp;
-        <Color>{props.colourQuantity} colours</Color>
-      </Text>
-    </Available>
-    <Price>
-      <FormattedNumber
-        value={props.price}
-        style="currency" // eslint-disable-line
-        currency={props.currency}
-        currencyDisplay="symbol"
-        minimumFractionDigits={0}
-      />
-    </Price>
+    </Info>
   </CardStyled>);
 
 Card.defaultProps = {
-  fullCard: false,
-  label: '',
+  label: ' ',
   colourQuantity: 0,
 };
 
@@ -145,7 +149,6 @@ Card.propTypes = {
   colourQuantity: PropTypes.number,
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
-  fullCard: PropTypes.bool,
 };
 
 export default Card;

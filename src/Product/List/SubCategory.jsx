@@ -29,7 +29,7 @@ const Title = styled.h3`
 
 export default () =>
   (<SubCategory>
-    <Title>Herritage Trench Coats</Title>
+    <Title>Heritage Trench Coats</Title>
     <div className="row">
       <div className="col-xs-6 col-md-3">
         <Card
@@ -139,7 +139,7 @@ export default () =>
         <Card
           fullCard
           link="/products/product1"
-          label="Online Exclu"
+          label="Online Exclusive"
           title="The Brighton – Longline Car Coat"
           photoName="https://assets.burberry.com/is/image/Burberryltd/70d0ea20f4faa00e90a0e70fed88af9cd4874824.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
           colourQuantity={7}
@@ -204,9 +204,9 @@ export default () =>
             link="/products/product1"
             label="New in"
             title="The Camden – Mid-length Car Coat"
-            photoName="https://assets.burberry.com/is/image/Burberryltd/499e46c07518da4b2d208164cb6202b415346661.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/b340592f566593645f37fd61fdafe720e2c224b7.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
             colourQuantity={7}
-            price={110000}
+            price={100000}
             currency="RUB"
           />
         </div>
@@ -216,9 +216,9 @@ export default () =>
             link="/products/product1"
             label="New in"
             title="The Camden – Mid-length Car Coat"
-            photoName="https://assets.burberry.com/is/image/Burberryltd/b340592f566593645f37fd61fdafe720e2c224b7.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
+            photoName="https://assets.burberry.com/is/image/Burberryltd/499e46c07518da4b2d208164cb6202b415346661.jpg?$BBY_V2_ML_3X4$&hei=354&wid=266"
             colourQuantity={7}
-            price={100000}
+            price={110000}
             currency="RUB"
           />
         </div>
