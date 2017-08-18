@@ -103,8 +103,8 @@ const Price = styled.h4`
 `;
 
 const Card = props =>
-  (<CardStyled to={props.link} title={props.title}>
-    <Photo src={props.photoName} alt={props.title} />
+  (<CardStyled to={props.to} title={props.title}>
+    <Photo src={props.src} alt={props.title} />
     <Info>
       <div>
         {props.label !== ' ' &&
@@ -114,7 +114,7 @@ const Card = props =>
         <Title>
           {props.title}
         </Title>
-        {props.colourQuantity > 0 &&
+        {props.colourQuantity > 1 &&
           <Colours colourQuantity={props.colourQuantity}>
             <Text>
               Available in&nbsp;
@@ -143,10 +143,10 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  link: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
   label: PropTypes.string,
   title: PropTypes.string.isRequired,
-  photoName: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
   colourQuantity: PropTypes.number,
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,

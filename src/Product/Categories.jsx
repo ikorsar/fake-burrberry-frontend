@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Categories = styled.section`
   display: none;
@@ -11,7 +12,7 @@ const Categories = styled.section`
   }
 `;
 
-const Link = styled.a`
+const CategoryLink = styled(Link)`
   font-size: 12px;
   line-height: 1.33;
   font-weight: 600;
@@ -27,11 +28,11 @@ const Link = styled.a`
 
 export default () =>
   (<Categories>
-    <Link href="#">Women</Link>
-    <Link href="#" active>
+    <CategoryLink to="/products/women/">Women</CategoryLink>
+    <CategoryLink to="/products/men/" active>
       Men
-    </Link>
-    <Link href="#">Children</Link>
-    <Link href="#">Beauty</Link>
-    <Link href="#">Experience</Link>
+    </CategoryLink>
+    <CategoryLink to="/products/children/">Children</CategoryLink>
+    <CategoryLink to="/products/beauty/">Beauty</CategoryLink>
+    <CategoryLink to="/products/experience/">Experience</CategoryLink>
   </Categories>);

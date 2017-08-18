@@ -43,11 +43,9 @@ const LinkStyled = styled(Link)`
 `;
 
 const Logo = styled.img`
-  width: 166px;
   height: 12px;
 
   @media screen and (min-width: 48rem) {
-    width: 221px;
     height: 16px;
   }
 `;

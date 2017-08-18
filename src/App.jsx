@@ -32,9 +32,10 @@ export default () =>
           <Header />
           <Content role="main">
             <Switch>
-              <Route exact path="/products" component={List} />
-              <Route path="/products/:id" component={Show} />
-              <Redirect from="/" to="/products" />
+              <Route exact path="/products/:section/" component={List} />
+              <Route exact path="/products/:section/:category" component={List} />
+              <Route path="/products/:section/:category/:id" component={Show} />
+              <Redirect from="/" to="/products/men/" />
             </Switch>
           </Content>
           <Footer />
