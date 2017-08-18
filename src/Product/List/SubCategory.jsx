@@ -6,7 +6,7 @@ import Card from '../Card/index';
 import Hr from './Hr';
 
 const SubCategory = styled.section`
-  padding-top: 3rem;
+  padding-top: 2rem;
 
   @media screen and (min-width: 48rem) {
     padding-top: 4rem;

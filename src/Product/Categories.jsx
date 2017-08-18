@@ -20,6 +20,7 @@ const Link = styled(NavLink)`
   color: #999;
   text-decoration: none;
   letter-spacing: 1.5px;
+  text-indent: -1.5px;
   padding: 0 1rem 1rem;
   border: 1px solid transparent;
 

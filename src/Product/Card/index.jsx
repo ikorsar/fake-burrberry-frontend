@@ -11,13 +11,10 @@ const CardStyled = styled(Link)`
   margin-bottom: 2rem;
   text-decoration: none;
   color: #171717;
+  position: relative;
 
   @media screen and (min-width: 48rem) {
     margin-bottom: 2rem;
-  }
-
-  @media screen and (min-width: 62rem) {
-    padding-bottom: 1rem;
   }
 `;
 
@@ -46,27 +43,13 @@ const Favorites = styled.button`
   background-color: transparent;
   border: none;
   flex-shrink: 0;
-  margin-left: .25rem;
+  position: absolute;
+  right: 0;
 `;
 
-const Heart = styled.img`display: block;`;
-
-const Colours = styled.div`
-  font-size: 12px;
-  line-height: 1rem;
-  margin-bottom: .25rem;
-`;
-
-const Text = styled.p`margin: 0;`;
-
-const Color = styled.button`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #171717;
-  font-size: .75rem;
-  line-height: 1rem;
+const Heart = styled.img`
+  margin-top: 2px;
+  display: block;
 `;
 
 const Title = styled.h3`
@@ -84,8 +67,25 @@ const Title = styled.h3`
   @media screen and (min-width: 62rem) {
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.25;
   }
+`;
+
+const Colours = styled.div`
+  font-size: 12px;
+  line-height: 1rem;
+  margin-bottom: .25rem;
+`;
+
+const Text = styled.p`margin: 0;`;
+
+const Color = styled.button`
+  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #171717;
+  font-size: .75rem;
+  line-height: 1rem;
 `;
 
 const Price = styled.h4`
