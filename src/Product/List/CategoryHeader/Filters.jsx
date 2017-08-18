@@ -20,7 +20,7 @@ const Title = styled.h4`
   }
 `;
 
-const Container = styled.div`
+const Wrapper = styled.div`
   overflow-x: scroll;
   display: flex;
 
@@ -28,6 +28,15 @@ const Container = styled.div`
     flex-basis: 100%;
     justify-content: flex-start;
     overflow-x: visible;
+  }
+`;
+
+const Group = styled.div`
+  display: flex;
+
+  &:last-child {
+    justify-self: flex-end;
+    margin-left: auto;
   }
 `;
 
@@ -58,9 +67,7 @@ const Filter = styled.button`
     margin-right: 3rem;
 
     &:last-child {
-      justify-self: flex-end;
-      margin-left: auto;
-      margin-right: .5rem;
+      margin-right: 0;
     }
   }
 `;
@@ -68,10 +75,14 @@ const Filter = styled.button`
 export default () =>
   (<Filters>
     <Title>Refine by</Title>
-    <Container>
-      <Filter>Category</Filter>
-      <Filter>Colour</Filter>
-      <Filter>Size</Filter>
-      <Filter>Sort by price</Filter>
-    </Container>
+    <Wrapper>
+      <Group>
+        <Filter>Category</Filter>
+        <Filter>Colour</Filter>
+        <Filter>Size</Filter>
+      </Group>
+      <Group>
+        <Filter>Sort by price</Filter>
+      </Group>
+    </Wrapper>
   </Filters>);

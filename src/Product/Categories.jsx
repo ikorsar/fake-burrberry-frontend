@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Categories = styled.section`
   display: none;
@@ -12,27 +12,28 @@ const Categories = styled.section`
   }
 `;
 
-const CategoryLink = styled(Link)`
+const Link = styled(NavLink)`
   font-size: 12px;
   line-height: 1.33;
   font-weight: 600;
   text-transform: uppercase;
-  color: ${props => (props.active ? '#171717' : '#999')};
+  color: #999;
   text-decoration: none;
   letter-spacing: 1.5px;
   padding: 0 1rem 1rem;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: ${props => (props.active ? '#171717' : 'transparent')};
+  border: 1px solid transparent;
+
+  &.active {
+    color: #171717;
+    border-bottom-color: #171717;
+  }
 `;
 
 export default () =>
   (<Categories>
-    <CategoryLink to="/products/women/">Women</CategoryLink>
-    <CategoryLink to="/products/men/" active>
-      Men
-    </CategoryLink>
-    <CategoryLink to="/products/children/">Children</CategoryLink>
-    <CategoryLink to="/products/beauty/">Beauty</CategoryLink>
-    <CategoryLink to="/products/experience/">Experience</CategoryLink>
+    <Link to="/products/women/">Women</Link>
+    <Link to="/products/men/">Men</Link>
+    <Link to="/products/children/">Children</Link>
+    <Link to="/products/beauty/">Beauty</Link>
+    <Link to="/products/experience/">Experience</Link>
   </Categories>);
