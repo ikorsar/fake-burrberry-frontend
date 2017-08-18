@@ -61,8 +61,8 @@ export default () =>
   (<CategoryHeader>
     <div className="container">
       <div className="row">
-        <div className="col-md-9">
-          <Title>Men’s clothing</Title>
+        <div className="col-xs-12 col-md-9">
+          <Title>Men’s Clothing</Title>
           <Description>
             <p>
               Explore our menswear collection for the season. Sculptural knitwear,{' '}
