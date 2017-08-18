@@ -37,6 +37,7 @@ const Group = styled.div`
   &:last-child {
     justify-self: flex-end;
     margin-left: auto;
+    margin-right: .5rem;
   }
 `;
 
