@@ -103,7 +103,10 @@ const Price = styled.h4`
 `;
 
 const Card = props =>
-  (<CardStyled to={props.to} title={props.title}>
+  (<CardStyled
+    to={`/products/${props.category}/${props.subcategory}/${props.to}`}
+    title={props.title}
+  >
     <Photo src={props.src} alt={props.title} />
     <Info>
       <div>
@@ -146,6 +149,8 @@ Card.propTypes = {
   to: PropTypes.string.isRequired,
   label: PropTypes.string,
   title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  subcategory: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   colourQuantity: PropTypes.number,
   price: PropTypes.number.isRequired,
