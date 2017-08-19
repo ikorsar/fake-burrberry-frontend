@@ -111,7 +111,7 @@ const LinkStyled = styled(Link)`
 
 const Card = props =>
   (<CardStyled title={props.title}>
-    <LinkStyled to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
+    <LinkStyled to={props.to}>
       <Photo src={props.src} alt={props.title} />
     </LinkStyled>
     <Info>
@@ -120,7 +120,7 @@ const Card = props =>
           <Label label={props.label}>
             {props.label}
           </Label>}
-        <LinkStyled to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
+        <LinkStyled to={props.to}>
           <Title>
             {props.title}
           </Title>
@@ -157,8 +157,6 @@ Card.propTypes = {
   to: PropTypes.string.isRequired,
   label: PropTypes.string,
   title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  subcategory: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   colourQuantity: PropTypes.number,
   price: PropTypes.number.isRequired,
