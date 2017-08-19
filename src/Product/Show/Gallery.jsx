@@ -12,7 +12,7 @@ const Gallery = styled.section`
   }
 `;
 
-const Photo = styled.img`
+export const Photo = styled.img`
   flex-shrink: 0;
   width: auto;
   height: 400px;

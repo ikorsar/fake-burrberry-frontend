@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { SmallOnly } from '../../components/Breakpoints';
+import { SmallOnly, LargeOnly } from '../../components/Breakpoints';
 
 import { Title } from './styled';
-import Gallery from './Gallery';
+import Gallery, { Photo } from './Gallery';
 import Details from './Details';
 
 const InfoStyled = styled.section`
@@ -22,7 +22,12 @@ export default function Info(props) {
         </SmallOnly>
         <div className="row middle-lg">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-6">
-            <Gallery />
+            <LargeOnly>
+              <Photo src="/files/product-img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+            </LargeOnly>
+            <SmallOnly>
+              <Gallery />
+            </SmallOnly>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-6">
             <Details />
