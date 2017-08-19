@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import heart from './heart.svg';
 
-const CardStyled = styled(Link)`
+const CardStyled = styled.div`
   display: block;
   margin-bottom: 2rem;
   text-decoration: none;
@@ -45,6 +45,7 @@ const Favorites = styled.button`
   flex-shrink: 0;
   position: absolute;
   right: 0;
+  cursor: pointer;
 `;
 
 const Heart = styled.img`
@@ -86,6 +87,7 @@ const Color = styled.button`
   border-bottom: 1px solid #171717;
   font-size: .75rem;
   line-height: 1rem;
+  cursor: pointer;
 `;
 
 const Price = styled.h4`
@@ -102,21 +104,27 @@ const Price = styled.h4`
   }
 `;
 
+const LinkStyled = styled(Link)`
+  text-decoration: none;
+  color: #171717;
+`;
+
 const Card = props =>
-  (<CardStyled
-    to={`/products/${props.category}/${props.subcategory}/${props.to}`}
-    title={props.title}
-  >
-    <Photo src={props.src} alt={props.title} />
+  (<CardStyled title={props.title}>
+    <LinkStyled to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
+      <Photo src={props.src} alt={props.title} />
+    </LinkStyled>
     <Info>
       <div>
         {props.label !== ' ' &&
           <Label label={props.label}>
             {props.label}
           </Label>}
-        <Title>
-          {props.title}
-        </Title>
+        <LinkStyled to={`/products/${props.category}/${props.subcategory}/${props.to}`}>
+          <Title>
+            {props.title}
+          </Title>
+        </LinkStyled>
         {props.colourQuantity > 1 &&
           <Colours colourQuantity={props.colourQuantity}>
             <Text>
