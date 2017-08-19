@@ -23,7 +23,10 @@ export default function Info(props) {
         <div className="row middle-lg">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-6">
             <LargeOnly>
-              <Photo src="/files/product-img1.jpg" alt="Long Cotton Gabardine Car Coat" />
+              <Photo
+                src={`${process.env.PUBLIC_URL}/files/product-img1.jpg`}
+                alt="Long Cotton Gabardine Car Coat"
+              />
             </LargeOnly>
             <SmallOnly>
               <Gallery />

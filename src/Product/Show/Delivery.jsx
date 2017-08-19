@@ -38,7 +38,7 @@ export default () =>
     <div className="container">
       <div className="row middle-lg">
         <div className="col-md-7">
-          <Img src="/files/delivery.jpg" alt="Delivery box" />
+          <Img src={`${process.env.PUBLIC_URL}/files/delivery.jpg`} alt="Delivery box" />
         </div>
         <div className="col-xs-12 col-md-5">
           <Description>

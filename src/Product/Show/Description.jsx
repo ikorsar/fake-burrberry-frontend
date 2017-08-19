@@ -59,7 +59,8 @@ const Article = styled.article`
     line-height: 1.5rem;
 
     &:last-child {
-    margin-bottom: 0;
+      margin-bottom: 0;
+    }
   }
 `;
 
@@ -115,7 +116,10 @@ export default () =>
           </div>
           <LargeOnly>
             <div className="col-lg-8">
-              <Img src="/files/description-big.jpg" alt="Description Photo" />
+              <Img
+                src={`${process.env.PUBLIC_URL}/files/description-big.jpg`}
+                alt="Description Photo"
+              />
             </div>
           </LargeOnly>
         </div>
@@ -125,13 +129,22 @@ export default () =>
               <Images>
                 <div className="row">
                   <div className="col-lg-4">
-                    <Img src="/files/description-small1.jpg" alt="Description Photo Small" />
+                    <Img
+                      src={`${process.env.PUBLIC_URL}/files/description-small1.jpg`}
+                      alt="Description Photo Small"
+                    />
                   </div>
                   <div className="col-lg-4">
-                    <Img src="/files/description-small2.jpg" alt="Description Photo Small" />
+                    <Img
+                      src={`${process.env.PUBLIC_URL}/files/description-small2.jpg`}
+                      alt="Description Photo Small"
+                    />
                   </div>
                   <div className="col-lg-4">
-                    <Img src="/files/description-small3.jpg" alt="Description Photo Small" />
+                    <Img
+                      src={`${process.env.PUBLIC_URL}/files/description-small3.jpg`}
+                      alt="Description Photo Small"
+                    />
                   </div>
                 </div>
               </Images>
