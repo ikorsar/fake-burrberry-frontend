@@ -25,11 +25,7 @@ const Button = styled.button`
   }
 `;
 
-const Text = styled.span`
-   {
-    color: #171717;
-  }
-`;
+const Text = styled.span`color: #171717;`;
 
 export default () =>
   (<Buttons>

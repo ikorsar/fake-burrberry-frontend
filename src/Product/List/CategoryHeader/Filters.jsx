@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import arrow from '../../../Header/arrow.svg';
+import arrow from '../../../images/arrow.svg';
 
 const Filters = styled.div`
   display: flex;

@@ -33,7 +33,12 @@ const Buttons = styled.div`
   flex-flow: column;
 `;
 
-const Details = styled.article`@media screen and (min-width: 48rem) {margin: 0;}`;
+const Details = styled.article`
+  @media screen and (min-width: 48rem) {
+    margin: 0;
+    padding: 3rem 0;
+  }
+`;
 
 const Header = styled.header`
   display: flex;

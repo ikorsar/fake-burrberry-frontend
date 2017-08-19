@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import hamburger from './hamburger.svg';
 import logo from './logo.svg';
-import arrow from './arrow.svg';
+import arrow from '../images/arrow.svg';
 
 const Header = styled.header`
   padding: 1.125rem 0;

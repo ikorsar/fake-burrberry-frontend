@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Card from '../Card/index';
+import Card from '../Card';
 import { TitleSection } from './styled';
 
 const Recommend = styled.section`
