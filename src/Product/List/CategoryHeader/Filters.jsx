@@ -9,17 +9,6 @@ const Filters = styled.div`
   margin-right: -.5rem;
 `;
 
-const Title = styled.h4`
-  font-size: .75rem;
-  line-height: 1rem;
-  font-weight: 400;
-  margin: 0 2rem 0 0;
-
-  @media screen and (min-width: 48rem) {
-    display: none;
-  }
-`;
-
 const Wrapper = styled.div`
   overflow-x: scroll;
   display: flex;
@@ -78,7 +67,6 @@ const Filter = styled.button`
 
 export default () =>
   (<Filters>
-    <Title>Refine by</Title>
     <Wrapper>
       <Group>
         <Filter>Category</Filter>
