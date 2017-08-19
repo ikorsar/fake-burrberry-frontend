@@ -6,10 +6,7 @@ import logo from './logo.svg';
 import arrow from './arrow.svg';
 
 const Header = styled.header`
-  display: flex;
   padding: 1.125rem 0;
-  align-items: center;
-  position: relative;
 
   @media screen and (min-width: 48rem) {
     padding: 1.5rem 0;
@@ -29,24 +26,21 @@ const ButtonMenu = styled.a`
 `;
 
 const Hamburger = styled.img`
-  width: 16px;
-  height: 11px;
+  width: 1rem;
+  height: .625rem;
 `;
 
 const LinkStyled = styled(Link)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: auto;
 `;
 
 const Logo = styled.img`
-  height: 12px;
+  height: .75rem;
+  display: block;
+  margin: 0 auto;
 
   @media screen and (min-width: 48rem) {
-    height: 16px;
+    height: 1rem;
   }
 `;
 
@@ -76,17 +70,27 @@ const Arrow = styled.img`
 `;
 
 export default () =>
-  (<div className="container">
-    <Header>
-      <ButtonMenu href="#">
-        <Hamburger src={hamburger} />
-      </ButtonMenu>
-      <Country>
-        Shopping in: United Kingdom (£)
-        <Arrow src={arrow} />
-      </Country>
-      <LinkStyled to="/">
-        <Logo src={logo} alt="Burberry Logo" />
-      </LinkStyled>
-    </Header>
-  </div>);
+  (<Header>
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12">
+          <div className="row middle-xs">
+            <div className="col-xs-2 col-md-4">
+              <ButtonMenu href="#">
+                <Hamburger src={hamburger} />
+              </ButtonMenu>
+              <Country>
+                Shopping in: United Kingdom (£)
+                <Arrow src={arrow} />
+              </Country>
+            </div>
+            <div className="col-xs-8 col-md-4">
+              <LinkStyled to="/">
+                <Logo src={logo} alt="Burberry Logo" />
+              </LinkStyled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Header>);

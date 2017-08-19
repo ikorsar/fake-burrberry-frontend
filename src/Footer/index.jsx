@@ -48,7 +48,7 @@ export default () =>
       <Buttons />
     </div>
 
-    <Help>Need Help?</Help>
+    <Help>Need help?</Help>
 
     <HelpLink href="#" title="Find out more and contact us">
       Find out more and contact us

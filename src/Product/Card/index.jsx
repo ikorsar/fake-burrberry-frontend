@@ -28,6 +28,7 @@ const Info = styled.section`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding-right: 1rem;
 `;
 
 const Label = styled.h4`
@@ -94,13 +95,12 @@ const Price = styled.h4`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   font-weight: 400;
-  line-height: 1.17;
+  line-height: 1rem;
   margin: 0;
-  color: #999;
+  color: #171717;
 
   @media screen and (min-width: 62rem) {
     line-height: 1.33;
-    color: #171717;
   }
 `;
 

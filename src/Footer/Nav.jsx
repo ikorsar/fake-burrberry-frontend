@@ -10,6 +10,10 @@ const Nav = styled.nav`
   @media screen and (min-width: 48rem) {
     display: block;
   }
+
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 3rem;
+  }
 `;
 
 const Title = styled.h3`

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ShowMore = styled.div`
   text-align: center;
-  padding: 2rem 0 1rem;
+  padding: 3rem 0 1rem;
 
   @media screen and (min-width: 48rem) {
     padding: 3rem 0 1.5rem;

@@ -50,18 +50,21 @@ const Filter = styled.button`
   text-align: left;
   position: relative;
   display: flex;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1.25rem 1.5rem 0;
   margin-right: 1rem;
   align-items: center;
 
   &::after {
     content: '';
-    display: inline-block;
+    display: block;
     background-image: url(${arrow});
-    background-size: 12px 6px;
-    width: 12px;
-    height: 6px;
-    margin-left: .5rem;
+    background-size: cover;
+    width: .75rem;
+    height: .375rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
   }
 
   @media screen and (min-width: 48rem) {

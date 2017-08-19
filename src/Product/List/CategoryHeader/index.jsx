@@ -26,7 +26,7 @@ const Description = styled.article`
 
   p {
     font-size: .75rem;
-    line-height: 1.67;
+    line-height: 1.25rem;
     color: #171717;
     opacity: .87;
     margin: 0;
