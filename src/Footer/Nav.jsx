@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import FindStore from './FindStore';
+
 const Nav = styled.nav`
   display: none;
   margin-bottom: 2rem;
 
   @media screen and (min-width: 48rem) {
     display: block;
+  }
+
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 3rem;
   }
 `;
 
@@ -102,5 +108,8 @@ export default () =>
           Japan Only - SCTL indications
         </Link>
       </Nav>
+    </div>
+    <div className="col-lg-3">
+      <FindStore />
     </div>
   </div>);

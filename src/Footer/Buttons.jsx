@@ -1,22 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Buttons = styled.div`
-  padding-right: .5rem;
-  padding-left: .5rem;
-
-  @media screen and (min-width: 48rem) {
-    display: flex;
-    padding-right: 0;
-    padding-left: 0;
-  }
-`;
+const Buttons = styled.div`@media screen and (min-width: 48rem) {display: flex;}`;
 
 const Button = styled.button`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75rem;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.33;
   display: block;
   margin-bottom: 1rem;
   padding: 0;
@@ -28,10 +19,22 @@ const Button = styled.button`
   @media screen and (min-width: 48rem) {
     margin: 0 1.5rem 0 0;
   }
+
+  @media screen and (min-width: 62rem) {
+    margin-right: 3rem;
+  }
 `;
+
+const Text = styled.span`color: #171717;`;
 
 export default () =>
   (<Buttons>
-    <Button type="button">Shipping country: Russian Federation</Button>
-    <Button type="button">Language: English</Button>
+    <Button type="button">
+      Shipping country:
+      <Text> Russian Federation</Text>
+    </Button>
+    <Button type="button">
+      Language:
+      <Text> English</Text>
+    </Button>
   </Buttons>);

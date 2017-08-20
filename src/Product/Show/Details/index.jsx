@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SmallOnly, LargeOnly } from '../../components/Breakpoints';
+import { SmallOnly, LargeOnly } from '../../../components/Breakpoints';
 
-import Button from '../../components/Buttons/Button';
+import Button from '../../../components/Buttons/Button';
 
 import { Title } from '../styled';
-import Colors from './Colors';
+import Colors from './Colors/index';
 import Sizes from './Sizes';
 
 import { Description, SubTitle, Text } from '../Shipping';
@@ -29,22 +29,22 @@ const Delivery = Description.extend`
 `;
 
 const Buttons = styled.div`
-  padding: 0 .5rem;
   display: flex;
   flex-flow: column;
-
-  @media screen and (min-width: 48rem) {
-    padding: 0;
-  }
 `;
 
-const Details = styled.article`@media screen and (min-width: 48rem) {margin: 0;}`;
+const Details = styled.article`
+  @media screen and (min-width: 48rem) {
+    margin: 0;
+    padding: 3rem 0;
+  }
+`;
 
 const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem .5rem;
+  padding: 1rem 0;
 
   @media screen and (min-width: 48rem) {
     padding: 0 0 1rem;

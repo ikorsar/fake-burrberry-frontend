@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LargeOnly } from '../components/Breakpoints';
+import { LargeOnly } from '../../components/Breakpoints';
 
-import Accordion from '../components/Accordion';
+import Accordion from '../../components/Accordion';
 import { TitleSection } from './styled';
 
 const Description = styled.section`
@@ -30,11 +30,10 @@ const Title = TitleSection.extend`
 `;
 
 const Article = styled.article`
-  padding: 0 .5rem;
+  padding-right: 1rem;
 
   @media screen and (min-width: 48rem) {
-    margin-left: -.5rem;
-    margin-right: -.5rem;
+    padding-right: 0;
   }
 
   p {
@@ -60,7 +59,8 @@ const Article = styled.article`
     line-height: 1.5rem;
 
     &:last-child {
-    margin-bottom: 0;
+      margin-bottom: 0;
+    }
   }
 `;
 
@@ -116,7 +116,10 @@ export default () =>
           </div>
           <LargeOnly>
             <div className="col-lg-8">
-              <Img src="/files/description-big.jpg" alt="Description Photo" />
+              <Img
+                src={`${process.env.PUBLIC_URL}/files/description-big.jpg`}
+                alt="Description Photo"
+              />
             </div>
           </LargeOnly>
         </div>
@@ -126,13 +129,22 @@ export default () =>
               <Images>
                 <div className="row">
                   <div className="col-lg-4">
-                    <Img src="/files/description-small1.jpg" alt="Description Photo Small" />
+                    <Img
+                      src={`${process.env.PUBLIC_URL}/files/description-small1.jpg`}
+                      alt="Description Photo Small"
+                    />
                   </div>
                   <div className="col-lg-4">
-                    <Img src="/files/description-small2.jpg" alt="Description Photo Small" />
+                    <Img
+                      src={`${process.env.PUBLIC_URL}/files/description-small2.jpg`}
+                      alt="Description Photo Small"
+                    />
                   </div>
                   <div className="col-lg-4">
-                    <Img src="/files/description-small3.jpg" alt="Description Photo Small" />
+                    <Img
+                      src={`${process.env.PUBLIC_URL}/files/description-small3.jpg`}
+                      alt="Description Photo Small"
+                    />
                   </div>
                 </div>
               </Images>
