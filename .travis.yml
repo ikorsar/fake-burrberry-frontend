@@ -14,6 +14,9 @@ install:
 script:
   - yarn lint
 
+before_deploy:
+  - yarn build
+
 deploy:
     provider: script
     skip_cleanup: true
