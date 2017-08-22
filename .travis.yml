@@ -29,5 +29,5 @@ deploy:
 
 after_deploy:
   echo '================'
-  echo "Deploy is done."
+  echo "Deploy is done!"
   echo '================'
