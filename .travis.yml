@@ -20,13 +20,13 @@ before_deploy:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: now ln $(now build -p -t=$GH_TOKEN) $DEV -t=$GH_TOKEN
+    script: now ln $(now build -p -t=$NOW_TOKEN) $DEV -t=$NOW_TOKEN
     on:
       branch: develop
 
   - provider: script
     skip_cleanup: true
-    script: now ln $(now build -p -t=$GH_TOKEN) $PROD -t=$GH_TOKEN
+    script: now ln $(now build -p -t=$NOW_TOKEN) $PROD -t=$NOW_TOKEN
     on:
       branch: master
 
