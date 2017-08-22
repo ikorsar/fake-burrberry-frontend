@@ -1,8 +1,33 @@
 language: node_js
+
 node_js:
   - "8"
-sudo: false
 
-# Run npm test always
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+install:
+  - yarn install
+
 script:
-  - "npm run test"
+  - yarn lint
+
+deploy:
+    provider: script
+    skip_cleanup: true
+    script: now ln $(now build -p -t=$GH_TOKEN) $DEV -t=$GH_TOKEN
+    on:
+      branch: develop
+
+    provider: script
+    skip_cleanup: true
+    script: now ln $(now build -p -t=$GH_TOKEN) $PROD -t=$GH_TOKEN
+    on:
+      branch: master
+
+after_deploy:
+  echo '================'
+  echo "Deploy is done."
+  echo '================'
