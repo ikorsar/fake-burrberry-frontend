@@ -31,6 +31,4 @@ deploy:
       branch: master
 
 after_deploy:
-  echo '================'
   echo "Deploy is done!"
-  echo '================'
