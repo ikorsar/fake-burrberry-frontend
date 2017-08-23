@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 import { Link } from 'react-router-dom';
 
-import heart from './heart.svg';
+// import heart from './heart.svg';
+import ButtonFav from './Fav';
 
 const CardStyled = styled.div`
   display: block;
@@ -38,7 +39,7 @@ const Label = styled.h4`
   margin: 0 0 .5rem;
 `;
 
-const Favorites = styled.button`
+const Favorites = styled(ButtonFav)`
   display: block;
   padding: 0;
   background-color: transparent;
@@ -47,11 +48,6 @@ const Favorites = styled.button`
   position: absolute;
   right: 0;
   cursor: pointer;
-`;
-
-const Heart = styled.img`
-  margin-top: 2px;
-  display: block;
 `;
 
 const Title = styled.h3`
@@ -142,9 +138,7 @@ const Card = props =>
           />
         </Price>
       </div>
-      <Favorites>
-        <Heart src={heart} />
-      </Favorites>
+      <Favorites />
     </Info>
   </CardStyled>);
 
