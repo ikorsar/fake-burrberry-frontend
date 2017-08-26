@@ -3,11 +3,7 @@ import styled from 'styled-components';
 
 import Filter from './Filter';
 
-const FiltersStyled = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: -.5rem;
-`;
+const FiltersStyled = styled.div``;
 
 const Wrapper = styled.div`
   overflow-x: scroll;
@@ -25,7 +21,7 @@ const Group = styled.div`
 
   &:last-child {
     button {
-      margin-right: .5rem;
+      margin-right: 0;
     }
   }
 `;
@@ -53,7 +49,12 @@ class Filters extends Component {
         <Wrapper>
           <Group>
             {['Category', 'Colour', 'Size'].map(category =>
-              (<Filter title={category} open={this.state.open} onClick={this.toggleChildMenu}>
+              (<Filter
+                key={category.toString()}
+                title={category}
+                open={this.state.open}
+                onClick={this.toggleChildMenu}
+              >
                 Content content content content content content content<br />
                 content content content content content content content<br />
                 content content content content content content content<br />
