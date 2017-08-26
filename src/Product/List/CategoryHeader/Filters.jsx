@@ -29,11 +29,12 @@ const Group = styled.div`
 class Filters extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      open: false,
-    };
     this.toggleChildMenu = this.toggleChildMenu.bind(this);
   }
+
+  state = {
+    open: false,
+  };
 
   toggleChildMenu(toggledOn) {
     if (toggledOn) {

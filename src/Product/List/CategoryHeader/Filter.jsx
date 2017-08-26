@@ -50,7 +50,8 @@ const Button = styled.button`
   }
 `;
 
-const Con = styled.div`position: relative;`;
+const FilterStyled = styled.div`position: relative;`;
+
 const Content = styled.div`
   background-color: #f3f3f3;
   display: none;
@@ -77,7 +78,9 @@ class Filter extends Component {
     this.hide = this.hide.bind(this);
   }
 
-  state = { active: false };
+  state = {
+    active: false,
+  };
 
   componentDidMount() {
     document.addEventListener('click', this.hide, true);
@@ -103,7 +106,7 @@ class Filter extends Component {
 
   render() {
     return (
-      <Con>
+      <FilterStyled>
         <div
           ref={(node) => {
             this.node = node;
@@ -127,7 +130,7 @@ class Filter extends Component {
             {this.props.children}
           </Content>
         </div>
-      </Con>
+      </FilterStyled>
     );
   }
 }
