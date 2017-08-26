@@ -15,6 +15,7 @@ import Footer from './Footer';
 addLocaleData(ru);
 
 const Content = styled.div`
+  overflow: hidden;
   padding-bottom: 4rem;
 
   @media screen and (min-width: 48rem) {

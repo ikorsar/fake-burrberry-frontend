@@ -3,16 +3,17 @@ import styled from 'styled-components';
 
 import Filter from './Filter';
 
-const FiltersStyled = styled.div``;
+const FiltersStyled = styled.div`
+  margin-right: -.5rem;
+  position: relative;
+`;
 
 const Wrapper = styled.div`
-  overflow-x: scroll;
   display: flex;
 
   @media screen and (min-width: 48rem) {
     flex-basis: 100%;
     justify-content: space-between;
-    overflow-x: visible;
   }
 `;
 
@@ -21,7 +22,7 @@ const Group = styled.div`
 
   &:last-child {
     button {
-      margin-right: 0;
+      margin-right: .5rem;
     }
   }
 `;

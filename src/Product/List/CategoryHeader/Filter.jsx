@@ -17,6 +17,7 @@ const Button = styled.button`
   margin-right: 1rem;
   align-items: center;
   color: ${props => (props.open ? '#999' : '#171717')};
+  white-space: nowrap;
 
   &::after {
     content: '';
@@ -50,24 +51,35 @@ const Button = styled.button`
   }
 `;
 
-const FilterStyled = styled.div`position: relative;`;
+const FilterStyled = styled.div`@media screen and (min-width: 48rem) {position: relative;}`;
 
 const Content = styled.div`
   background-color: #f3f3f3;
   display: none;
   position: absolute;
   top: 100%;
-  left: ${props => (props.right ? 'auto' : '-1.5rem')};
-  right: ${props => (props.right ? '-1.5rem' : 'auto')};
-  padding: 1rem 1.5rem 1.5rem;
+  padding: 1rem .5rem 1.5rem;
   z-index: 20;
   line-height: 1rem;
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial;
   font-size: .75rem;
-  white-space: nowrap;
+  left: -.5rem;
+  right: 0;
 
   &.is-active {
     display: block;
+  }
+
+  @media screen and (min-width: 48rem) {
+    padding: 1rem 1.5rem 1.5rem;
+    white-space: nowrap;
+    left: ${props => (props.right ? 'auto' : '-.5rem')};
+    right: ${props => (props.right ? '-.5rem' : 'auto')};
+  }
+
+  @media screen and (min-width: 62rem) {
+    left: ${props => (props.right ? 'auto' : '-1.5rem')};
+    right: ${props => (props.right ? '-1.5rem' : 'auto')};
   }
 `;
 
