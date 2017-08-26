@@ -10,6 +10,8 @@ const FiltersStyled = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
+  overflow-x: auto;
+  overflow-y: visible;
 
   @media screen and (min-width: 48rem) {
     flex-basis: 100%;
@@ -50,7 +52,7 @@ class Filters extends Component {
       <FiltersStyled>
         <Wrapper>
           <Group>
-            {['Category', 'Colour', 'Size'].map(category =>
+            {['Category', 'Colour', 'Size', 'test'].map(category =>
               (<Filter
                 key={category.toString()}
                 title={category}
