@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Button from '../../../components/Buttons/Button';
 import { ButtonText } from '../../../components/Buttons/ButtonText';
 
-const Sizes = styled.div`
+const SizesStyled = styled.div`
   display: flex;
   flex-flow: column;
 `;
@@ -68,21 +68,99 @@ const Footer = styled.div`
   }
 `;
 
-export default () =>
-  (<Sizes>
-    <Header>
-      <Size>
-        Size: <strong>XL</strong>
-      </Size>
-      <ButtonText type="button">Need size help?</ButtonText>
-    </Header>
-    <Content>
-      <Button type="button" label="S" small />
-      <Button type="button" label="M" small />
-      <Button type="button" label="L" small />
-      <Button type="button" label="XL" small active />
-    </Content>
-    <Footer>
-      <Button type="button" label="Find in store" />
-    </Footer>
-  </Sizes>);
+const ButtonSize = styled.button`
+  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .75em;
+  line-height: .875rem;
+  margin: 0 0 1rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #171717;
+  border-color: #171717;
+
+  &.is-active {
+    font-weight: bold;
+  }
+`;
+
+class Sizes extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sizes: ['S', 'M', 'L', 'XL'],
+      selectedSize: 'XL',
+    };
+    this.handleRadio = this.handleRadio.bind(this);
+  }
+
+  handleRadio(e) {
+    this.setState({ selectedSize: e.target.value });
+  }
+
+  render() {
+    const selectedSize = this.state.selectedSize;
+
+    const buttons = this.state.sizes.map((size, key) => {
+      const active = this.state.selectedSize === size;
+
+      return (
+        <ButtonSize
+          key={key.toString()}
+          small
+          type="button"
+          onClick={this.handleRadio}
+          className={active ? 'is-active' : null}
+          value={size}
+        >
+          {size}
+        </ButtonSize>
+      );
+    });
+
+    return (
+      <SizesStyled>
+        <Header>
+          <Size>
+            Size: <strong>{selectedSize}</strong>
+          </Size>
+          <ButtonText type="button">Need size help?</ButtonText>
+        </Header>
+        <Content>
+          {buttons}
+        </Content>
+
+        <Footer>
+          <Button type="button" label="Find in store" />
+        </Footer>
+      </SizesStyled>
+    );
+  }
+}
+
+export default Sizes;
+
+// export default () =>
+//   (<Sizes>
+//     <Header>
+//       <Size>
+//         Size: <strong>XL</strong>
+//       </Size>
+//       <ButtonText type="button">Need size help?</ButtonText>
+//     </Header>
+//     <Content>
+//       <Button type="button" label="S" small />
+//       <Button type="button" label="M" small />
+//       <Button type="button" label="L" small />
+//       <Button type="button" label="XL" small active />
+//     </Content>
+//     <Footer>
+//       <Button type="button" label="Find in store" />
+//     </Footer>
+//   </Sizes>);
