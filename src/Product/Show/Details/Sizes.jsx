@@ -93,14 +93,15 @@ const ButtonSize = styled.button`
 class Sizes extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      sizes: ['S', 'M', 'L', 'XL'],
-      selectedSize: 'XL',
-    };
-    this.handleRadio = this.handleRadio.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleRadio(e) {
+  state = {
+    sizes: ['S', 'M', 'L', 'XL'],
+    selectedSize: 'XL',
+  };
+
+  handleClick(e) {
     this.setState({ selectedSize: e.target.value });
   }
 
@@ -115,7 +116,7 @@ class Sizes extends Component {
           key={key.toString()}
           small
           type="button"
-          onClick={this.handleRadio}
+          onClick={this.handleClick}
           className={active ? 'is-active' : null}
           value={size}
         >
@@ -145,22 +146,3 @@ class Sizes extends Component {
 }
 
 export default Sizes;
-
-// export default () =>
-//   (<Sizes>
-//     <Header>
-//       <Size>
-//         Size: <strong>XL</strong>
-//       </Size>
-//       <ButtonText type="button">Need size help?</ButtonText>
-//     </Header>
-//     <Content>
-//       <Button type="button" label="S" small />
-//       <Button type="button" label="M" small />
-//       <Button type="button" label="L" small />
-//       <Button type="button" label="XL" small active />
-//     </Content>
-//     <Footer>
-//       <Button type="button" label="Find in store" />
-//     </Footer>
-//   </Sizes>);
