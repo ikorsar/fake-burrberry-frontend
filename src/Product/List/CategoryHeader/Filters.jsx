@@ -5,7 +5,6 @@ import Filter from './Filter';
 
 const FiltersStyled = styled.div`
   display: flex;
-  white-space: nowrap;
   align-items: center;
   margin-right: -.5rem;
 `;
@@ -40,10 +39,12 @@ class Filters extends Component {
     this.toggleChildMenu = this.toggleChildMenu.bind(this);
   }
 
-  toggleChildMenu() {
-    this.setState({
-      open: true,
-    });
+  toggleChildMenu(toggledOn) {
+    if (toggledOn) {
+      this.setState({ open: true });
+    } else {
+      this.setState({ open: false });
+    }
   }
 
   render() {
@@ -51,21 +52,16 @@ class Filters extends Component {
       <FiltersStyled>
         <Wrapper>
           <Group>
-            <Filter title="Category" open={this.state.open} onClick={this.toggleChildMenu}>
-              <p>
-                Content content content content content content content content content content
-                content content content content content content content content content content
-                content content content content content content content content content content
-                content content content content content content content content content content
-                content content
-              </p>
-            </Filter>
-            <Filter title="Colour" open={this.state.open} onClick={this.toggleChildMenu}>
-              <p>test</p>
-            </Filter>
-            <Filter title="Size" open={this.state.open} onClick={this.toggleChildMenu}>
-              <p>test</p>
-            </Filter>
+            {['Category', 'Colour', 'Size'].map(category =>
+              (<Filter title={category} open={this.state.open} onClick={this.toggleChildMenu}>
+                Content content content content content content content<br />
+                content content content content content content content<br />
+                content content content content content content content<br />
+                content content content content content content content<br />
+                content content content content content content content<br />
+                content content content content content content content
+              </Filter>),
+            )}
           </Group>
           <Group>
             <Filter
@@ -74,7 +70,10 @@ class Filters extends Component {
               open={this.state.open}
               onClick={this.toggleChildMenu}
             >
-              <p>test</p>
+              high or<br />
+              low<br />
+              it’s medium length of<br />
+              content
             </Filter>
           </Group>
         </Wrapper>

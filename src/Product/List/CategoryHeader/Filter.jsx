@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import onClickOutside from 'react-onclickoutside';
 
 import arrow from '../../../images/arrow.svg';
 
@@ -61,7 +60,10 @@ const Content = styled.div`
   right: ${props => (props.right ? '-1.5rem' : 'auto')};
   padding: 1rem 1.5rem 1.5rem;
   z-index: 20;
-  white-space: normal;
+  line-height: 1rem;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial;
+  font-size: .75rem;
+  white-space: nowrap;
 
   &.is-active {
     display: block;
@@ -71,38 +73,60 @@ const Content = styled.div`
 class Filter extends Component {
   constructor(props) {
     super(props);
-    this.state = { active: false };
-    this.show = this.show.bind(this);
-    // this.hide = this.hide.bind(this);
+    this.toggle = this.toggle.bind(this);
+    this.hide = this.hide.bind(this);
   }
 
-  show() {
-    this.setState({ active: true });
-    document.addEventListener('click', this.hide);
+  state = { active: false };
+
+  componentDidMount() {
+    document.addEventListener('click', this.hide, true);
   }
 
-  handleClickOutside() {
-    this.setState({ active: false });
-    document.addEventListener('click', this.hide);
+  componentWillUnmount() {
+    document.removeEventListener('click', this.hide, true);
+  }
+
+  toggle(on = true) {
+    if (on === false && on === this.state.active) return;
+    this.setState(
+      () => ({ active: !this.state.active }),
+      () => this.props.onClick(this.state.active),
+    );
+  }
+
+  hide(e) {
+    if (this.node && !this.node.contains(e.target)) {
+      this.toggle(false);
+    }
   }
 
   render() {
     return (
       <Con>
-        <Button
-          type="button"
-          className={this.state.active ? 'is-active' : null}
-          open={this.props.open}
-          onClick={() => {
-            this.props.onClick();
-            this.show();
+        <div
+          ref={(node) => {
+            this.node = node;
           }}
         >
-          {this.props.title}
-        </Button>
-        <Content className={this.state.active ? 'is-active' : null} right={this.props.right}>
-          {this.props.children}
-        </Content>
+          <Button
+            type="button"
+            className={this.state.active ? 'is-active' : null}
+            open={this.props.open}
+            onClick={this.toggle}
+          >
+            {this.props.title}
+          </Button>
+          <Content
+            className={this.state.active ? 'is-active' : null}
+            right={this.props.right}
+            innerRef={(node) => {
+              this.node = node;
+            }}
+          >
+            {this.props.children}
+          </Content>
+        </div>
       </Con>
     );
   }
@@ -121,4 +145,4 @@ Filter.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default onClickOutside(Filter);
+export default Filter;
