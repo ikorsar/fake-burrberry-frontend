@@ -78,12 +78,12 @@ const Title = styled.h3`
   text-transform: uppercase;
 `;
 
-const Buttons = styled.div`
+const Selects = styled.div`
   display: flex;
   flex-flow: column;
 `;
 
-const Button = styled.select`
+const Container = styled.div`
   font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: .75em;
   font-weight: 400;
@@ -102,6 +102,15 @@ const Button = styled.select`
   color: #171717;
   border-color: #171717;
   display: block;
+`;
+
+const Select = styled.select`
+  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .75em;
+  font-weight: 400;
+  line-height: 1rem;
+  background-color: transparent;
+  border: none;
 `;
 
 class MobileMenu extends Component {
@@ -169,14 +178,18 @@ class MobileMenu extends Component {
             </Link>
           </div>
         </Nav>
-        <Buttons>
-          <Button>
-            <option>United Kingdom (£)</option>
-          </Button>
-          <Button>
-            <option>English</option>
-          </Button>
-        </Buttons>
+        <Selects>
+          <Container>
+            <Select>
+              <option>United Kingdom (£)</option>
+            </Select>
+          </Container>
+          <Container>
+            <Select>
+              <option>English</option>
+            </Select>
+          </Container>
+        </Selects>
       </Wrapper>
     );
   }
