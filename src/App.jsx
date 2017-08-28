@@ -28,6 +28,9 @@ const Content = styled.div`
 
   .menu-opened & {
     transform: translateX(274px);
+    overflow: hidden;
+    pointer-events: none;
+    height: 100vh;
   }
 `;
 
