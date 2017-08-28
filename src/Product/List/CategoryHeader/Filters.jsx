@@ -52,7 +52,7 @@ class Filters extends Component {
       <FiltersStyled>
         <Wrapper>
           <Group>
-            {['Category', 'Colour', 'Size', 'test'].map(category =>
+            {['Category', 'Colour', 'Size'].map(category =>
               (<Filter
                 key={category.toString()}
                 title={category}

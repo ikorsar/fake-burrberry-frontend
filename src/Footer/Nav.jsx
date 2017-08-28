@@ -16,7 +16,7 @@ const Nav = styled.nav`
   }
 `;
 
-const Title = styled.h3`
+export const Title = styled.h3`
   font-size: .75rem;
   font-weight: bold;
   line-height: .875rem;
@@ -24,7 +24,7 @@ const Title = styled.h3`
   text-transform: uppercase;
 `;
 
-const Link = styled.a`
+export const Link = styled.a`
   font-size: .75rem;
   font-weight: 600;
   line-height: 1rem;
