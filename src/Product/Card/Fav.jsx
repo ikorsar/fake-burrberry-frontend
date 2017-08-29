@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Heart from './Heart';
+import Heart from '../../components/Heart';
 
 const ButtonStyled = styled.button`
   display: block;
