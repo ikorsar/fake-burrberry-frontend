@@ -13,8 +13,8 @@ class Heart extends Component {
   render() {
     return (
       <HeartStyled
-        width="16px"
-        height="15px"
+        width={this.props.width}
+        height={this.props.height}
         viewBox="0 0 16 15"
         xmlns="http://www.w3.org/2000/svg"
         active={this.props.active}
@@ -32,7 +32,14 @@ class Heart extends Component {
   }
 }
 
+Heart.defaultProps = {
+  width: '16px',
+  height: '15px',
+};
+
 Heart.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.string,
   active: PropTypes.bool.isRequired,
 };
 
