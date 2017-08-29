@@ -19,8 +19,12 @@ const Wrapper = styled.aside`
   padding: 1.25rem 0.5rem;
   box-shadow: 0 0 2px #999;
   overflow-y: scroll;
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   transform: ${props => (props.isOpened ? 'translate3d(0, 0, 0)' : 'translate3d(-100%, 0, 0)')};
+
+  @media screen and (min-width: 62rem) {
+    display: none;
+  }
 `;
 
 const Nav = styled.nav`margin-top: 1.625rem;`;

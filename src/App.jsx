@@ -19,7 +19,7 @@ addLocaleData(ru);
 const Page = styled.div`overflow: ${props => (props.isOpened ? 'hidden' : 'visible')};`;
 
 const Content = styled.div`
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   transform: translate3d(0, 0, 0);
   z-index: 200;
   position: relative;
@@ -33,6 +33,11 @@ const Content = styled.div`
       pointer-events: none;
       height: 100vh;
     `};
+
+  @media screen and (min-width: 62rem) {
+    transition: none;
+    transform: translate3d(0, 0, 0);
+  }
 `;
 
 const Main = styled.div`
