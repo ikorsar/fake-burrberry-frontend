@@ -33,7 +33,7 @@ const ButtonMenu = styled.a`
 
 const Hamburger = styled.img`
   width: 1rem;
-  height: .625rem;
+  height: 0.625rem;
 `;
 
 export const LinkStyled = styled(Link)`
@@ -42,7 +42,7 @@ export const LinkStyled = styled(Link)`
 `;
 
 export const Logo = styled.img`
-  height: .75rem;
+  height: 0.75rem;
   display: block;
   margin: 0 auto;
 
@@ -52,8 +52,8 @@ export const Logo = styled.img`
 `;
 
 const Country = styled.button`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
   line-height: 1.33;
   font-weight: 600;
   text-align: left;
@@ -73,7 +73,7 @@ const Country = styled.button`
 const Arrow = styled.img`
   width: 12px;
   height: 6px;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 `;
 
 class Header extends Component {

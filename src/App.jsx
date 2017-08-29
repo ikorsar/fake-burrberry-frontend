@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { addLocaleData, IntlProvider } from 'react-intl';
 import ru from 'react-intl/locale-data/ru';
@@ -16,22 +16,23 @@ import Footer from './Footer';
 
 addLocaleData(ru);
 
-const Page = styled.div`
-  &.menu-opened {
-    overflow: hidden;
-  }
-`;
+const Page = styled.div`overflow: ${props => (props.isOpened ? 'hidden' : 'visible')};`;
 
 const Content = styled.div`
-  transition: all .2s ease-in-out;
-  transform: translateX(0);
+  transition: all 0.2s ease-in-out;
+  transform: translate3d(0, 0, 0);
+  z-index: 200;
+  position: relative;
+  background-color: #fff;
 
-  .menu-opened & {
-    transform: translateX(274px);
-    overflow: hidden;
-    pointer-events: none;
-    height: 100vh;
-  }
+  ${props =>
+    props.isOpened &&
+    css`
+      transform: translate3d(274px, 0, 0);
+      overflow: hidden;
+      pointer-events: none;
+      height: 100vh;
+    `};
 `;
 
 const Main = styled.div`
@@ -82,15 +83,15 @@ class App extends Component {
         <div>
           <Helmet defaultTitle="Burberry" titleTemplate="%s | Burberry" />
           <Router>
-            <Page className={this.state.isOpened ? 'menu-opened' : null}>
+            <Page isOpened={this.state.isOpened}>
               <div
                 ref={(node) => {
                   this.node = node;
                 }}
               >
-                <MobileMenu />
+                <MobileMenu isOpened={this.state.isOpened} />
               </div>
-              <Content>
+              <Content isOpened={this.state.isOpened}>
                 <Header menuOpen={this.handleClick} />
                 <Main role="main">
                   <Switch>
