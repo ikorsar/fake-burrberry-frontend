@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
-import arrow from '../../../images/arrow.svg';
+import arrow from '../../images/arrow.svg';
 
 const Button = styled.button`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
   line-height: 1rem;
   background-color: transparent;
   border: none;
@@ -24,8 +24,8 @@ const Button = styled.button`
     display: block;
     background-image: url(${arrow});
     background-size: cover;
-    width: .75rem;
-    height: .375rem;
+    width: 0.75rem;
+    height: 0.375rem;
     position: absolute;
     top: 50%;
     right: 0;
@@ -33,14 +33,16 @@ const Button = styled.button`
     opacity: ${props => (props.open ? '.3' : '1')};
   }
 
-  &.is-active {
-    color: #171717;
+  ${props =>
+    props.isOpened &&
+    css`
+      color: #171717;
 
-    &::after {
-      opacity: 1;
-      transform: translateY(-50%) rotate(180deg);
-    }
-  }
+      &::after {
+        opacity: 1;
+        transform: translateY(-50%) rotate(180deg);
+      }
+    `};
 
   @media screen and (min-width: 48rem) {
     margin-right: 3rem;
@@ -55,20 +57,16 @@ const FilterStyled = styled.div`@media screen and (min-width: 48rem) {position: 
 
 const Content = styled.div`
   background-color: #f3f3f3;
-  display: none;
   position: absolute;
   top: 100%;
-  padding: 1rem .5rem 1.5rem;
+  padding: 1rem 0.5rem 1.5rem;
   z-index: 20;
   line-height: 1rem;
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial;
-  font-size: .75rem;
+  font-size: 0.75rem;
   left: -.5rem;
   right: 0;
-
-  &.is-active {
-    display: block;
-  }
+  display: ${props => (props.active ? 'block' : 'none')};
 
   @media screen and (min-width: 48rem) {
     padding: 1rem 1.5rem 1.5rem;
@@ -87,30 +85,30 @@ class Filter extends Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
-    this.hide = this.hide.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   state = {
-    active: false,
+    isOpened: false,
   };
 
   componentDidMount() {
-    document.addEventListener('click', this.hide, true);
+    document.addEventListener('click', this.handleOutsideClick, true);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.hide, true);
+    document.removeEventListener('click', this.handleOutsideClick, true);
   }
 
   toggle(on = true) {
-    if (on === false && on === this.state.active) return;
+    if (on === false && on === this.state.isOpened) return;
     this.setState(
-      () => ({ active: !this.state.active }),
-      () => this.props.onClick(this.state.active),
+      () => ({ isOpened: !this.state.isOpened }),
+      () => this.props.onClick(this.state.isOpened),
     );
   }
 
-  hide(e) {
+  handleOutsideClick(e) {
     if (this.node && !this.node.contains(e.target)) {
       this.toggle(false);
     }
@@ -126,19 +124,13 @@ class Filter extends Component {
         >
           <Button
             type="button"
-            className={this.state.active ? 'is-active' : null}
+            isOpened={this.state.isOpened}
             open={this.props.open}
             onClick={this.toggle}
           >
             {this.props.title}
           </Button>
-          <Content
-            className={this.state.active ? 'is-active' : null}
-            right={this.props.right}
-            innerRef={(node) => {
-              this.node = node;
-            }}
-          >
+          <Content active={this.state.isOpened} right={this.props.right}>
             {this.props.children}
           </Content>
         </div>
