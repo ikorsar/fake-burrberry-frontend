@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import hamburger from './hamburger.svg';
 import logo from './logo.svg';
-import arrow from '../images/arrow.svg';
+import Country from './Country';
 
 const HeaderStyled = styled.header`
   padding: 1.125rem 0;
@@ -51,31 +51,6 @@ export const Logo = styled.img`
   }
 `;
 
-const Country = styled.button`
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.75rem;
-  line-height: 1.33;
-  font-weight: 600;
-  text-align: left;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  color: #999;
-  display: none;
-  position: relative;
-
-  @media screen and (min-width: 48rem) {
-    display: flex;
-    align-items: center;
-  }
-`;
-
-const Arrow = styled.img`
-  width: 12px;
-  height: 6px;
-  margin-left: 0.5rem;
-`;
-
 class Header extends Component {
   state = {};
 
@@ -90,10 +65,7 @@ class Header extends Component {
                   <ButtonMenu onClick={this.props.menuOpen}>
                     <Hamburger src={hamburger} />
                   </ButtonMenu>
-                  <Country>
-                    Shopping in: United Kingdom (£)
-                    <Arrow src={arrow} />
-                  </Country>
+                  <Country />
                 </div>
                 <div className="col-xs-8 col-md-4">
                   <LinkStyled to="/">

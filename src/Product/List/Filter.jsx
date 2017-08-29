@@ -18,6 +18,7 @@ const Button = styled.button`
   align-items: center;
   color: ${props => (props.open ? '#999' : '#171717')};
   white-space: nowrap;
+  cursor: pointer;
 
   &::after {
     content: '';
