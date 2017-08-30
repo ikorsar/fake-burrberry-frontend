@@ -101,12 +101,13 @@ class Filter extends Component {
     document.removeEventListener('click', this.handleOutsideClick, true);
   }
 
-  toggle(on = true) {
-    if (on === false && on === this.state.isOpened) return;
-    this.setState(
-      () => ({ isOpened: !this.state.isOpened }),
-      () => this.props.onClick(this.state.isOpened),
-    );
+  toggle(on) {
+    if (on !== this.state.isOpened) {
+      this.setState(
+        () => ({ isOpened: !this.state.isOpened }),
+        () => this.props.onClick(this.state.isOpened),
+      );
+    }
   }
 
   handleOutsideClick(e) {
