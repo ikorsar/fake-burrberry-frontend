@@ -30,7 +30,7 @@ const Select = styled.select`
   opacity: 0;
   position: absolute;
   left: 0;
-  width: 40%;
+  width: 100%;
   cursor: pointer;
 `;
 
@@ -39,18 +39,18 @@ class ButtonSelect extends Component {
     value: 0,
   };
 
-  render() {
-    const handleSelect = (e) => {
-      this.setState({
-        value: e.target.selectedIndex,
-      });
-    };
+  handleSelect = (e) => {
+    this.setState({
+      value: e.target.selectedIndex,
+    });
+  };
 
+  render() {
     return (
       <ButtonSelectStyled>
         {this.props.title}&nbsp;
         <Choosen>{this.props.options[this.state.value]}</Choosen>
-        <Select onChange={handleSelect}>
+        <Select onChange={this.handleSelect}>
           {this.props.options.map(option => (
             <option value={option} key={option}>
               {option}
