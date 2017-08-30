@@ -54,7 +54,7 @@ const ListContent = styled.section`
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -4rem;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: -10;
     opacity: 0;
@@ -76,12 +76,12 @@ class List extends Component {
   }
 
   state = {
-    isOpened: false,
+    open: false,
   };
 
   handleClick() {
     this.setState(() => ({
-      isOpened: !this.state.isOpened,
+      open: !this.state.open,
     }));
   }
 
@@ -105,7 +105,7 @@ class List extends Component {
                     <Filter
                       key={category.toString()}
                       title={category}
-                      open={this.state.isOpened}
+                      open={this.state.open}
                       onClick={this.handleClick}
                     >
                       Content content content content content content content<br />
@@ -121,7 +121,7 @@ class List extends Component {
                   <Filter
                     title="Sort by price"
                     right
-                    open={this.state.isOpened}
+                    open={this.state.open}
                     onClick={this.handleClick}
                   >
                     high or<br />
@@ -135,7 +135,7 @@ class List extends Component {
           </div>
         </CategoryHeader>
 
-        <ListContent open={this.state.isOpened}>
+        <ListContent open={this.state.open}>
           <div className="container">
             <SubCategory />
 
