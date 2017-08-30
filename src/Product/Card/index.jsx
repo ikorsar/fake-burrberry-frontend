@@ -111,7 +111,7 @@ const Card = props => (
     </LinkStyled>
     <Info>
       <div>
-        {props.label !== ' ' && <Label label={props.label}>{props.label}</Label>}
+        {props.label.trim() && <Label>{props.label}</Label>}
         <LinkStyled to={props.to}>
           <Title>{props.title}</Title>
         </LinkStyled>
