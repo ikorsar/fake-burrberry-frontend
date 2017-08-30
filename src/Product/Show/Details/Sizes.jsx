@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Button from '../../../components/Buttons/Button';
 import { ButtonText } from '../../../components/Buttons/ButtonText';
@@ -29,7 +29,7 @@ const Content = styled.div`
   display: none;
 
   button {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
   @media screen and (min-width: 48rem) {
@@ -44,7 +44,7 @@ const Content = styled.div`
 
 const Size = styled.p`
   font-family: Raleway;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   color: #171717;
   padding: 0;
@@ -69,11 +69,11 @@ const Footer = styled.div`
 `;
 
 const ButtonSize = styled.button`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75em;
-  line-height: .875rem;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  line-height: 0.875rem;
   margin: 0 0 1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -85,9 +85,7 @@ const ButtonSize = styled.button`
   color: #171717;
   border-color: #171717;
 
-  &.is-active {
-    font-weight: bold;
-  }
+  ${props => props.isActive && css`font-weight: bold;`};
 `;
 
 class Sizes extends Component {
@@ -109,7 +107,7 @@ class Sizes extends Component {
     const selectedSize = this.state.selectedSize;
 
     const buttons = this.state.sizes.map((size, key) => {
-      const active = this.state.selectedSize === size;
+      const isActive = this.state.selectedSize === size;
 
       return (
         <ButtonSize
@@ -117,7 +115,7 @@ class Sizes extends Component {
           small
           type="button"
           onClick={this.handleClick}
-          className={active ? 'is-active' : null}
+          isActive={isActive}
           value={size}
         >
           {size}
@@ -133,9 +131,7 @@ class Sizes extends Component {
           </Size>
           <ButtonText type="button">Need size help?</ButtonText>
         </Header>
-        <Content>
-          {buttons}
-        </Content>
+        <Content>{buttons}</Content>
 
         <Footer>
           <Button type="button" label="Find in store" />

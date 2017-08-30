@@ -29,13 +29,13 @@ const Heart = props => (
 Heart.defaultProps = {
   width: '16px',
   height: '15px',
-  fill: '#fff',
+  fill: true,
 };
 
 Heart.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
-  fill: PropTypes.string,
+  fill: PropTypes.bool,
 };
 
 export default Heart;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const ColorsStyled = styled.section`
   margin: 0 0 2rem;
@@ -29,7 +29,7 @@ const Container = styled.div`
 
 const Choosen = styled.p`
   font-family: Raleway;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   color: #171717;
   padding: 0;
@@ -48,7 +48,7 @@ const Button = styled.button`
   height: 40px;
   margin-right: 1rem;
   padding: 0;
-  transition: border-color .25s ease-in-out;
+  transition: border-color 0.25s ease-in-out;
   background-color: ${props => props.hex};
   border-width: 1px;
   border-style: solid;
@@ -56,10 +56,12 @@ const Button = styled.button`
   border-radius: 50%;
   cursor: pointer;
 
-  &.is-active {
-    border-color: #232122;
-    cursor: default;
-  }
+  ${props =>
+    props.isActive &&
+    css`
+      border-color: #232122;
+      cursor: default;
+    `};
 `;
 
 class Colors extends Component {
@@ -81,14 +83,14 @@ class Colors extends Component {
     const selectedColor = this.state.selectedColor;
 
     const colors = this.state.colors.map((color, key) => {
-      const active = this.state.selectedColor === color.name;
+      const isActive = this.state.selectedColor === color.name;
 
       return (
         <Button
           key={key.toString()}
           type="button"
           onClick={this.handleClick}
-          className={active ? 'is-active' : null}
+          isActive={isActive}
           name={color.name}
           hex={color.hex}
         >
@@ -102,9 +104,7 @@ class Colors extends Component {
         <Choosen>
           Colour: <strong>{selectedColor}</strong>
         </Choosen>
-        <Container>
-          {colors}
-        </Container>
+        <Container>{colors}</Container>
       </ColorsStyled>
     );
   }
