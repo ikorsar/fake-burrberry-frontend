@@ -17,6 +17,7 @@ const ButtonSelectStyled = styled.div`
   display: flex;
   flex-flow: column;
   position: relative;
+  padding: 1rem;
 `;
 
 const Choosen = styled.span`
@@ -24,20 +25,21 @@ const Choosen = styled.span`
   font-size: 0.75em;
   font-weight: 400;
   line-height: 1rem;
-  position: absolute;
-  top: 1rem;
-  left: 0;
-  right: 0;
   text-align: center;
 `;
 
 const Select = styled.select`
   padding: 1rem;
+  position: absolute;
   font-size: 0.75em;
   line-height: 1rem;
   background-color: transparent;
   border: none;
   opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 `;
 
 class ButtonSelect extends Component {
