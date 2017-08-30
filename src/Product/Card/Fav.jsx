@@ -34,7 +34,7 @@ class ButtonFav extends Component {
   render() {
     return (
       <ButtonStyled onClick={this.handleClick}>
-        <Heart active={this.state.isActive} />
+        <Heart fill={this.state.isActive} />
       </ButtonStyled>
     );
   }
