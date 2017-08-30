@@ -101,21 +101,24 @@ class List extends Component {
             <Filters>
               <Wrapper>
                 <Group>
-                  {['Category', 'Colour', 'Size'].map(category => (
-                    <Filter
-                      key={category.toString()}
-                      title={category}
-                      open={this.state.open}
-                      onClick={this.handleClick}
-                    >
-                      Content content content content content content content<br />
-                      content content content content content content content<br />
-                      content content content content content content content<br />
-                      content content content content content content content<br />
-                      content content content content content content content<br />
-                      content content content content content content content
-                    </Filter>
-                  ))}
+                  <Filter title="Category" open={this.state.open} onClick={this.handleClick}>
+                    Content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content
+                  </Filter>
+                  <Filter title="Colour" open={this.state.open} onClick={this.handleClick}>
+                    <input type="checkbox" />
+                    <span>Example checkbox</span>
+                  </Filter>
+                  <Filter title="Size" open={this.state.open} onClick={this.handleClick}>
+                    Content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content<br />
+                    content content content content content content content content
+                  </Filter>
                 </Group>
                 <Group>
                   <Filter
