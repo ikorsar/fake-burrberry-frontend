@@ -104,7 +104,7 @@ class Filter extends Component {
   toggle(on) {
     if (on !== this.state.isActive) {
       this.setState(
-        () => ({ isActive: !this.state.isActive }),
+        prevState => ({ isActive: !prevState.isActive }),
         () => this.props.onClick(this.state.isActive),
       );
     }
