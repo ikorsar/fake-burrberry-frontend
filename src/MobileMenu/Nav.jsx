@@ -92,9 +92,9 @@ const Menu = props => (
     </LinkStyled>
     <Nav>
       <Categories>
-        {['Women', 'Men', 'Children', 'Beauty', 'Experience'].map(link => (
-          <Category onClick={props.toggleSubmenu} key={link}>
-            {link}
+        {['Women', 'Men', 'Children', 'Beauty', 'Experience'].map(name => (
+          <Category onClick={props.toggleSubmenu} key={name} name={name}>
+            {name}
           </Category>
         ))}
       </Categories>
@@ -154,6 +154,7 @@ const Menu = props => (
 Menu.propTypes = {
   toggleSubmenu: PropTypes.func.isRequired,
   submenuOpen: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default Menu;

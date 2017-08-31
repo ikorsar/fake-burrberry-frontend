@@ -69,9 +69,9 @@ class App extends Component {
   }
 
   handleClick() {
-    this.setState({
-      isOpened: true,
-    });
+    this.setState(prevState => ({
+      isOpened: !prevState.isOpened,
+    }));
   }
 
   menuClose(e) {
@@ -94,7 +94,7 @@ class App extends Component {
                   this.node = node;
                 }}
               >
-                <MobileMenu isOpened={this.state.isOpened} />
+                <MobileMenu isOpened={this.state.isOpened} mobileMenuClose={this.handleClick} />
               </div>
               <Content isOpened={this.state.isOpened}>
                 <Header handleMenuOpen={this.handleClick} />

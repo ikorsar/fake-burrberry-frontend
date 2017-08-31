@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   overflow-y: scroll;
 
   ${props =>
-    props.submenuOpen &&
+    props.isSubMenuOpen &&
     css`
       transform: translate3d(0, 0, 0);
       opacity: 1;
@@ -92,47 +92,72 @@ const NavLinkStyled = styled(NavLink)`
   }
 `;
 
-const Submenu = props => (
-  <Wrapper submenuOpen={props.submenuOpen}>
+const links = [
+  {
+    title: 'New Arrivals',
+    to: '/products/men/new-arrivals',
+  },
+  {
+    title: 'Clothing',
+    to: '/products/men/clothing',
+  },
+  {
+    title: 'Scarves',
+    to: '/products/men/scarves',
+  },
+  {
+    title: 'Accessories',
+    to: '/products/men/accessories',
+  },
+  {
+    title: 'Shoes',
+    to: '/products/men/shoes',
+  },
+  {
+    title: 'Fragnance',
+    to: '/products/men/fragnance',
+  },
+  {
+    title: 'Gifts',
+    to: '/products/men/gifts',
+  },
+  {
+    title: 'Runaway',
+    to: '/products/men/runaway',
+  },
+];
+
+const SubMenu = props => (
+  <Wrapper isSubMenuOpen={props.isSubMenuOpen}>
     <Header>
-      <Link onClick={props.toggleSubmenu}>Home</Link>
+      <Link onClick={props.subMenuClose}>Home</Link>
     </Header>
     <Section>
       <Img src={`${process.env.PUBLIC_URL}/files/section-img.jpg`} alt="" />
-      <Title>Men</Title>
+      <Title>{props.categories.categoryName}</Title>
     </Section>
     <Nav>
-      <NavLinkStyled to="/products/men/new-arrivals" title="New Arrivals">
-        New Arrivals
-      </NavLinkStyled>
-      <NavLinkStyled to="/products/men/clothing" title="Clothing">
-        Clothing
-      </NavLinkStyled>
-      <NavLinkStyled to="/products/men/scarves" title="Scarves">
-        Scarves
-      </NavLinkStyled>
-      <NavLinkStyled to="/products/men/accessories" title="Accessories">
-        Accessories
-      </NavLinkStyled>
-      <NavLinkStyled to="/products/men/shoes" title="Shoes">
-        Shoes
-      </NavLinkStyled>
-      <NavLinkStyled to="/products/men/fragnance" title="Fragnance">
-        Fragnance
-      </NavLinkStyled>
-      <NavLinkStyled to="/products/men/gifts" title="Gifts">
-        Gifts
-      </NavLinkStyled>
-      <NavLinkStyled to="/products/men/runaway" title="Runaway">
-        Runaway
-      </NavLinkStyled>
+      {links.map(link => (
+        <NavLinkStyled
+          to={link.to}
+          title={link.title}
+          key={link.title}
+          onClick={props.mobileMenuClose}
+        >
+          {link.title}
+        </NavLinkStyled>
+      ))}
     </Nav>
   </Wrapper>
 );
 
-Submenu.propTypes = {
-  toggleSubmenu: PropTypes.func.isRequired,
-  submenuOpen: PropTypes.bool.isRequired,
+SubMenu.propTypes = {
+  mobileMenuClose: PropTypes.func.isRequired,
+  subMenuClose: PropTypes.func.isRequired,
+  isSubMenuOpen: PropTypes.bool.isRequired,
+  categories: PropTypes.shape({
+    categoryName: PropTypes.string,
+  }).isRequired,
 };
 
-export default Submenu;
+export default SubMenu;
