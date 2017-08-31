@@ -62,7 +62,7 @@ class Header extends Component {
             <div className="col-xs-12">
               <div className="row middle-xs">
                 <div className="col-xs-2 col-md-4">
-                  <ButtonMenu onClick={this.props.setMenuOpen}>
+                  <ButtonMenu onClick={this.props.handleMenuOpen}>
                     <Hamburger src={hamburger} />
                   </ButtonMenu>
                   <Country />
@@ -82,7 +82,7 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  setMenuOpen: PropTypes.func.isRequired,
+  handleMenuOpen: PropTypes.func.isRequired,
 };
 
 export default Header;

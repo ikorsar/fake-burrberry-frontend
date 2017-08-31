@@ -97,7 +97,7 @@ class App extends Component {
                 <MobileMenu isOpened={this.state.isOpened} />
               </div>
               <Content isOpened={this.state.isOpened}>
-                <Header setMenuOpen={this.handleClick} />
+                <Header handleMenuOpen={this.handleClick} />
                 <Main role="main">
                   <Switch>
                     <Route exact path="/products/:section/" component={List} />
