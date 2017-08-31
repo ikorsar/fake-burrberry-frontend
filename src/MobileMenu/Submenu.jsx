@@ -21,17 +21,23 @@ const Wrapper = styled.div`
     `};
 `;
 
-const Header = styled.header``;
+const Header = styled.header`
+  display: flex;
+  flex-flow: column;
+`;
 
-const Link = styled.a`
+const Link = styled.button`
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1rem;
   display: block;
   background-color: #fff;
   padding: 1rem;
-  font-size: 0.875rem;
-  line-height: 1rem;
   position: relative;
   color: #171717;
-  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  text-align: left;
 
   &::before {
     content: '';

@@ -20,16 +20,25 @@ const Wrapper = styled.div`
 
 const Nav = styled.nav`margin-top: 1.625rem;`;
 
-const Category = styled.a`
+const Categories = styled.div`
+  display: flex;
+  flex-flow: column;
+`;
+
+const Category = styled.button`
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1rem;
   display: block;
   margin-bottom: 1.5rem;
-  text-decoration: none;
   color: #171717;
   position: relative;
   cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  text-align: left;
 
   &:last-child {
     margin-bottom: 3rem;
@@ -82,13 +91,13 @@ const Menu = props => (
       <Logo src={logo} alt="Burberry Logo" />
     </LinkStyled>
     <Nav>
-      <div>
+      <Categories>
         {['Women', 'Men', 'Children', 'Beauty', 'Experience'].map(link => (
           <Category onClick={props.toggleSubmenu} key={link}>
             {link}
           </Category>
         ))}
-      </div>
+      </Categories>
       <div>
         <Title>Customer service</Title>
         <Link href="#" title="Contact Us">
