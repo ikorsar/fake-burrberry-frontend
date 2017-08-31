@@ -2,10 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const HeartStyled = styled.svg`
-  transition: all 0.15s ease-in-out;
-  fill: ${props => (props.fill ? '#171717' : '#fff')};
-`;
+const HeartStyled = styled.svg`transition: all 0.15s ease-in-out;`;
 
 const Heart = props => (
   <HeartStyled
@@ -29,13 +26,13 @@ const Heart = props => (
 Heart.defaultProps = {
   width: '16px',
   height: '15px',
-  fill: true,
+  fill: '#fff',
 };
 
 Heart.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
-  fill: PropTypes.bool,
+  fill: PropTypes.string,
 };
 
 export default Heart;

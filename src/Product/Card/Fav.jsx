@@ -22,7 +22,7 @@ class ButtonFav extends Component {
   }
 
   state = {
-    isActive: false,
+    fill: false,
   };
 
   handleClick() {
@@ -34,7 +34,7 @@ class ButtonFav extends Component {
   render() {
     return (
       <ButtonStyled onClick={this.handleClick}>
-        <Heart fill={this.state.isActive} />
+        <Heart fill={this.state.isActive ? '#171717' : '#fff'} />
       </ButtonStyled>
     );
   }
