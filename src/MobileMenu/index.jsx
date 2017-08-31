@@ -29,9 +29,9 @@ export default class MobileMenu extends Component {
   };
 
   toggleSubmenu = () => {
-    this.setState({
-      submenuOpen: !this.state.submenuOpen,
-    });
+    this.setState(prevState => ({
+      submenuOpen: !prevState.submenuOpen,
+    }));
   };
 
   render() {
