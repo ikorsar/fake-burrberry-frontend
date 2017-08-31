@@ -16,7 +16,7 @@ const Button = styled.button`
   padding: 1.5rem 1.25rem 1.5rem 0;
   margin-right: 1rem;
   align-items: center;
-  color: ${props => (props.open ? '#999' : '#171717')};
+  color: ${props => (props.filterOpened ? '#999' : '#171717')};
   white-space: nowrap;
   cursor: pointer;
 
@@ -31,11 +31,11 @@ const Button = styled.button`
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    opacity: ${props => (props.open ? '.3' : '1')};
+    opacity: ${props => (props.filterOpened ? '.3' : '1')};
   }
 
   ${props =>
-    props.isOpened &&
+    props.isActive &&
     css`
       color: #171717;
 
@@ -90,7 +90,7 @@ class Filter extends Component {
   }
 
   state = {
-    isOpened: false,
+    isActive: false,
   };
 
   componentDidMount() {
@@ -102,10 +102,10 @@ class Filter extends Component {
   }
 
   toggle(on) {
-    if (on !== this.state.isOpened) {
+    if (on !== this.state.isActive) {
       this.setState(
-        () => ({ isOpened: !this.state.isOpened }),
-        () => this.props.onClick(this.state.isOpened),
+        () => ({ isActive: !this.state.isActive }),
+        () => this.props.onClick(this.state.isActive),
       );
     }
   }
@@ -126,13 +126,13 @@ class Filter extends Component {
         >
           <Button
             type="button"
-            isOpened={this.state.isOpened}
-            open={this.props.open}
+            isActive={this.state.isActive}
+            filterOpened={this.props.filterOpened}
             onClick={this.toggle}
           >
             {this.props.title}
           </Button>
-          <Content active={this.state.isOpened} right={this.props.right}>
+          <Content active={this.state.isActive} right={this.props.right}>
             {this.props.children}
           </Content>
         </div>
@@ -143,13 +143,13 @@ class Filter extends Component {
 
 Filter.defaultProps = {
   right: false,
-  open: false,
+  filterOpened: false,
 };
 
 Filter.propTypes = {
   onClick: PropTypes.func.isRequired,
   right: PropTypes.bool,
-  open: PropTypes.bool,
+  filterOpened: PropTypes.bool,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };

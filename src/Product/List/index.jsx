@@ -61,7 +61,7 @@ const ListContent = styled.section`
     transition: all 0.15s ease-in-out;
 
     ${props =>
-    props.open &&
+    props.filterOpened &&
       css`
         opacity: 1;
         z-index: 10;
@@ -76,12 +76,12 @@ class List extends Component {
   }
 
   state = {
-    open: false,
+    filterOpened: false,
   };
 
   handleClick() {
     this.setState(() => ({
-      open: !this.state.open,
+      filterOpened: !this.state.filterOpened,
     }));
   }
 
@@ -101,17 +101,29 @@ class List extends Component {
             <Filters>
               <Wrapper>
                 <Group>
-                  <Filter title="Category" open={this.state.open} onClick={this.handleClick}>
+                  <Filter
+                    title="Category"
+                    filterOpened={this.state.filterOpened}
+                    onClick={this.handleClick}
+                  >
                     Content content content content content content content<br />
                     content content content content content content content<br />
                     content content content content content content content<br />
                     content content content content content content content
                   </Filter>
-                  <Filter title="Colour" open={this.state.open} onClick={this.handleClick}>
+                  <Filter
+                    title="Colour"
+                    filterOpened={this.state.filterOpened}
+                    onClick={this.handleClick}
+                  >
                     <input type="checkbox" />
                     <span>Example checkbox</span>
                   </Filter>
-                  <Filter title="Size" open={this.state.open} onClick={this.handleClick}>
+                  <Filter
+                    title="Size"
+                    filterOpened={this.state.filterOpened}
+                    onClick={this.handleClick}
+                  >
                     Content content content content content content content<br />
                     content content content content content content content<br />
                     content content content content content content content<br />
@@ -124,7 +136,7 @@ class List extends Component {
                   <Filter
                     title="Sort by price"
                     right
-                    open={this.state.open}
+                    filterOpened={this.state.filterOpened}
                     onClick={this.handleClick}
                   >
                     high or<br />
@@ -138,7 +150,7 @@ class List extends Component {
           </div>
         </CategoryHeader>
 
-        <ListContent open={this.state.open}>
+        <ListContent filterOpened={this.state.filterOpened}>
           <div className="container">
             <SubCategory />
 
