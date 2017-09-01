@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import hamburger from './hamburger.svg';
 import logo from './logo.svg';
-import arrow from '../images/arrow.svg';
+import Country from './Country';
 
-const Header = styled.header`
+const HeaderStyled = styled.header`
   padding: 1.125rem 0;
 
   @media screen and (min-width: 48rem) {
@@ -20,6 +22,10 @@ const Header = styled.header`
 const ButtonMenu = styled.a`
   display: flex;
 
+  .menu-opened & {
+    pointer-events: none;
+  }
+
   @media screen and (min-width: 48rem) {
     display: none;
   }
@@ -27,15 +33,16 @@ const ButtonMenu = styled.a`
 
 const Hamburger = styled.img`
   width: 1rem;
-  height: .625rem;
+  height: 0.625rem;
 `;
 
-const LinkStyled = styled(Link)`
+export const LinkStyled = styled(Link)`
   margin: auto;
+  display: block;
 `;
 
-const Logo = styled.img`
-  height: .75rem;
+export const Logo = styled.img`
+  height: 0.75rem;
   display: block;
   margin: 0 auto;
 
@@ -44,53 +51,38 @@ const Logo = styled.img`
   }
 `;
 
-const Country = styled.button`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
-  line-height: 1.33;
-  font-weight: 600;
-  text-align: left;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  color: #999;
-  display: none;
-  position: relative;
+class Header extends Component {
+  state = {};
 
-  @media screen and (min-width: 48rem) {
-    display: flex;
-    align-items: center;
-  }
-`;
-
-const Arrow = styled.img`
-  width: 12px;
-  height: 6px;
-  margin-left: .5rem;
-`;
-
-export default () =>
-  (<Header>
-    <div className="container">
-      <div className="row">
-        <div className="col-xs-12">
-          <div className="row middle-xs">
-            <div className="col-xs-2 col-md-4">
-              <ButtonMenu href="#">
-                <Hamburger src={hamburger} />
-              </ButtonMenu>
-              <Country>
-                Shopping in: United Kingdom (£)
-                <Arrow src={arrow} />
-              </Country>
-            </div>
-            <div className="col-xs-8 col-md-4">
-              <LinkStyled to="/">
-                <Logo src={logo} alt="Burberry Logo" />
-              </LinkStyled>
+  render() {
+    return (
+      <HeaderStyled>
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12">
+              <div className="row middle-xs">
+                <div className="col-xs-2 col-md-4">
+                  <ButtonMenu onClick={this.props.handleMenuOpen}>
+                    <Hamburger src={hamburger} />
+                  </ButtonMenu>
+                  <Country />
+                </div>
+                <div className="col-xs-8 col-md-4">
+                  <LinkStyled to="/">
+                    <Logo src={logo} alt="Burberry Logo" />
+                  </LinkStyled>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </Header>);
+      </HeaderStyled>
+    );
+  }
+}
+
+Header.propTypes = {
+  handleMenuOpen: PropTypes.func.isRequired,
+};
+
+export default Header;

@@ -14,7 +14,7 @@ const SubCategory = styled.section`
 `;
 
 const Title = styled.h3`
-  font-family: "Lora", Helvetica, Arial, serif;
+  font-family: 'Lora', Helvetica, Arial, serif;
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -27,8 +27,8 @@ const Title = styled.h3`
   }
 `;
 
-export default () =>
-  (<SubCategory>
+export default () => (
+  <SubCategory>
     <Title>Heritage Trench Coats</Title>
     <div className="row">
       <div className="col-xs-6 col-md-3">
@@ -220,4 +220,5 @@ export default () =>
         </div>
       </div>
     </MediaQuery>
-  </SubCategory>);
+  </SubCategory>
+);

@@ -2,36 +2,44 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Buttons = styled.div`@media screen and (min-width: 48rem) {display: flex;}`;
-
 const ButtonSelectStyled = styled.div`
-  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 400;
-  line-height: 1.33;
-  margin-bottom: 1rem;
-  padding: 0;
+  margin: 0 0 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-align-last: center;
   text-decoration: none;
-  color: #999;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #171717;
+  border-color: #171717;
+  display: flex;
+  flex-flow: column;
   position: relative;
-
-  @media screen and (min-width: 48rem) {
-    margin: 0 1.5rem 0 0;
-  }
-
-  @media screen and (min-width: 62rem) {
-    margin-right: 3rem;
-  }
+  padding: 1rem;
 `;
 
-const Choosen = styled.span`color: #171717;`;
+const Choosen = styled.span`
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 1rem;
+  text-align: center;
+`;
 
 const Select = styled.select`
-  opacity: 0;
+  padding: 1rem;
   position: absolute;
+  font-size: 0.75em;
+  line-height: 1rem;
+  background-color: transparent;
+  border: none;
+  opacity: 0;
+  top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
-  cursor: pointer;
 `;
 
 class ButtonSelect extends Component {
@@ -48,7 +56,6 @@ class ButtonSelect extends Component {
   render() {
     return (
       <ButtonSelectStyled>
-        {this.props.title}&nbsp;
         <Choosen>{this.props.options[this.state.value]}</Choosen>
         <Select onChange={this.handleSelect}>
           {this.props.options.map(option => (
@@ -63,13 +70,7 @@ class ButtonSelect extends Component {
 }
 
 ButtonSelect.propTypes = {
-  title: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default () => (
-  <Buttons>
-    <ButtonSelect title="Shipping country:" options={['United Kingdom', 'Russian Federation']} />
-    <ButtonSelect title="Language:" options={['English', 'Russian']} />
-  </Buttons>
-);
+export default ButtonSelect;

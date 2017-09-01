@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 import { Link } from 'react-router-dom';
 
-import heart from './heart.svg';
+import ButtonFav from './Fav';
 
 const CardStyled = styled.div`
   display: block;
@@ -32,13 +32,13 @@ const Info = styled.section`
 `;
 
 const Label = styled.h4`
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 400;
-  margin: 0 0 .5rem;
+  margin: 0 0 0.5rem;
 `;
 
-const Favorites = styled.button`
+const Favorites = styled(ButtonFav)`
   display: block;
   padding: 0;
   background-color: transparent;
@@ -49,20 +49,15 @@ const Favorites = styled.button`
   cursor: pointer;
 `;
 
-const Heart = styled.img`
-  margin-top: 2px;
-  display: block;
-`;
-
 const Title = styled.h3`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1rem;
-  margin: 0 0 .5rem;
+  margin: 0 0 0.5rem;
 
   @media screen and (min-width: 48rem) {
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.25rem;
   }
 
@@ -75,25 +70,25 @@ const Title = styled.h3`
 const Colours = styled.div`
   font-size: 12px;
   line-height: 1rem;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 `;
 
 const Text = styled.p`margin: 0;`;
 
 const Color = styled.button`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 0;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #171717;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   cursor: pointer;
 `;
 
 const Price = styled.h4`
-  font-family: "Raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .75rem;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem;
   margin: 0;
@@ -109,29 +104,25 @@ const LinkStyled = styled(Link)`
   color: #171717;
 `;
 
-const Card = props =>
-  (<CardStyled title={props.title}>
+const Card = props => (
+  <CardStyled title={props.title}>
     <LinkStyled to={props.to}>
       <Photo src={props.src} alt={props.title} />
     </LinkStyled>
     <Info>
       <div>
-        {props.label !== ' ' &&
-          <Label label={props.label}>
-            {props.label}
-          </Label>}
+        {props.label.trim() && <Label>{props.label}</Label>}
         <LinkStyled to={props.to}>
-          <Title>
-            {props.title}
-          </Title>
+          <Title>{props.title}</Title>
         </LinkStyled>
-        {props.colourQuantity > 1 &&
+        {props.colourQuantity > 1 && (
           <Colours colourQuantity={props.colourQuantity}>
             <Text>
               Available in&nbsp;
               <Color>{props.colourQuantity} colours</Color>
             </Text>
-          </Colours>}
+          </Colours>
+        )}
         <Price>
           <FormattedNumber
             value={props.price}
@@ -142,11 +133,10 @@ const Card = props =>
           />
         </Price>
       </div>
-      <Favorites>
-        <Heart src={heart} />
-      </Favorites>
+      <Favorites />
     </Info>
-  </CardStyled>);
+  </CardStyled>
+);
 
 Card.defaultProps = {
   label: ' ',

@@ -5,7 +5,7 @@ import { SmallOnly, LargeOnly } from '../../../components/Breakpoints';
 import Button from '../../../components/Buttons/Button';
 
 import { Title } from '../styled';
-import Colors from './Colors/index';
+import Colors from './Colors';
 import Sizes from './Sizes';
 
 import { Description, SubTitle, Text } from '../Shipping';
